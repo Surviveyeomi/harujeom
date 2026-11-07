@@ -1,0 +1,16 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {calculateDay,getFortune,validateProfile,shiftDate,koreanToday,readProfile,STORAGE_KEY} from '../src/fortune.js';
+const p={year:1992,month:10,day:24,hour:5,minute:30,calendar:'solar',leap:false,unknownTime:false,gender:'unspecified'};
+test('같은 입력과 날짜의 결과가 동일',()=>assert.deepEqual(calculateDay(p,'2026-11-08'),calculateDay(p,'2026-11-08')));
+test('공식 README 예제 사주와 일치',()=>assert.deepEqual(calculateDay(p,'2026-11-08').pillars,{year:'임신',month:'경술',day:'계유',hour:'을묘'}));
+test('동일 생일 양력·음력 결과 동일',()=>assert.deepEqual(calculateDay(p,'2026-11-08'),calculateDay({...p,calendar:'lunar',month:9,day:29},'2026-11-08')));
+test('윤달을 양력으로 정확히 변환',()=>assert.deepEqual(validateProfile({...p,year:2020,month:4,day:1,calendar:'lunar',leap:true}),{year:2020,month:5,day:23}));
+test('존재하지 않는 양력 날짜 거부',()=>assert.throws(()=>validateProfile({...p,year:2023,month:2,day:29})));
+test('미래 생일 거부',()=>assert.throws(()=>validateProfile({...p,year:2026,month:12,day:31},'2026-11-08')));
+test('잘못된 윤달 거부',()=>assert.throws(()=>validateProfile({...p,calendar:'lunar',year:2024,month:1,day:1,leap:true})));
+test('시간 및 누락된 입력 거부',()=>{assert.throws(()=>validateProfile({...p,hour:24}));assert.throws(()=>validateProfile({...p,month:0}));assert.throws(()=>validateProfile(null));});
+test('월·연도 경계 날짜 순서',()=>{assert.equal(shiftDate('2026-01-01',-1),'2025-12-31');assert.deepEqual(getFortune(p,'2026-03-01').days.map(d=>d.date),['2026-02-27','2026-02-28','2026-03-01']);});
+test('KST 자정 전후 날짜 전환',()=>{assert.equal(koreanToday(new Date('2026-11-07T14:59:59Z')),'2026-11-07');assert.equal(koreanToday(new Date('2026-11-07T15:00:00Z')),'2026-11-08');});
+test('시간 미상은 입력 시각에 영향받지 않음',()=>assert.deepEqual(calculateDay({...p,unknownTime:true,hour:1},'2026-11-08'),calculateDay({...p,unknownTime:true,hour:20},'2026-11-08')));
+test('성별은 일일 점수에 영향을 주지 않음',()=>assert.deepEqual(calculateDay({...p,gender:'male'},'2026-11-08'),calculateDay({...p,gender:'female'},'2026-11-08')));
+test('365일 점수 범위·4개 분야·주의 포인트',()=>{const scores=new Set();for(let i=0;i<365;i++){const d=calculateDay(p,shiftDate('2026-01-01',i));assert.ok(d.score>=0&&d.score<=100);assert.equal(d.fields.length,4);assert.ok(d.fields.every(f=>f.text&&f.score>=0&&f.score<=100));assert.ok(d.caution);scores.add(d.score);}assert.ok(scores.size>5);});
+test('저장 정보 복원 및 손상·저장소 차단 처리',()=>{assert.deepEqual(readProfile({getItem:key=>key===STORAGE_KEY?JSON.stringify(p):null}),p);assert.equal(readProfile({getItem:()=>'{bad'}),null);assert.equal(readProfile({getItem:()=>{throw Error('blocked')}}),null);});

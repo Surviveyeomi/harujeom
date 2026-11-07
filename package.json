@@ -1,0 +1,1 @@
+{"name":"harujeom","version":"0.1.0","private":true,"type":"module","scripts":{"build":"esbuild src/app.js --bundle --format=iife --outfile=dist/app.js","test":"node --test tests/*.test.js","start":"python3 -m http.server 4173 --directory dist"},"dependencies":{"manseryeok":"2.0.0"},"devDependencies":{"esbuild":"0.25.12"}}
