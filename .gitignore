@@ -1,4 +1,53 @@
+# Dependencies and build caches
 node_modules/
-submission/
-*.tgz
+.cache/
+.npm/
+.pnpm-store/
+coverage/
+*.log
+*.tsbuildinfo
+
+# Secrets and local credentials
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+.netrc
+.ssh/
+.aws/
+credentials*.json
+*service-account*.json
+
+# OS and editor files
 .DS_Store
+._*
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# School submissions, presentation assets and personal documents
+submission/
+presentation/
+중간제출/
+최종제출/
+*.docx
+*.doc
+*.pptx
+*.ppt
+*.pdf
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.bundle
+
+# Local hosting identity; already committed historical metadata is retained
+.openai/

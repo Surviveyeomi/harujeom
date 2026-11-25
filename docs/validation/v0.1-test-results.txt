@@ -1,0 +1,84 @@
+
+> harujeom@0.1.0 test
+> node --test tests/*.test.js
+
+TAP version 13
+# Subtest: 같은 입력과 날짜의 결과가 동일
+ok 1 - 같은 입력과 날짜의 결과가 동일
+  ---
+  duration_ms: 27.86875
+  ...
+# Subtest: 공식 README 예제 사주와 일치
+ok 2 - 공식 README 예제 사주와 일치
+  ---
+  duration_ms: 0.581166
+  ...
+# Subtest: 동일 생일 양력·음력 결과 동일
+ok 3 - 동일 생일 양력·음력 결과 동일
+  ---
+  duration_ms: 0.801042
+  ...
+# Subtest: 윤달을 양력으로 정확히 변환
+ok 4 - 윤달을 양력으로 정확히 변환
+  ---
+  duration_ms: 0.329416
+  ...
+# Subtest: 존재하지 않는 양력 날짜 거부
+ok 5 - 존재하지 않는 양력 날짜 거부
+  ---
+  duration_ms: 0.291958
+  ...
+# Subtest: 미래 생일 거부
+ok 6 - 미래 생일 거부
+  ---
+  duration_ms: 0.062917
+  ...
+# Subtest: 잘못된 윤달 거부
+ok 7 - 잘못된 윤달 거부
+  ---
+  duration_ms: 0.127792
+  ...
+# Subtest: 시간 및 누락된 입력 거부
+ok 8 - 시간 및 누락된 입력 거부
+  ---
+  duration_ms: 0.248167
+  ...
+# Subtest: 월·연도 경계 날짜 순서
+ok 9 - 월·연도 경계 날짜 순서
+  ---
+  duration_ms: 0.779833
+  ...
+# Subtest: KST 자정 전후 날짜 전환
+ok 10 - KST 자정 전후 날짜 전환
+  ---
+  duration_ms: 0.373458
+  ...
+# Subtest: 시간 미상은 입력 시각에 영향받지 않음
+ok 11 - 시간 미상은 입력 시각에 영향받지 않음
+  ---
+  duration_ms: 0.619416
+  ...
+# Subtest: 성별은 일일 점수에 영향을 주지 않음
+ok 12 - 성별은 일일 점수에 영향을 주지 않음
+  ---
+  duration_ms: 0.586375
+  ...
+# Subtest: 365일 점수 범위·4개 분야·주의 포인트
+ok 13 - 365일 점수 범위·4개 분야·주의 포인트
+  ---
+  duration_ms: 28.462125
+  ...
+# Subtest: 저장 정보 복원 및 손상·저장소 차단 처리
+ok 14 - 저장 정보 복원 및 손상·저장소 차단 처리
+  ---
+  duration_ms: 0.2985
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 157.96775
