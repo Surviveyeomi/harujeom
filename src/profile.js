@@ -1,6 +1,6 @@
 import {STORAGE_KEY,validateProfile} from './fortune.js';
 export function parseProfile(values){
- for(const [key,label] of [['year','출생 연도'],['month','출생 월'],['day','출생 일']])if(!String(values[key]??'').trim()){const e=Error(`${label}을 입력해주세요.`);e.field=key;throw e;}
+ for(const [key,label] of [['year','출생 연도를'],['month','출생 월을'],['day','출생 일을']])if(!String(values[key]??'').trim()){const e=Error(`${label} 입력해주세요.`);e.field=key;throw e;}
  if(!values.unknownTime&&!/^\d{2}:\d{2}$/.test(values.time??'')){const e=Error('출생시간을 입력하거나 시간을 몰라요를 선택해주세요.');e.field='time';throw e;}
  const [hour,minute]=(values.time||'12:00').split(':').map(Number);
  const p={year:Number(values.year),month:Number(values.month),day:Number(values.day),hour:values.unknownTime?12:hour,minute:values.unknownTime?0:minute,calendar:values.calendar,gender:values.gender,leap:!!values.leap,unknownTime:!!values.unknownTime};validateProfile(p);return p;

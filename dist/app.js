@@ -31,140 +31,140 @@
       "use strict";
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.DAY_PILLAR_ANCHOR = exports.TEN_GOD_HANJA = exports.ELEMENT_CONTROLS = exports.ELEMENT_GENERATES = exports.MONTH_BRANCHES = exports.BRANCH_MAIN_STEM = exports.BRANCH_ELEMENTS = exports.STEM_ELEMENTS = exports.FIVE_ELEMENTS = exports.YIN_YANG = exports.EARTHLY_BRANCHES_HANJA = exports.EARTHLY_BRANCHES = exports.HEAVENLY_STEMS_HANJA = exports.HEAVENLY_STEMS = void 0;
-      exports.HEAVENLY_STEMS = ["\uAC11", "\uC744", "\uBCD1", "\uC815", "\uBB34", "\uAE30", "\uACBD", "\uC2E0", "\uC784", "\uACC4"];
+      exports.HEAVENLY_STEMS = ["갑", "을", "병", "정", "무", "기", "경", "신", "임", "계"];
       exports.HEAVENLY_STEMS_HANJA = [
-        "\u7532",
-        "\u4E59",
-        "\u4E19",
-        "\u4E01",
-        "\u620A",
-        "\u5DF1",
-        "\u5E9A",
-        "\u8F9B",
-        "\u58EC",
-        "\u7678"
+        "甲",
+        "乙",
+        "丙",
+        "丁",
+        "戊",
+        "己",
+        "庚",
+        "辛",
+        "壬",
+        "癸"
       ];
       exports.EARTHLY_BRANCHES = [
-        "\uC790",
-        "\uCD95",
-        "\uC778",
-        "\uBB18",
-        "\uC9C4",
-        "\uC0AC",
-        "\uC624",
-        "\uBBF8",
-        "\uC2E0",
-        "\uC720",
-        "\uC220",
-        "\uD574"
+        "자",
+        "축",
+        "인",
+        "묘",
+        "진",
+        "사",
+        "오",
+        "미",
+        "신",
+        "유",
+        "술",
+        "해"
       ];
       exports.EARTHLY_BRANCHES_HANJA = [
-        "\u5B50",
-        "\u4E11",
-        "\u5BC5",
-        "\u536F",
-        "\u8FB0",
-        "\u5DF3",
-        "\u5348",
-        "\u672A",
-        "\u7533",
-        "\u9149",
-        "\u620C",
-        "\u4EA5"
+        "子",
+        "丑",
+        "寅",
+        "卯",
+        "辰",
+        "巳",
+        "午",
+        "未",
+        "申",
+        "酉",
+        "戌",
+        "亥"
       ];
-      exports.YIN_YANG = ["\uC591", "\uC74C"];
-      exports.FIVE_ELEMENTS = ["\uBAA9", "\uD654", "\uD1A0", "\uAE08", "\uC218"];
+      exports.YIN_YANG = ["양", "음"];
+      exports.FIVE_ELEMENTS = ["목", "화", "토", "금", "수"];
       exports.STEM_ELEMENTS = [
-        "\uBAA9",
-        "\uBAA9",
-        "\uD654",
-        "\uD654",
-        "\uD1A0",
-        "\uD1A0",
-        "\uAE08",
-        "\uAE08",
-        "\uC218",
-        "\uC218"
+        "목",
+        "목",
+        "화",
+        "화",
+        "토",
+        "토",
+        "금",
+        "금",
+        "수",
+        "수"
       ];
       exports.BRANCH_ELEMENTS = [
-        "\uC218",
+        "수",
         // 자
-        "\uD1A0",
+        "토",
         // 축
-        "\uBAA9",
+        "목",
         // 인
-        "\uBAA9",
+        "목",
         // 묘
-        "\uD1A0",
+        "토",
         // 진
-        "\uD654",
+        "화",
         // 사
-        "\uD654",
+        "화",
         // 오
-        "\uD1A0",
+        "토",
         // 미
-        "\uAE08",
+        "금",
         // 신
-        "\uAE08",
+        "금",
         // 유
-        "\uD1A0",
+        "토",
         // 술
-        "\uC218"
+        "수"
         // 해
       ];
       exports.BRANCH_MAIN_STEM = {
-        \uC790: "\uACC4",
-        \uCD95: "\uAE30",
-        \uC778: "\uAC11",
-        \uBB18: "\uC744",
-        \uC9C4: "\uBB34",
-        \uC0AC: "\uBCD1",
-        \uC624: "\uC815",
-        \uBBF8: "\uAE30",
-        \uC2E0: "\uACBD",
-        \uC720: "\uC2E0",
-        \uC220: "\uBB34",
-        \uD574: "\uC784"
+        자: "계",
+        축: "기",
+        인: "갑",
+        묘: "을",
+        진: "무",
+        사: "병",
+        오: "정",
+        미: "기",
+        신: "경",
+        유: "신",
+        술: "무",
+        해: "임"
       };
       exports.MONTH_BRANCHES = {
-        1: "\uC778",
-        2: "\uBB18",
-        3: "\uC9C4",
-        4: "\uC0AC",
-        5: "\uC624",
-        6: "\uBBF8",
-        7: "\uC2E0",
-        8: "\uC720",
-        9: "\uC220",
-        10: "\uD574",
-        11: "\uC790",
-        12: "\uCD95"
+        1: "인",
+        2: "묘",
+        3: "진",
+        4: "사",
+        5: "오",
+        6: "미",
+        7: "신",
+        8: "유",
+        9: "술",
+        10: "해",
+        11: "자",
+        12: "축"
       };
       exports.ELEMENT_GENERATES = {
-        \uBAA9: "\uD654",
-        \uD654: "\uD1A0",
-        \uD1A0: "\uAE08",
-        \uAE08: "\uC218",
-        \uC218: "\uBAA9"
+        목: "화",
+        화: "토",
+        토: "금",
+        금: "수",
+        수: "목"
       };
       exports.ELEMENT_CONTROLS = {
-        \uBAA9: "\uD1A0",
-        \uD1A0: "\uC218",
-        \uC218: "\uD654",
-        \uD654: "\uAE08",
-        \uAE08: "\uBAA9"
+        목: "토",
+        토: "수",
+        수: "화",
+        화: "금",
+        금: "목"
       };
       exports.TEN_GOD_HANJA = {
-        \uBE44\uACAC: "\u6BD4\u80A9",
-        \uAC81\uC7AC: "\u52AB\u8CA1",
-        \uC2DD\uC2E0: "\u98DF\u795E",
-        \uC0C1\uAD00: "\u50B7\u5B98",
-        \uD3B8\uC7AC: "\u504F\u8CA1",
-        \uC815\uC7AC: "\u6B63\u8CA1",
-        \uD3B8\uAD00: "\u504F\u5B98",
-        \uC815\uAD00: "\u6B63\u5B98",
-        \uD3B8\uC778: "\u504F\u5370",
-        \uC815\uC778: "\u6B63\u5370"
+        비견: "比肩",
+        겁재: "劫財",
+        식신: "食神",
+        상관: "傷官",
+        편재: "偏財",
+        정재: "正財",
+        편관: "偏官",
+        정관: "正官",
+        편인: "偏印",
+        정인: "正印"
       };
       exports.DAY_PILLAR_ANCHOR = {
         year: 1992,
@@ -192,20 +192,20 @@
       var constants_1 = require_constants();
       function assertIntegerInRange(value, min, max, name) {
         if (typeof value !== "number" || !Number.isInteger(value)) {
-          throw new RangeError(`${name}\uC740 \uC815\uC218\uC5EC\uC57C \uD569\uB2C8\uB2E4: ${String(value)}`);
+          throw new RangeError(`${name}은 정수여야 합니다: ${String(value)}`);
         }
         if (value < min || value > max) {
-          throw new RangeError(`${name}\uC740 ${min}~${max} \uBC94\uC704\uC5EC\uC57C \uD569\uB2C8\uB2E4: ${value}`);
+          throw new RangeError(`${name}은 ${min}~${max} 범위여야 합니다: ${value}`);
         }
       }
       function assertFiniteNumber(value, name) {
         if (typeof value !== "number" || !Number.isFinite(value)) {
-          throw new RangeError(`${name}\uC740 \uC720\uD55C\uD55C \uC22B\uC790\uC5EC\uC57C \uD569\uB2C8\uB2E4: ${String(value)}`);
+          throw new RangeError(`${name}은 유한한 숫자여야 합니다: ${String(value)}`);
         }
       }
       function assertBoolean(value, name) {
         if (typeof value !== "boolean") {
-          throw new TypeError(`${name}\uC740 boolean \uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4: ${String(value)}`);
+          throw new TypeError(`${name}은 boolean 이어야 합니다: ${String(value)}`);
         }
       }
       function assertOptionalBoolean(value, name) {
@@ -213,32 +213,32 @@
           assertBoolean(value, name);
         }
       }
-      function assertHeavenlyStem(value, name = "\uCC9C\uAC04") {
+      function assertHeavenlyStem(value, name = "천간") {
         if (typeof value !== "string" || !constants_1.HEAVENLY_STEMS.includes(value)) {
-          throw new RangeError(`${name}\uC740 \uC720\uD6A8\uD55C \uCC9C\uAC04\uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4: ${String(value)}`);
+          throw new RangeError(`${name}은 유효한 천간이어야 합니다: ${String(value)}`);
         }
       }
-      function assertEarthlyBranch(value, name = "\uC9C0\uC9C0") {
+      function assertEarthlyBranch(value, name = "지지") {
         if (typeof value !== "string" || !constants_1.EARTHLY_BRANCHES.includes(value)) {
-          throw new RangeError(`${name}\uC740 \uC720\uD6A8\uD55C \uC9C0\uC9C0\uC5EC\uC57C \uD569\uB2C8\uB2E4: ${String(value)}`);
+          throw new RangeError(`${name}은 유효한 지지여야 합니다: ${String(value)}`);
         }
       }
-      function assertPillar(value, name = "\uAE30\uB465") {
+      function assertPillar(value, name = "기둥") {
         if (value === null || typeof value !== "object") {
-          throw new TypeError(`${name}\uC740 \uAC1D\uCCB4\uC5EC\uC57C \uD569\uB2C8\uB2E4.`);
+          throw new TypeError(`${name}은 객체여야 합니다.`);
         }
         const pillar = value;
         assertHeavenlyStem(pillar.heavenlyStem, `${name}.heavenlyStem`);
         assertEarthlyBranch(pillar.earthlyBranch, `${name}.earthlyBranch`);
       }
-      function assertGender(value, name = "\uC131\uBCC4(gender)") {
+      function assertGender(value, name = "성별(gender)") {
         if (value !== "male" && value !== "female") {
-          throw new RangeError(`${name}\uC740 'male' \uB610\uB294 'female' \uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4: ${String(value)}`);
+          throw new RangeError(`${name}은 'male' 또는 'female' 이어야 합니다: ${String(value)}`);
         }
       }
-      function assertDayBoundary(value, name = "\uC77C \uACBD\uACC4(dayBoundary)") {
+      function assertDayBoundary(value, name = "일 경계(dayBoundary)") {
         if (value !== "midnight" && value !== "jasi" && value !== "splitJasi") {
-          throw new RangeError(`${name}\uB294 'midnight', 'jasi', 'splitJasi' \uC911 \uD558\uB098\uC5EC\uC57C \uD569\uB2C8\uB2E4: ${String(value)}`);
+          throw new RangeError(`${name}는 'midnight', 'jasi', 'splitJasi' 중 하나여야 합니다: ${String(value)}`);
         }
       }
     }
@@ -257,7 +257,7 @@
       var validation_1 = require_validation();
       function getHeavenlyStemYinYang(stem) {
         (0, validation_1.assertHeavenlyStem)(stem);
-        return constants_1.HEAVENLY_STEMS.indexOf(stem) % 2 === 0 ? "\uC591" : "\uC74C";
+        return constants_1.HEAVENLY_STEMS.indexOf(stem) % 2 === 0 ? "양" : "음";
       }
       function getHeavenlyStemElement2(stem) {
         (0, validation_1.assertHeavenlyStem)(stem);
@@ -265,7 +265,7 @@
       }
       function getEarthlyBranchYinYang(branch) {
         (0, validation_1.assertEarthlyBranch)(branch);
-        return constants_1.EARTHLY_BRANCHES.indexOf(branch) % 2 === 0 ? "\uC591" : "\uC74C";
+        return constants_1.EARTHLY_BRANCHES.indexOf(branch) % 2 === 0 ? "양" : "음";
       }
       function getEarthlyBranchElement2(branch) {
         (0, validation_1.assertEarthlyBranch)(branch);
@@ -1001,7 +1001,7 @@
       exports.LUNAR_MAX_YEAR = exports.LUNAR_MIN_YEAR + LUNAR_DATA.length - 1;
       exports.LUNAR_BASE_UTC_MS = Date.UTC(1391, 1, 13);
       function assertYear(year) {
-        (0, validation_1.assertIntegerInRange)(year, exports.LUNAR_MIN_YEAR, exports.LUNAR_MAX_YEAR, "\uC74C\uB825 \uC5F0\uB3C4(year)");
+        (0, validation_1.assertIntegerInRange)(year, exports.LUNAR_MIN_YEAR, exports.LUNAR_MAX_YEAR, "음력 연도(year)");
       }
       function getLeapMonth(year) {
         assertYear(year);
@@ -1016,7 +1016,7 @@
       }
       function getLunarMonthDays(year, month) {
         assertYear(year);
-        (0, validation_1.assertIntegerInRange)(month, 1, 12, "\uC74C\uB825 \uC6D4(month)");
+        (0, validation_1.assertIntegerInRange)(month, 1, 12, "음력 월(month)");
         return LUNAR_DATA[year - exports.LUNAR_MIN_YEAR] & 65536 >> month ? 30 : 29;
       }
       function getLunarYearDays(year) {
@@ -1052,15 +1052,15 @@
         return d.getUTCFullYear() === year && d.getUTCMonth() === month - 1 && d.getUTCDate() === day;
       }
       function lunarToSolar2(year, month, day, isLeapMonth) {
-        (0, validation_1.assertIntegerInRange)(year, lunar_data_1.LUNAR_MIN_YEAR, lunar_data_1.LUNAR_MAX_YEAR, "\uC74C\uB825 \uC5F0\uB3C4(year)");
-        (0, validation_1.assertIntegerInRange)(month, 1, 12, "\uC74C\uB825 \uC6D4(month)");
-        (0, validation_1.assertBoolean)(isLeapMonth, "\uC724\uB2EC \uC5EC\uBD80(isLeapMonth)");
+        (0, validation_1.assertIntegerInRange)(year, lunar_data_1.LUNAR_MIN_YEAR, lunar_data_1.LUNAR_MAX_YEAR, "음력 연도(year)");
+        (0, validation_1.assertIntegerInRange)(month, 1, 12, "음력 월(month)");
+        (0, validation_1.assertBoolean)(isLeapMonth, "윤달 여부(isLeapMonth)");
         const leapMonth = (0, lunar_data_1.getLeapMonth)(year);
         if (isLeapMonth && leapMonth !== month) {
-          throw new RangeError(`${year}\uB144\uC5D0\uB294 \uC724${month}\uC6D4\uC774 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.`);
+          throw new RangeError(`${year}년에는 윤${month}월이 존재하지 않습니다.`);
         }
         const maxDay = isLeapMonth && leapMonth === month ? (0, lunar_data_1.getLeapMonthDays)(year) : (0, lunar_data_1.getLunarMonthDays)(year, month);
-        (0, validation_1.assertIntegerInRange)(day, 1, maxDay, `${year}\uB144 ${isLeapMonth ? "\uC724" : ""}${month}\uC6D4 \uC77C\uC790(day)`);
+        (0, validation_1.assertIntegerInRange)(day, 1, maxDay, `${year}년 ${isLeapMonth ? "윤" : ""}${month}월 일자(day)`);
         let offset = 0;
         for (let y = lunar_data_1.LUNAR_MIN_YEAR; y < year; y++) {
           offset += (0, lunar_data_1.getLunarYearDays)(y);
@@ -1084,14 +1084,14 @@
       }
       function solarToLunar(year, month, day) {
         if (!isValidSolarDate(year, month, day)) {
-          throw new RangeError(`\uC720\uD6A8\uD558\uC9C0 \uC54A\uC740 \uC591\uB825 \uB0A0\uC9DC\uC785\uB2C8\uB2E4: ${year}-${month}-${day}`);
+          throw new RangeError(`유효하지 않은 양력 날짜입니다: ${year}-${month}-${day}`);
         }
         const targetUTC = Date.UTC(year, month - 1, day);
         let offset = Math.floor((targetUTC - lunar_data_1.LUNAR_BASE_UTC_MS) / MS_PER_DAY);
         if (offset < 0) {
           const base = new Date(lunar_data_1.LUNAR_BASE_UTC_MS);
           const baseStr = `${base.getUTCFullYear()}-${String(base.getUTCMonth() + 1).padStart(2, "0")}-${String(base.getUTCDate()).padStart(2, "0")}`;
-          throw new RangeError(`\uC74C\uB825 \uBCC0\uD658 \uC9C0\uC6D0 \uBC94\uC704(\uC591\uB825 ${baseStr}) \uC774\uC804 \uB0A0\uC9DC\uC785\uB2C8\uB2E4: ${year}-${month}-${day}`);
+          throw new RangeError(`음력 변환 지원 범위(양력 ${baseStr}) 이전 날짜입니다: ${year}-${month}-${day}`);
         }
         let lunarYear = lunar_data_1.LUNAR_MIN_YEAR;
         for (; lunarYear <= lunar_data_1.LUNAR_MAX_YEAR; lunarYear++) {
@@ -1101,7 +1101,7 @@
           offset -= yearDays;
         }
         if (lunarYear > lunar_data_1.LUNAR_MAX_YEAR) {
-          throw new RangeError(`\uC74C\uB825 \uBCC0\uD658 \uC9C0\uC6D0 \uBC94\uC704(${lunar_data_1.LUNAR_MAX_YEAR}\uB144)\uB97C \uBC97\uC5B4\uB0AC\uC2B5\uB2C8\uB2E4: ${year}-${month}-${day}`);
+          throw new RangeError(`음력 변환 지원 범위(${lunar_data_1.LUNAR_MAX_YEAR}년)를 벗어났습니다: ${year}-${month}-${day}`);
         }
         const leapMonth = (0, lunar_data_1.getLeapMonth)(lunarYear);
         let lunarMonth = 1;
@@ -1416,7 +1416,7 @@
       var constants_1 = require_constants();
       function ganjiIndexOf(stemIndex, branchIndex) {
         if ((stemIndex - branchIndex) % 2 !== 0) {
-          throw new RangeError(`\uC874\uC7AC\uD558\uC9C0 \uC54A\uB294 \uCC9C\uAC04\xB7\uC9C0\uC9C0 \uC870\uD569\uC785\uB2C8\uB2E4: ${constants_1.HEAVENLY_STEMS[stemIndex]}${constants_1.EARTHLY_BRANCHES[branchIndex]}`);
+          throw new RangeError(`존재하지 않는 천간·지지 조합입니다: ${constants_1.HEAVENLY_STEMS[stemIndex]}${constants_1.EARTHLY_BRANCHES[branchIndex]}`);
         }
         return ((6 * stemIndex - 5 * branchIndex) % 60 + 60) % 60;
       }
@@ -1448,63 +1448,63 @@
       var MS_PER_MINUTE = 6e4;
       var SOLAR_TERM_CACHE = /* @__PURE__ */ new Map();
       function assertSolarTermYear(year) {
-        (0, validation_1.assertIntegerInRange)(year, SOLAR_TERM_MIN_YEAR, SOLAR_TERM_MAX_YEAR, "\uC808\uAE30 \uC5F0\uB3C4(year)");
+        (0, validation_1.assertIntegerInRange)(year, SOLAR_TERM_MIN_YEAR, SOLAR_TERM_MAX_YEAR, "절기 연도(year)");
       }
       exports.SOLAR_TERM_NAMES = [
-        "\uC18C\uD55C",
-        "\uB300\uD55C",
-        "\uC785\uCD98",
-        "\uC6B0\uC218",
-        "\uACBD\uCE69",
-        "\uCD98\uBD84",
-        "\uCCAD\uBA85",
-        "\uACE1\uC6B0",
-        "\uC785\uD558",
-        "\uC18C\uB9CC",
-        "\uB9DD\uC885",
-        "\uD558\uC9C0",
-        "\uC18C\uC11C",
-        "\uB300\uC11C",
-        "\uC785\uCD94",
-        "\uCC98\uC11C",
-        "\uBC31\uB85C",
-        "\uCD94\uBD84",
-        "\uD55C\uB85C",
-        "\uC0C1\uAC15",
-        "\uC785\uB3D9",
-        "\uC18C\uC124",
-        "\uB300\uC124",
-        "\uB3D9\uC9C0"
+        "소한",
+        "대한",
+        "입춘",
+        "우수",
+        "경칩",
+        "춘분",
+        "청명",
+        "곡우",
+        "입하",
+        "소만",
+        "망종",
+        "하지",
+        "소서",
+        "대서",
+        "입추",
+        "처서",
+        "백로",
+        "추분",
+        "한로",
+        "상강",
+        "입동",
+        "소설",
+        "대설",
+        "동지"
       ];
       exports.SOLAR_TERM_NAMES_HANJA = [
-        "\u5C0F\u5BD2",
-        "\u5927\u5BD2",
-        "\u7ACB\u6625",
-        "\u96E8\u6C34",
-        "\u9A5A\u87C4",
-        "\u6625\u5206",
-        "\u6DF8\u660E",
-        "\u7A40\u96E8",
-        "\u7ACB\u590F",
-        "\u5C0F\u6EFF",
-        "\u8292\u7A2E",
-        "\u590F\u81F3",
-        "\u5C0F\u6691",
-        "\u5927\u6691",
-        "\u7ACB\u79CB",
-        "\u8655\u6691",
-        "\u767D\u9732",
-        "\u79CB\u5206",
-        "\u5BD2\u9732",
-        "\u971C\u964D",
-        "\u7ACB\u51AC",
-        "\u5C0F\u96EA",
-        "\u5927\u96EA",
-        "\u51AC\u81F3"
+        "小寒",
+        "大寒",
+        "立春",
+        "雨水",
+        "驚蟄",
+        "春分",
+        "淸明",
+        "穀雨",
+        "立夏",
+        "小滿",
+        "芒種",
+        "夏至",
+        "小暑",
+        "大暑",
+        "立秋",
+        "處暑",
+        "白露",
+        "秋分",
+        "寒露",
+        "霜降",
+        "立冬",
+        "小雪",
+        "大雪",
+        "冬至"
       ];
       var LICHUN_INDEX = 2;
       function solarTermLongitude(index) {
-        (0, validation_1.assertIntegerInRange)(index, 0, 23, "\uC808\uAE30 \uC778\uB371\uC2A4(index)");
+        (0, validation_1.assertIntegerInRange)(index, 0, 23, "절기 인덱스(index)");
         return (285 + 15 * index) % 360;
       }
       function solarTermInstantMs(year, index) {
@@ -1534,7 +1534,7 @@
         return Array.from({ length: 24 }, (_, i) => getSolarTerm(year, i));
       }
       function sajuYearForInstant(instantMs, calendarYear) {
-        (0, validation_1.assertFiniteNumber)(instantMs, "\uC808\uB300 \uC21C\uAC04(instantMs)");
+        (0, validation_1.assertFiniteNumber)(instantMs, "절대 순간(instantMs)");
         const lichunMs = solarTermInstantMs(calendarYear, LICHUN_INDEX);
         return instantMs < lichunMs ? calendarYear - 1 : calendarYear;
       }
@@ -1553,7 +1553,7 @@
         [0, 12]
       ];
       function sajuMonthForInstant(instantMs) {
-        (0, validation_1.assertFiniteNumber)(instantMs, "\uC808\uB300 \uC21C\uAC04(instantMs)");
+        (0, validation_1.assertFiniteNumber)(instantMs, "절대 순간(instantMs)");
         const year = new Date(instantMs).getUTCFullYear();
         let bestBoundary = -Infinity;
         let month = 12;
@@ -1664,18 +1664,18 @@
         const targetEl = (0, elements_1.getHeavenlyStemElement)(target);
         const sameYinYang = (0, elements_1.getHeavenlyStemYinYang)(dayMaster) === (0, elements_1.getHeavenlyStemYinYang)(target);
         if (targetEl === dayEl) {
-          return sameYinYang ? "\uBE44\uACAC" : "\uAC81\uC7AC";
+          return sameYinYang ? "비견" : "겁재";
         }
         if (constants_1.ELEMENT_GENERATES[dayEl] === targetEl) {
-          return sameYinYang ? "\uC2DD\uC2E0" : "\uC0C1\uAD00";
+          return sameYinYang ? "식신" : "상관";
         }
         if (constants_1.ELEMENT_CONTROLS[dayEl] === targetEl) {
-          return sameYinYang ? "\uD3B8\uC7AC" : "\uC815\uC7AC";
+          return sameYinYang ? "편재" : "정재";
         }
         if (constants_1.ELEMENT_CONTROLS[targetEl] === dayEl) {
-          return sameYinYang ? "\uD3B8\uAD00" : "\uC815\uAD00";
+          return sameYinYang ? "편관" : "정관";
         }
-        return sameYinYang ? "\uD3B8\uC778" : "\uC815\uC778";
+        return sameYinYang ? "편인" : "정인";
       }
       function getBranchTenGod(dayMaster, branch) {
         (0, validation_1.assertEarthlyBranch)(branch);
@@ -1693,7 +1693,7 @@
             branch: getBranchTenGod(dayMaster, pillars.month.earthlyBranch)
           },
           day: {
-            stem: "\uC77C\uAC04",
+            stem: "일간",
             branch: getBranchTenGod(dayMaster, pillars.day.earthlyBranch)
           },
           hour: {
@@ -1715,8 +1715,8 @@
       var ganji_1 = require_ganji();
       var validation_1 = require_validation();
       function getVoidBranches(dayStem, dayBranch) {
-        (0, validation_1.assertHeavenlyStem)(dayStem, "\uC77C\uAC04(dayStem)");
-        (0, validation_1.assertEarthlyBranch)(dayBranch, "\uC77C\uC9C0(dayBranch)");
+        (0, validation_1.assertHeavenlyStem)(dayStem, "일간(dayStem)");
+        (0, validation_1.assertEarthlyBranch)(dayBranch, "일지(dayBranch)");
         const dayGanji = (0, ganji_1.ganjiIndexOf)(constants_1.HEAVENLY_STEMS.indexOf(dayStem), constants_1.EARTHLY_BRANCHES.indexOf(dayBranch));
         const xunStartBranch = (dayGanji - dayGanji % 10) % 12;
         return [
@@ -1750,12 +1750,12 @@
       }
       function getLuckPillars(params) {
         const { instantUTCms, birthYear, monthPillar, sajuYearStemIndex, gender, count = 10 } = params;
-        (0, validation_1.assertFiniteNumber)(instantUTCms, "\uCD9C\uC0DD \uC808\uB300 \uC21C\uAC04(instantUTCms)");
-        (0, validation_1.assertIntegerInRange)(birthYear, 101, 9998, "\uC785\uB825 \uC591\uB825 \uC5F0\uB3C4(birthYear)");
-        (0, validation_1.assertPillar)(monthPillar, "\uC6D4\uC8FC(monthPillar)");
-        (0, validation_1.assertIntegerInRange)(sajuYearStemIndex, 0, 9, "\uC0AC\uC8FC \uC5F0\uAC04 \uC778\uB371\uC2A4(sajuYearStemIndex)");
+        (0, validation_1.assertFiniteNumber)(instantUTCms, "출생 절대 순간(instantUTCms)");
+        (0, validation_1.assertIntegerInRange)(birthYear, 101, 9998, "입력 양력 연도(birthYear)");
+        (0, validation_1.assertPillar)(monthPillar, "월주(monthPillar)");
+        (0, validation_1.assertIntegerInRange)(sajuYearStemIndex, 0, 9, "사주 연간 인덱스(sajuYearStemIndex)");
         (0, validation_1.assertGender)(gender);
-        (0, validation_1.assertIntegerInRange)(count, 1, 120, "\uB300\uC6B4 \uAC1C\uC218(count)");
+        (0, validation_1.assertIntegerInRange)(count, 1, 120, "대운 개수(count)");
         const yangYear = sajuYearStemIndex % 2 === 0;
         const male = gender === "male";
         const forward = yangYear && male || !yangYear && !male;
@@ -1802,6 +1802,13 @@
   var require_dist = __commonJS({
     "node_modules/manseryeok/dist/index.js"(exports) {
       "use strict";
+      /**
+       * 만세력(萬歲曆) 계산 라이브러리
+       * Korean Saju (Four Pillars) and Manseryeok calculation library
+       *
+       * @author Yoohyojun
+       * @license MIT
+       */
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.DEFAULT_LONGITUDE = exports.getLuckPillars = exports.getVoidBranches = exports.getTenGodChart = exports.getBranchTenGod = exports.getTenGod = exports.equationOfTimeMinutes = exports.apparentSolarLongitude = exports.SOLAR_TERM_NAMES_HANJA = exports.SOLAR_TERM_NAMES = exports.getSolarTermsOfYear = exports.getSolarTerm = exports.LUNAR_MAX_YEAR = exports.LUNAR_MIN_YEAR = exports.isValidSolarDate = exports.solarToLunar = exports.lunarToSolar = exports.getEarthlyBranchElement = exports.getEarthlyBranchYinYang = exports.getHeavenlyStemElement = exports.getHeavenlyStemYinYang = exports.TEN_GOD_HANJA = exports.FIVE_ELEMENTS = exports.YIN_YANG = exports.EARTHLY_BRANCHES_HANJA = exports.EARTHLY_BRANCHES = exports.HEAVENLY_STEMS_HANJA = exports.HEAVENLY_STEMS = void 0;
       exports.calculateFourPillars = calculateFourPillars2;
@@ -1913,14 +1920,14 @@
       } });
       function validateBirthInfo(birthInfo) {
         if (birthInfo === null || typeof birthInfo !== "object") {
-          throw new TypeError("\uC0DD\uB144\uC6D4\uC77C\uC2DC \uC815\uBCF4(birthInfo)\uB294 \uAC1D\uCCB4\uC5EC\uC57C \uD569\uB2C8\uB2E4.");
+          throw new TypeError("생년월일시 정보(birthInfo)는 객체여야 합니다.");
         }
         const { year, month, day, hour, minute } = birthInfo;
         if (birthInfo.isLunar !== void 0) {
-          (0, validation_1.assertBoolean)(birthInfo.isLunar, "\uC74C\uB825 \uC5EC\uBD80(isLunar)");
+          (0, validation_1.assertBoolean)(birthInfo.isLunar, "음력 여부(isLunar)");
         }
         if (birthInfo.isLeapMonth !== void 0) {
-          (0, validation_1.assertBoolean)(birthInfo.isLeapMonth, "\uC724\uB2EC \uC5EC\uBD80(isLeapMonth)");
+          (0, validation_1.assertBoolean)(birthInfo.isLeapMonth, "윤달 여부(isLeapMonth)");
         }
         if (birthInfo.dayBoundary !== void 0) {
           (0, validation_1.assertDayBoundary)(birthInfo.dayBoundary);
@@ -1931,37 +1938,37 @@
         if (birthInfo.trueSolarTime !== void 0) {
           const { trueSolarTime } = birthInfo;
           if (trueSolarTime === null || typeof trueSolarTime !== "object" || Array.isArray(trueSolarTime)) {
-            throw new TypeError("\uC9C4\uD0DC\uC591\uC2DC \uC635\uC158(trueSolarTime)\uC740 \uAC1D\uCCB4\uC5EC\uC57C \uD569\uB2C8\uB2E4.");
+            throw new TypeError("진태양시 옵션(trueSolarTime)은 객체여야 합니다.");
           }
           if (trueSolarTime.longitude !== void 0) {
-            (0, validation_1.assertFiniteNumber)(trueSolarTime.longitude, "\uCD9C\uC0DD\uC9C0 \uACBD\uB3C4(trueSolarTime.longitude)");
+            (0, validation_1.assertFiniteNumber)(trueSolarTime.longitude, "출생지 경도(trueSolarTime.longitude)");
             if (trueSolarTime.longitude < -180 || trueSolarTime.longitude > 180) {
-              throw new RangeError(`\uCD9C\uC0DD\uC9C0 \uACBD\uB3C4(trueSolarTime.longitude)\uB294 -180~180 \uBC94\uC704\uC5EC\uC57C \uD569\uB2C8\uB2E4: ${trueSolarTime.longitude}`);
+              throw new RangeError(`출생지 경도(trueSolarTime.longitude)는 -180~180 범위여야 합니다: ${trueSolarTime.longitude}`);
             }
           }
-          (0, validation_1.assertOptionalBoolean)(trueSolarTime.applyEquationOfTime, "\uADE0\uC2DC\uCC28 \uBCF4\uC815 \uC5EC\uBD80(trueSolarTime.applyEquationOfTime)");
-          (0, validation_1.assertOptionalBoolean)(trueSolarTime.applyHistoricalDst, "\uACFC\uAC70 \uD45C\uC900\uC2DC\xB7\uC11C\uBA38\uD0C0\uC784 \uBCF4\uC815 \uC5EC\uBD80(trueSolarTime.applyHistoricalDst)");
+          (0, validation_1.assertOptionalBoolean)(trueSolarTime.applyEquationOfTime, "균시차 보정 여부(trueSolarTime.applyEquationOfTime)");
+          (0, validation_1.assertOptionalBoolean)(trueSolarTime.applyHistoricalDst, "과거 표준시·서머타임 보정 여부(trueSolarTime.applyHistoricalDst)");
         }
         const minYear = solar_terms_data_1.SOLAR_TERM_DATA_MIN_YEAR;
         const maxYear = birthInfo.isLunar ? lunar_data_1.LUNAR_MAX_YEAR : solar_terms_data_1.SOLAR_TERM_DATA_MAX_YEAR;
         if (!Number.isInteger(year) || year < minYear || year > maxYear) {
-          throw new RangeError(`\uC5F0\uB3C4(year)\uB294 ${minYear}~${maxYear} \uC815\uC218\uC5EC\uC57C \uD569\uB2C8\uB2E4: ${year}`);
+          throw new RangeError(`연도(year)는 ${minYear}~${maxYear} 정수여야 합니다: ${year}`);
         }
         if (!Number.isInteger(hour) || hour < 0 || hour > 23) {
-          throw new RangeError(`\uC2DC(hour)\uB294 0~23 \uC815\uC218\uC5EC\uC57C \uD569\uB2C8\uB2E4: ${hour}`);
+          throw new RangeError(`시(hour)는 0~23 정수여야 합니다: ${hour}`);
         }
         if (!Number.isInteger(minute) || minute < 0 || minute > 59) {
-          throw new RangeError(`\uBD84(minute)\uC740 0~59 \uC815\uC218\uC5EC\uC57C \uD569\uB2C8\uB2E4: ${minute}`);
+          throw new RangeError(`분(minute)은 0~59 정수여야 합니다: ${minute}`);
         }
         if (birthInfo.isLunar) {
           if (!Number.isInteger(month) || month < 1 || month > 12) {
-            throw new RangeError(`\uC6D4(month)\uC740 1~12 \uC815\uC218\uC5EC\uC57C \uD569\uB2C8\uB2E4: ${month}`);
+            throw new RangeError(`월(month)은 1~12 정수여야 합니다: ${month}`);
           }
           if (!Number.isInteger(day) || day < 1 || day > 30) {
-            throw new RangeError(`\uC74C\uB825 \uC77C(day)\uC740 1~30 \uC815\uC218\uC5EC\uC57C \uD569\uB2C8\uB2E4: ${day}`);
+            throw new RangeError(`음력 일(day)은 1~30 정수여야 합니다: ${day}`);
           }
         } else if (!(0, convert_1.isValidSolarDate)(year, month, day)) {
-          throw new RangeError(`\uC720\uD6A8\uD558\uC9C0 \uC54A\uC740 \uC591\uB825 \uB0A0\uC9DC\uC785\uB2C8\uB2E4: ${year}-${month}-${day}`);
+          throw new RangeError(`유효하지 않은 양력 날짜입니다: ${year}-${month}-${day}`);
         }
       }
       function hanjaOf(pillar) {
@@ -2054,7 +2061,7 @@
             };
           },
           toHanjaString() {
-            return `${yearHanja}\u5E74\u67F1, ${monthHanja}\u6708\u67F1, ${dayHanja}\u65E5\u67F1, ${hourHanja}\u6642\u67F1`;
+            return `${yearHanja}年柱, ${monthHanja}月柱, ${dayHanja}日柱, ${hourHanja}時柱`;
           }
         };
       }
@@ -2065,14 +2072,64 @@
         (0, validation_1.assertPillar)(day, "day");
         (0, validation_1.assertPillar)(hour, "hour");
         return [
-          `${year.heavenlyStem}${year.earthlyBranch}\uC5F0\uC8FC`,
-          `${month.heavenlyStem}${month.earthlyBranch}\uC6D4\uC8FC`,
-          `${day.heavenlyStem}${day.earthlyBranch}\uC77C\uC8FC`,
-          `${hour.heavenlyStem}${hour.earthlyBranch}\uC2DC\uC8FC`
+          `${year.heavenlyStem}${year.earthlyBranch}연주`,
+          `${month.heavenlyStem}${month.earthlyBranch}월주`,
+          `${day.heavenlyStem}${day.earthlyBranch}일주`,
+          `${hour.heavenlyStem}${hour.earthlyBranch}시주`
         ].join(", ");
       }
     }
   });
+
+  // src/messages.js
+  var fields = {
+    money: [
+      ["구매를 결정하기 전에 필요한 물건인지 살펴보세요.", "작은 지출을 적어보면 오늘의 예산이 또렷해져요.", "할인보다 실제 사용할 횟수를 먼저 생각해보세요.", "장바구니를 잠시 비워두고 다시 살펴봐도 좋아요.", "정기 결제 내역 하나만 확인해보세요."],
+      ["계획한 예산 안에서 기분 좋은 선택을 해보세요.", "필요한 물건의 가격을 차분히 비교해보세요.", "이번 주 지출을 가볍게 정리하기 좋은 날이에요.", "작은 절약 목표 하나를 정해보세요.", "이미 가진 물건을 활용하면 새로운 만족을 찾을 수 있어요."],
+      ["미뤄둔 소비 계획을 비교하며 정리해보세요.", "예산을 세우고 필요한 곳에 알맞게 써보세요.", "저축 목표를 작은 단위로 나누어 시작해보세요.", "좋은 선택의 기준을 적으면 소비가 한결 편해져요.", "여유 자금을 어디에 둘지 차분히 계획해보세요."]
+    ],
+    love: [
+      ["마음을 서둘러 확인하지 않아도 괜찮아요.", "잠깐 혼자 쉬며 내 기분을 먼저 살펴보세요.", "답장이 늦어도 여러 이유가 있을 수 있어요.", "중요한 이야기는 편안한 시간에 나누어보세요.", "상대의 마음을 추측하기보다 가볍게 물어보세요."],
+      ["짧은 안부 한마디로 대화를 시작해보세요.", "함께 즐길 소소한 이야기를 찾아보세요.", "고마웠던 일을 떠올려 마음을 전해보세요.", "서로의 하루를 천천히 들어보세요.", "편안한 거리와 내 속도를 함께 존중해주세요."],
+      ["따뜻한 마음을 구체적인 말로 표현해보세요.", "함께하고 싶은 작은 계획을 제안해보세요.", "좋았던 순간을 나누며 대화를 이어가보세요.", "상대의 장점을 발견하면 솔직하게 전해보세요.", "부담 없는 관심으로 반가운 대화를 열어보세요."]
+    ],
+    work: [
+      ["할 일을 하나만 골라 시작해보세요.", "짧게 쉬고 나서 중요한 부분부터 다시 읽어보세요.", "오늘의 목표를 조금 작게 잡아도 괜찮아요.", "막히는 부분은 메모하고 도움을 구해보세요.", "마감 전에 확인할 시간을 따로 남겨두세요."],
+      ["작은 목표를 세워 차근차근 진행해보세요.", "익숙한 일부터 끝내면 다음 일이 편해져요.", "집중할 시간을 짧게 나누어 사용해보세요.", "오늘 배운 내용을 한 줄로 정리해보세요.", "할 일의 순서를 정하면 시작이 쉬워져요."],
+      ["미뤄둔 일의 첫 단추를 끼워보세요.", "집중할 시간을 확보해 중요한 일에 써보세요.", "떠오른 아이디어를 작은 실험으로 옮겨보세요.", "완료한 작업을 정리하고 다음 목표를 세워보세요.", "배운 것을 직접 적용하며 자신감을 쌓아보세요."]
+    ],
+    people: [
+      ["답하기 전에 상대의 말을 끝까지 들어보세요.", "의도가 모호한 말은 편하게 다시 물어보세요.", "어려운 부탁에는 내 상황도 차분히 설명해주세요.", "잠시 생각할 시간을 가진 뒤 답해도 괜찮아요.", "대화가 길어지면 서로의 요점을 정리해보세요."],
+      ["익숙한 사람에게 가벼운 안부를 건네보세요.", "도움을 받았다면 짧게 감사 인사를 전해보세요.", "서로의 일정을 확인하고 약속을 정해보세요.", "작은 공통 관심사로 대화를 시작해보세요.", "함께할 일의 역할을 분명히 나누어보세요."],
+      ["함께할 작은 활동을 제안해보세요.", "서로의 아이디어를 열린 마음으로 나누어보세요.", "누군가의 노력을 알아보고 말로 전해보세요.", "협력할 일을 찾아 먼저 손을 내밀어보세요.", "반가운 소식을 나누며 연결을 이어가보세요."]
+    ]
+  };
+  var overall = [
+    ["오늘은 여유를 조금 남겨두세요. 한 가지를 해내도 충분해요.", "급한 일과 기다려도 되는 일을 나누어보세요.", "내 컨디션을 확인하고 하루의 속도를 정해보세요.", "잠깐의 휴식이 다음 시작을 편하게 만들 수 있어요.", "익숙하고 편안한 선택으로 하루를 채워보세요."],
+    ["내 속도를 지키며 차근차근 이어가보세요.", "평소의 작은 습관이 하루를 든든하게 받쳐줘요.", "가까운 목표 하나를 마무리하는 데 집중해보세요.", "일과 휴식의 균형을 가볍게 살펴보세요.", "오늘 할 수 있는 만큼 꾸준히 움직여보세요."],
+    ["작은 시도로 하루에 새로운 경험을 더해보세요.", "미뤄둔 계획을 실행할 첫걸음을 정해보세요.", "관심 있던 일에 집중할 시간을 마련해보세요.", "좋은 기분을 주변과 나누며 하루를 시작해보세요.", "하고 싶은 일을 구체적인 행동 하나로 옮겨보세요."]
+  ];
+  var trends = [
+    ["최근 점수가 내려갔어요. 여유 있게 우선순위를 정해보세요.", "그제보다 낮은 점수예요. 오늘의 속도를 편하게 조절해보세요.", "점수 흐름이 낮아졌지만 하루의 선택은 열려 있어요.", "최근 흐름은 하락이에요. 쉬어갈 시간을 챙겨보세요.", "그제와 비교해 내려간 흐름이에요. 작은 목표부터 시작해보세요."],
+    ["최근 점수가 비슷해요. 익숙한 리듬을 이어가보세요.", "그제와 큰 차이가 없는 흐름이에요. 차근차근 움직여보세요.", "최근 흐름이 대체로 유지되고 있어요. 나만의 속도를 지켜보세요.", "큰 변화 없는 흐름이에요. 작은 일상의 즐거움을 찾아보세요.", "그제와 비슷한 범위예요. 오늘 할 일 하나에 집중해보세요."],
+    ["그제보다 점수가 올랐어요. 가벼운 시도를 해보세요.", "최근 흐름이 올라가고 있어요. 작은 계획을 시작해보세요.", "그제와 비교해 상승한 흐름이에요. 관심 있는 일에 시간을 써보세요.", "최근 점수가 높아졌어요. 할 수 있는 일부터 옮겨보세요.", "상승한 흐름을 참고해 미뤄둔 일을 하나 골라보세요."]
+  ];
+  var cautions = {
+    money: ["결제 전 예산을 한 번 확인해보세요.", "계획하지 않은 소비는 잠시 기다려보세요.", "자동 결제 항목을 가볍게 점검해보세요.", "가격뿐 아니라 꼭 필요한지도 생각해보세요.", "빌리거나 공유할 수 있는 물건인지 살펴보세요."],
+    love: ["중요한 이야기는 서두르지 않아도 괜찮아요.", "답변을 재촉하기보다 서로의 시간을 존중해주세요.", "내 감정을 차분히 설명하는 표현을 골라보세요.", "다른 사람과 관계를 비교하지 않아도 괜찮아요.", "추측이 앞서면 한 번 더 물어보세요."],
+    work: ["너무 많은 일을 한꺼번에 시작하지 마세요.", "중요한 제출물은 마지막으로 한 번 확인해보세요.", "짧은 휴식 시간을 일정에 포함해주세요.", "모르는 부분은 혼자 오래 고민하기보다 질문해보세요.", "오늘 마칠 수 있는 범위로 목표를 줄여보세요."],
+    people: ["주변 사람의 말을 조금 더 들어보세요.", "부탁을 받으면 가능한 범위를 먼저 생각해보세요.", "문자로 오해하기 쉬운 내용은 분명하게 확인해주세요.", "약속의 시간과 장소를 다시 살펴보세요.", "의견이 다를 때는 공통점을 먼저 찾아보세요."]
+  };
+  var tier = (score) => score >= 80 ? 2 : score >= 60 ? 1 : 0;
+  function choose(items, seed, date, channel) {
+    let hash = 0;
+    for (const c of seed + channel) hash = hash * 31 + c.charCodeAt(0) >>> 0;
+    const day = Math.floor(Date.parse(date + "T00:00:00Z") / 864e5);
+    return items[((hash + day) % items.length + items.length) % items.length];
+  }
+  function seedFor(solar, p) {
+    return `${solar.year}-${solar.month}-${solar.day}/${p.unknownTime ? "unknown" : p.hour + ":" + p.minute}`;
+  }
 
   // src/fortune.js
   var import_manseryeok = __toESM(require_dist(), 1);
@@ -2085,11 +2142,11 @@
     return d.toISOString().slice(0, 10);
   }
   function validateProfile(p, today = koreanToday()) {
-    if (!p || !["solar", "lunar"].includes(p.calendar) || !["female", "male", "unspecified"].includes(p.gender)) throw Error("\uC785\uB825 \uD56D\uBAA9\uC744 \uB2E4\uC2DC \uD655\uC778\uD574\uC8FC\uC138\uC694.");
-    if (!Number.isInteger(p.year) || p.year < 1900 || p.year > Number(today.slice(0, 4))) throw Error("\uCD9C\uC0DD \uC5F0\uB3C4\uB294 1900\uB144\uBD80\uD130 \uC62C\uD574\uAE4C\uC9C0 \uC785\uB825\uD574\uC8FC\uC138\uC694.");
-    if (!Number.isInteger(p.month) || p.month < 1 || p.month > 12 || !Number.isInteger(p.day) || p.day < 1 || p.day > 31) throw Error("\uC6D4\uACFC \uC77C\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.");
-    if (typeof p.unknownTime !== "boolean" || typeof p.leap !== "boolean" || !Number.isInteger(p.hour) || p.hour < 0 || p.hour > 23 || !Number.isInteger(p.minute) || p.minute < 0 || p.minute > 59) throw Error("\uCD9C\uC0DD\uC2DC\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.");
-    if (p.calendar === "solar" && p.leap) throw Error("\uC724\uB2EC\uC740 \uC74C\uB825\uC5D0\uC11C\uB9CC \uC120\uD0DD\uD560 \uC218 \uC788\uC5B4\uC694.");
+    if (!p || !["solar", "lunar"].includes(p.calendar) || !["female", "male", "unspecified"].includes(p.gender)) throw Error("입력 항목을 다시 확인해주세요.");
+    if (!Number.isInteger(p.year) || p.year < 1900 || p.year > Math.min(Number(today.slice(0, 4)), p.calendar === "lunar" ? 2100 : 2300)) throw Error("출생 연도는 1900년부터 올해까지 입력해주세요. 지원 상한은 양력 2300년, 음력 2100년이에요.");
+    if (!Number.isInteger(p.month) || p.month < 1 || p.month > 12 || !Number.isInteger(p.day) || p.day < 1 || p.day > 31) throw Error("월과 일을 확인해주세요.");
+    if (typeof p.unknownTime !== "boolean" || typeof p.leap !== "boolean" || !Number.isInteger(p.hour) || p.hour < 0 || p.hour > 23 || !Number.isInteger(p.minute) || p.minute < 0 || p.minute > 59) throw Error("출생시간을 확인해주세요.");
+    if (p.calendar === "solar" && p.leap) throw Error("윤달은 음력에서만 선택할 수 있어요.");
     let solar;
     try {
       solar = p.calendar === "lunar" ? (0, import_manseryeok.lunarToSolar)(p.year, p.month, p.day, p.leap) : { year: p.year, month: p.month, day: p.day };
@@ -2098,23 +2155,18 @@
       if (d.toISOString().slice(0, 10) > today) throw Error();
       (0, import_manseryeok.calculateFourPillars)({ year: solar.year, month: solar.month, day: solar.day, hour: p.unknownTime ? 12 : p.hour, minute: p.unknownTime ? 0 : p.minute });
     } catch {
-      throw Error("\uC874\uC7AC\uD558\uC9C0 \uC54A\uB294 \uB0A0\uC9DC\xB7\uC724\uB2EC\uC774\uAC70\uB098 \uBBF8\uB798\uC758 \uC0DD\uC77C\uC774\uC5D0\uC694. \uB0A0\uC9DC\uB97C \uD655\uC778\uD574\uC8FC\uC138\uC694.");
+      throw Error("존재하지 않는 날짜·윤달이거나 미래의 생일이에요. 날짜를 확인해주세요.");
     }
     return solar;
   }
-  var elements = ["\uBAA9", "\uD654", "\uD1A0", "\uAE08", "\uC218"];
+  var elements = ["목", "화", "토", "금", "수"];
   function relation(a, b) {
     return [8, 5, -6, -9, 10][(elements.indexOf(b) - elements.indexOf(a) + 5) % 5];
   }
-  var copy = {
-    money: ["\uC791\uC740 \uC9C0\uCD9C\uB3C4 \uC7A0\uAE50 \uBA48\uCD94\uC5B4 \uC0B4\uD3B4\uBCF4\uC138\uC694. \uD544\uC694\uD55C \uAC83\uBD80\uD130 \uACE0\uB974\uBA74 \uCDA9\uBD84\uD574\uC694.", "\uACC4\uD68D\uD55C \uBC94\uC704\uC5D0\uC11C \uC9C0\uCD9C\uD574\uBCF4\uC138\uC694. \uC791\uC740 \uC815\uB9AC\uAC00 \uB9C8\uC74C\uC758 \uC5EC\uC720\uB97C \uB9CC\uB4E4\uC5B4\uC694.", "\uBBF8\uB904\uB454 \uC18C\uBE44 \uACC4\uD68D\uC744 \uC815\uB9AC\uD558\uAE30 \uC88B\uC544\uC694. \uBE44\uAD50\uD558\uACE0 \uACE0\uB974\uBA74 \uB354 \uB9CC\uC871\uC2A4\uB7EC\uC6CC\uC694."],
-    love: ["\uB9C8\uC74C\uC744 \uC11C\uB458\uB7EC \uD655\uC778\uD558\uC9C0 \uC54A\uC544\uB3C4 \uAD1C\uCC2E\uC544\uC694. \uB0B4 \uC18D\uB3C4\uBD80\uD130 \uC874\uC911\uD574\uC8FC\uC138\uC694.", "\uC9E7\uC740 \uC548\uBD80 \uD55C\uB9C8\uB514\uB97C \uAC74\uB124\uBCF4\uC138\uC694. \uD3B8\uC548\uD55C \uB300\uD654\uAC00 \uAC00\uAE4C\uC6CC\uC9C0\uB294 \uC2DC\uC791\uC774\uC5D0\uC694.", "\uB530\uB73B\uD55C \uB9C8\uC74C\uC744 \uD45C\uD604\uD574\uBCF4\uC138\uC694. \uC791\uC740 \uAD00\uC2EC\uC774 \uAE30\uBD84 \uC88B\uC740 \uB300\uD654\uB85C \uC774\uC5B4\uC9C8 \uC218 \uC788\uC5B4\uC694."],
-    work: ["\uD560 \uC77C\uC744 \uD558\uB098\uB9CC \uACE8\uB77C \uC2DC\uC791\uD574\uBCF4\uC138\uC694. \uC26C\uC5B4\uAC00\uB294 \uC2DC\uAC04\uB3C4 \uACC4\uD68D\uC758 \uC77C\uBD80\uC608\uC694.", "\uC791\uC740 \uBAA9\uD45C\uB97C \uC138\uC6CC \uCC28\uADFC\uCC28\uADFC \uD574\uBCF4\uC138\uC694. \uAFB8\uC900\uD568\uC774 \uC624\uB298\uC758 \uD798\uC774\uC5D0\uC694.", "\uC9D1\uC911\uD560 \uC2DC\uAC04\uC744 \uB530\uB85C \uB9C8\uB828\uD574\uBCF4\uC138\uC694. \uBBF8\uB904\uB454 \uC77C\uC758 \uCCAB \uB2E8\uCD94\uB97C \uB07C\uC6B0\uAE30 \uC88B\uC544\uC694."],
-    people: ["\uB2F5\uD558\uAE30 \uC804\uC5D0 \uD55C \uBC88 \uB354 \uB4E4\uC5B4\uBCF4\uC138\uC694. \uC7A0\uAE50\uC758 \uC5EC\uC720\uAC00 \uC624\uD574\uB97C \uC904\uC5EC\uC918\uC694.", "\uC775\uC219\uD55C \uC0AC\uB78C\uC5D0\uAC8C \uBA3C\uC800 \uC548\uBD80\uB97C \uAC74\uB124\uBCF4\uC138\uC694. \uAC00\uBCBC\uC6B4 \uB300\uD654\uBA74 \uCDA9\uBD84\uD574\uC694.", "\uD568\uAED8\uD560 \uC77C\uC744 \uC81C\uC548\uD574\uBCF4\uC138\uC694. \uC11C\uB85C\uC758 \uC544\uC774\uB514\uC5B4\uB97C \uB098\uB204\uAE30 \uC88B\uC740 \uD750\uB984\uC774\uC5D0\uC694."]
-  };
-  var cautions = ["\uCDA9\uB3D9\uC801\uC778 \uC18C\uBE44\uB294 \uD55C \uBC88 \uB354 \uC0DD\uAC01\uD574\uBCF4\uC138\uC694.", "\uC911\uC694\uD55C \uC774\uC57C\uAE30\uB294 \uC11C\uB450\uB974\uC9C0 \uC54A\uC544\uB3C4 \uAD1C\uCC2E\uC544\uC694.", "\uB108\uBB34 \uB9CE\uC740 \uC77C\uC744 \uD55C\uAEBC\uBC88\uC5D0 \uC2DC\uC791\uD558\uC9C0 \uB9C8\uC138\uC694.", "\uC624\uB298\uC740 \uC8FC\uBCC0 \uC0AC\uB78C\uC758 \uB9D0\uC744 \uC870\uAE08 \uB354 \uB4E4\uC5B4\uBCF4\uC138\uC694."];
   function calculateDay(p, date) {
+    validateDate(date);
     const solar = validateProfile(p);
+    const seed = seedFor(solar, p);
     const birth = (0, import_manseryeok.calculateFourPillars)({ ...solar, hour: p.unknownTime ? 12 : p.hour, minute: p.unknownTime ? 0 : p.minute });
     const [year, month, day] = date.split("-").map(Number);
     const daily = (0, import_manseryeok.calculateFourPillars)({ year, month, day, hour: 12, minute: 0 });
@@ -2124,36 +2176,83 @@
     const mean = keys.reduce((sum, k) => sum + relation((0, import_manseryeok.getHeavenlyStemElement)(birth[k].heavenlyStem), dayStem) + relation((0, import_manseryeok.getEarthlyBranchElement)(birth[k].earthlyBranch), dayBranch), 0) / (keys.length * 2);
     const base = 65 + mean * 2;
     const targets = [elements[(elements.indexOf(dayStem) + 2) % 5], elements[(elements.indexOf(dayBranch) + 1) % 5], dayStem, dayBranch];
-    const fields = Object.keys(copy).map((key, i) => {
+    const fields2 = Object.keys(fields).map((key, i) => {
       const score2 = Math.max(0, Math.min(100, Math.round(base + relation(birth.dayElement.stem, targets[i]))));
-      return { key, score: score2, text: copy[key][score2 >= 80 ? 2 : score2 >= 60 ? 1 : 0] };
+      return { key, score: score2, text: choose(fields[key][tier(score2)], seed, date, key) };
     });
-    const score = Math.round(fields.reduce((s, f) => s + f.score, 0) / 4);
-    const lowest = fields.reduce((best, f, i) => f.score < fields[best].score ? i : best, 0);
-    return { date, score, fields, caution: cautions[lowest], pillars: birth.toObject(), daily: daily.toObject().day, unknownTime: p.unknownTime };
+    const score = Math.round(fields2.reduce((s, f) => s + f.score, 0) / 4);
+    const lowest = fields2.reduce((best, f, i) => f.score < fields2[best].score ? i : best, 0);
+    return { date, score, fields: fields2, caution: choose(cautions[fields2[lowest].key], seed, date, "caution"), description: choose(overall[tier(score)], seed, date, "overall"), pillars: birth.toObject(), daily: daily.toObject().day, unknownTime: p.unknownTime };
   }
   function getFortune(p, today = koreanToday()) {
+    validateDate(today);
     const days = [-2, -1, 0].map((n) => calculateDay(p, shiftDate(today, n)));
     const delta = days[2].score - days[0].score;
-    return { days, today: days[2], trend: delta >= 6 ? "\uCD5C\uADFC \uD750\uB984\uC774 \uD55C\uACB0 \uAC00\uBCBC\uC6CC\uC9C0\uACE0 \uC788\uC5B4\uC694." : delta <= -6 ? "\uC870\uAE08 \uCC9C\uCC9C\uD788, \uB098\uB9CC\uC758 \uC18D\uB3C4\uB85C \uC6C0\uC9C1\uC5EC\uBCF4\uC138\uC694." : "\uBE44\uC2B7\uD55C \uD750\uB984\uC774 \uC774\uC5B4\uC9C0\uACE0 \uC788\uC5B4\uC694. \uCC28\uBD84\uD788 \uD558\uB8E8\uB97C \uC2DC\uC791\uD574\uBCF4\uC138\uC694." };
+    return { days, today: days[2], trend: choose(trends[delta >= 6 ? 2 : delta <= -6 ? 0 : 1], seedFor(validateProfile(p), p), today, "trend") };
+  }
+  function validateDate(date) {
+    const d = /* @__PURE__ */ new Date(date + "T12:00:00Z");
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !Number.isFinite(d.valueOf()) || d.toISOString().slice(0, 10) !== date || Number(date.slice(0, 4)) < 1800 || Number(date.slice(0, 4)) > 2300) throw Error("계산 날짜는 1800~2300년의 유효한 날짜여야 해요.");
   }
   var STORAGE_KEY = "harujeom.profile.v1";
-  function readProfile(storage2) {
-    try {
-      const p = JSON.parse(storage2.getItem(STORAGE_KEY));
-      if (!p) return null;
-      validateProfile(p);
-      return p;
-    } catch {
-      return null;
+
+  // src/profile.js
+  function parseProfile(values) {
+    for (const [key, label] of [["year", "출생 연도를"], ["month", "출생 월을"], ["day", "출생 일을"]]) if (!String(values[key] ?? "").trim()) {
+      const e = Error(`${label} 입력해주세요.`);
+      e.field = key;
+      throw e;
     }
+    if (!values.unknownTime && !/^\d{2}:\d{2}$/.test(values.time ?? "")) {
+      const e = Error("출생시간을 입력하거나 시간을 몰라요를 선택해주세요.");
+      e.field = "time";
+      throw e;
+    }
+    const [hour, minute] = (values.time || "12:00").split(":").map(Number);
+    const p = { year: Number(values.year), month: Number(values.month), day: Number(values.day), hour: values.unknownTime ? 12 : hour, minute: values.unknownTime ? 0 : minute, calendar: values.calendar, gender: values.gender, leap: !!values.leap, unknownTime: !!values.unknownTime };
+    validateProfile(p);
+    return p;
+  }
+  function loadProfile(getStorage) {
+    try {
+      const raw = getStorage().getItem(STORAGE_KEY);
+      if (raw === null) return { profile: null, status: "empty" };
+      const profile = JSON.parse(raw);
+      validateProfile(profile);
+      return { profile, status: "saved" };
+    } catch (error) {
+      return { profile: null, status: error instanceof SyntaxError ? "corrupt" : "unavailable" };
+    }
+  }
+  function saveProfile(getStorage, p, remember) {
+    try {
+      if (remember) getStorage().setItem(STORAGE_KEY, JSON.stringify(p));
+      else getStorage().removeItem(STORAGE_KEY);
+      return { ok: true, status: remember ? "saved" : "session" };
+    } catch {
+      return { ok: false, status: "unavailable" };
+    }
+  }
+  function deleteProfile(getStorage) {
+    try {
+      getStorage().removeItem(STORAGE_KEY);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+  function needsRefresh(renderedDate2, currentDate, visible) {
+    return !!renderedDate2 && visible && renderedDate2 !== currentDate;
   }
 
   // src/app.js
   var $ = (id) => document.getElementById(id);
   var active = null;
+  var personal = null;
   var isDemo = false;
   var renderedDate = "";
+  var remembered = false;
+  var lastNotice = "";
   var example = { year: 2e3, month: 5, day: 15, hour: 9, minute: 30, calendar: "solar", leap: false, unknownTime: false, gender: "unspecified" };
   function storage() {
     return window.localStorage;
@@ -2173,7 +2272,12 @@
   $("calendar").addEventListener("change", sync);
   $("unknown").addEventListener("change", sync);
   function showForm() {
-    if (active && !isDemo) form(active);
+    if (personal) form(personal);
+    else {
+      $("profile-form").reset();
+      sync();
+    }
+    $("remember").checked = remembered;
     $("welcome").hidden = false;
     $("dashboard").hidden = true;
     $("edit").hidden = true;
@@ -2182,7 +2286,7 @@
     window.scrollTo(0, 0);
     $("year").focus();
   }
-  function render(p, demo = false, message = "") {
+  function render(p, demo = false, message = "", focus = true) {
     const result = getFortune(p);
     active = p;
     isDemo = demo;
@@ -2190,24 +2294,26 @@
     $("welcome").hidden = true;
     $("dashboard").hidden = false;
     $("edit").hidden = false;
-    $("today-date").textContent = renderedDate.replaceAll("-", ". ") + " \xB7 \uC624\uB298\uC758 \uC791\uC740 \uD78C\uD2B8";
-    $("mode-label").textContent = demo ? "\uC608\uC2DC \uCCB4\uD5D8" : "\uC624\uB298\uC758 \uC6B4\uC138";
-    $("profile-summary").textContent = (demo ? "\uAC00\uC0C1 \uC608\uC2DC \xB7 " : "") + `${p.calendar === "solar" ? "\uC591\uB825" : "\uC74C\uB825"} ${p.year}.${p.month}.${p.day}${p.leap ? " (\uC724\uB2EC)" : ""} \xB7 ${p.unknownTime ? "\uCD9C\uC0DD\uC2DC\uAC04 \uBBF8\uC0C1" : String(p.hour).padStart(2, "0") + ":" + String(p.minute).padStart(2, "0")}`;
-    const notice = demo ? "\uAC00\uC0C1 \uC815\uBCF4\uB85C \uBCF4\uB294 \uC608\uC2DC\uC608\uC694. \uB0B4 \uC815\uBCF4\uB97C \uC785\uB825\uD558\uBA74 \uB098\uC758 \uACB0\uACFC\uB97C \uD655\uC778\uD560 \uC218 \uC788\uC5B4\uC694." : message;
+    $("today-date").textContent = renderedDate.replaceAll("-", ". ") + " · 오늘의 작은 힌트";
+    $("mode-label").textContent = demo ? "예시 체험" : "오늘의 운세";
+    $("profile-summary").textContent = (demo ? "가상 예시 · " : "") + `${p.calendar === "solar" ? "양력" : "음력"} ${p.year}.${p.month}.${p.day}${p.leap ? " (윤달)" : ""} · ${p.unknownTime ? "출생시간 미상" : String(p.hour).padStart(2, "0") + ":" + String(p.minute).padStart(2, "0")}`;
+    lastNotice = message;
+    const notice = demo ? "가상 정보로 보는 예시예요. 내 정보를 입력하면 나의 결과를 확인할 수 있어요." : message;
     $("notice").hidden = !notice;
     $("notice").textContent = notice;
     const s = result.today.score;
     $("score").textContent = s;
-    $("score-label").textContent = s >= 80 ? "\uAC00\uBCCD\uAC8C \uD55C \uAC78\uC74C" : s >= 60 ? "\uCC28\uBD84\uD788 \uC774\uC5B4\uAC00\uB294 \uB0A0" : "\uC5EC\uC720\uB97C \uCC59\uAE30\uB294 \uB0A0";
-    $("score-title").textContent = s >= 80 ? "\uC791\uC740 \uC2DC\uC791\uC774 \uAE30\uB300\uB418\uB294 \uD558\uB8E8" : s >= 60 ? "\uB098\uB9CC\uC758 \uB9AC\uB4EC\uC744 \uCC3E\uC544\uAC00\uB294 \uD558\uB8E8" : "\uC7A0\uAE50 \uC26C\uC5B4\uAC00\uB3C4 \uAD1C\uCC2E\uC740 \uD558\uB8E8";
-    $("score-description").textContent = s >= 80 ? "\uBBF8\uB904\uB450\uC5C8\uB358 \uC77C\uC744 \uD558\uB098 \uC2DC\uC791\uD574\uBCF4\uC138\uC694. \uC791\uC740 \uC2DC\uB3C4\uAC00 \uC624\uB298\uC744 \uC870\uAE08 \uB2E4\uB974\uAC8C \uB9CC\uB4E4 \uC218 \uC788\uC5B4\uC694." : s >= 60 ? "\uC775\uC219\uD55C \uC77C\uBD80\uD130 \uCC28\uADFC\uCC28\uADFC \uD574\uBCF4\uC138\uC694. \uB0B4 \uC18D\uB3C4\uB97C \uC9C0\uD0A4\uB294 \uAC83\uB9CC\uC73C\uB85C\uB3C4 \uCDA9\uBD84\uD574\uC694." : "\uC624\uB298\uC740 \uD574\uC57C \uD560 \uC77C\uC744 \uC870\uAE08 \uB35C\uC5B4\uBCF4\uC138\uC694. \uC2A4\uC2A4\uB85C\uC5D0\uAC8C \uC5EC\uC720\uB97C \uC8FC\uB294 \uAC83\uB3C4 \uC88B\uC740 \uC120\uD0DD\uC774\uC5D0\uC694.";
+    $("score-label").textContent = s >= 80 ? "가볍게 한 걸음" : s >= 60 ? "차분히 이어가는 날" : "여유를 챙기는 날";
+    $("score-title").textContent = s >= 80 ? "작은 시작이 기대되는 하루" : s >= 60 ? "나만의 리듬을 찾아가는 하루" : "잠깐 쉬어가도 괜찮은 하루";
+    $("score-description").textContent = result.today.description;
     const xs = [35, 145, 255];
     const ys = result.days.map((d) => 140 - d.score);
     const points = xs.map((x, i) => `${x},${ys[i]}`).join(" ");
-    $("chart").innerHTML = `<svg viewBox="0 0 400 190" role="img" aria-label="\uCD5C\uADFC \uC6B4\uC138: \uADF8\uC81C ${result.days[0].score}\uC810, \uC5B4\uC81C ${result.days[1].score}\uC810, \uC624\uB298 ${s}\uC810, \uB0B4\uC77C \uBBF8\uACF5\uAC1C"><path d="M20 140 H380 M20 90 H380 M20 40 H380" stroke="#e9ebe2" fill="none"/><polygon points="35,140 ${points} 255,140" fill="#edf1e3"/><polyline points="${points}" stroke="#648252" stroke-width="2.5" fill="none"/><path d="M255 ${ys[2]} L365 80" stroke="#bdc5b4" stroke-dasharray="4 5" fill="none"/>${xs.map((x, i) => `<circle cx="${x}" cy="${ys[i]}" r="${i === 2 ? 6 : 4}" fill="${i === 2 ? "#42684c" : "#a4b18e"}"/><text x="${x}" y="${ys[i] - 16}" text-anchor="middle" fill="#42684c" font-size="15">${result.days[i].score}</text><text x="${x}" y="167" text-anchor="middle" fill="#747c71" font-size="11">${["\uADF8\uC81C", "\uC5B4\uC81C", "\uC624\uB298"][i]}</text><text x="${x}" y="184" text-anchor="middle" fill="#9a9f92" font-size="9">${result.days[i].date.slice(5).replace("-", ".")}</text>`).join("")}<circle cx="365" cy="80" r="17" fill="#f2f2e8"/><text x="365" y="86" text-anchor="middle" font-size="17" fill="#939b85">?</text><text x="365" y="167" text-anchor="middle" font-size="11" fill="#939b85">\uB0B4\uC77C</text></svg>`;
+    $("chart").innerHTML = `<svg viewBox="0 0 400 190" role="img" aria-label="최근 운세: 그제 ${result.days[0].score}점, 어제 ${result.days[1].score}점, 오늘 ${s}점, 내일 미공개"><path d="M20 140 H380 M20 90 H380 M20 40 H380" stroke="#e9ebe2" fill="none"/><polygon points="35,140 ${points} 255,140" fill="#edf1e3"/><polyline points="${points}" stroke="#648252" stroke-width="2.5" fill="none"/>${xs.map((x, i) => `<circle cx="${x}" cy="${ys[i]}" r="${i === 2 ? 6 : 4}" fill="${i === 2 ? "#42684c" : "#a4b18e"}"/><text x="${x}" y="${ys[i] - 16}" text-anchor="middle" fill="#42684c" font-size="15">${result.days[i].score}</text><text x="${x}" y="167" text-anchor="middle" fill="#747c71" font-size="15">${["그제", "어제", "오늘"][i]}</text><text x="${x}" y="184" text-anchor="middle" fill="#59634f" font-size="13">${result.days[i].date.slice(5).replace("-", ".")}</text>`).join("")}<circle cx="365" cy="80" r="17" fill="#f2f2e8"/><text x="365" y="86" text-anchor="middle" font-size="17" fill="#59634f">?</text><text x="365" y="167" text-anchor="middle" font-size="15" fill="#59634f">내일</text></svg>`;
+    $("chart-values").textContent = result.days.map((d, i) => `${["그제", "어제", "오늘"][i]} ${d.date.slice(5)} · ${d.score}점`).join(" / ") + " / 내일 ?";
     $("trend").textContent = result.trend;
-    const names = ["\uAE08\uC804\uC6B4", "\uC5F0\uC560\uC6B4", "\uC77C\xB7\uACF5\uBD80\uC6B4", "\uB300\uC778\uC6B4"];
-    const icons = ["\u20A9", "\u2661", "\u270E", "\u263A"];
+    const names = ["금전운", "연애운", "일·공부운", "대인운"];
+    const icons = ["₩", "♡", "✎", "☺"];
     $("fields").replaceChildren();
     result.today.fields.forEach((f, i) => {
       const el = document.createElement("div");
@@ -2217,77 +2323,70 @@
       icon.textContent = icons[i];
       icon.setAttribute("aria-hidden", "true");
       const h = document.createElement("h3");
-      h.textContent = names[i];
+      h.textContent = names[i] + " · " + f.score + "점";
       const text = document.createElement("p");
       text.textContent = f.text;
       el.append(icon, h, text);
       $("fields").append(el);
     });
     $("caution").textContent = result.today.caution;
-    $("pillars").textContent = "\uACC4\uC0B0 \uD655\uC778 \xB7 " + Object.entries(result.today.pillars).filter(([k]) => !p.unknownTime || k !== "hour").map(([k, v]) => ({ year: "\uC5F0\uC8FC", month: "\uC6D4\uC8FC", day: "\uC77C\uC8FC", hour: "\uC2DC\uC8FC" })[k] + " " + v).join(" / ") + " \xB7 \uC624\uB298 \uC77C\uC9C4 " + result.today.daily;
+    $("pillars").textContent = "계산 확인 · " + Object.entries(result.today.pillars).filter(([k]) => !p.unknownTime || k !== "hour").map(([k, v]) => ({ year: "연주", month: "월주", day: "일주", hour: "시주" })[k] + " " + v).join(" / ") + " · 오늘 일진 " + result.today.daily;
     $("delete").hidden = demo;
-    window.scrollTo(0, 0);
+    if (focus) {
+      window.scrollTo(0, 0);
+      $("result-heading").focus();
+    }
   }
   $("profile-form").addEventListener("submit", (e) => {
     e.preventDefault();
-    const [hour, minute] = $("time").value.split(":").map(Number);
-    const p = { year: Number($("year").value), month: Number($("month").value), day: Number($("day").value), hour: $("unknown").checked ? 12 : hour, minute: $("unknown").checked ? 0 : minute, calendar: $("calendar").value, leap: $("leap").checked, unknownTime: $("unknown").checked, gender: $("gender").value };
+    for (const el of document.querySelectorAll("[aria-invalid]")) el.removeAttribute("aria-invalid");
     try {
-      validateProfile(p);
-      let message = "";
-      try {
-        if ($("remember").checked) storage().setItem(STORAGE_KEY, JSON.stringify(p));
-        else storage().removeItem(STORAGE_KEY);
-      } catch {
-        message = "\uBE0C\uB77C\uC6B0\uC800 \uC800\uC7A5\uC18C\uB97C \uC0AC\uC6A9\uD560 \uC218 \uC5C6\uC5B4 \uC774\uBC88 \uBC29\uBB38\uC5D0\uC11C\uB9CC \uACB0\uACFC\uB97C \uBCF4\uC5EC\uB4DC\uB824\uC694.";
-      }
+      const p = parseProfile({ year: $("year").value, month: $("month").value, day: $("day").value, time: $("time").value, unknownTime: $("unknown").checked, calendar: $("calendar").value, leap: $("leap").checked, gender: $("gender").value });
+      const state = saveProfile(storage, p, $("remember").checked);
+      personal = p;
+      remembered = state.ok && state.status === "saved";
+      const message = state.ok ? remembered ? "이 브라우저에 정보를 저장했어요. 아래에서 언제든 삭제할 수 있어요." : "정보를 저장하지 않고 이번 방문에서만 보여드려요." : "브라우저 저장소에 접근할 수 없어 이번 방문에서만 보여드려요. 기존 저장 정보가 있다면 삭제되지 않았을 수 있으니 브라우저 설정에서 확인해주세요.";
       render(p, false, message);
     } catch (err) {
       $("form-error").textContent = err.message;
+      const el = $(err.field || "year");
+      el.setAttribute("aria-invalid", "true");
+      el.focus();
     }
   });
   $("demo").onclick = () => render(example, true);
   $("edit").onclick = showForm;
+  $("home").onclick = showForm;
   $("new-profile").onclick = showForm;
-  $("cancel").onclick = () => render(active, isDemo);
+  $("cancel").onclick = () => render(active, isDemo, lastNotice);
   $("delete").onclick = () => $("delete-dialog").showModal();
   $("delete-cancel").onclick = () => $("delete-dialog").close();
   $("delete-confirm").onclick = () => {
-    try {
-      storage().removeItem(STORAGE_KEY);
-    } catch {
-      $("delete-dialog").close();
-      $("notice").hidden = false;
-      $("notice").textContent = "\uC800\uC7A5 \uC815\uBCF4\uB97C \uC0AD\uC81C\uD558\uC9C0 \uBABB\uD588\uC5B4\uC694. \uBE0C\uB77C\uC6B0\uC800 \uC124\uC815\uC5D0\uC11C \uC0AC\uC774\uD2B8 \uB370\uC774\uD130\uB97C \uC0AD\uC81C\uD574\uC8FC\uC138\uC694.";
-      return;
-    }
+    const deleted = deleteProfile(storage);
     $("delete-dialog").close();
     active = null;
+    personal = null;
     isDemo = false;
+    remembered = false;
     $("profile-form").reset();
     showForm();
+    $("form-error").textContent = deleted ? "정보를 삭제했어요." : "화면의 정보는 지웠지만 저장소 삭제에 실패했어요. 브라우저 설정에서 사이트 데이터를 삭제해주세요.";
   };
   function refresh() {
-    if (active && !$("dashboard").hidden && renderedDate !== koreanToday()) render(active, isDemo);
+    if (active && needsRefresh(renderedDate, koreanToday(), !$("dashboard").hidden)) render(active, isDemo, lastNotice, false);
   }
   document.addEventListener("visibilitychange", () => {
     if (!document.hidden) refresh();
   });
   setInterval(refresh, 3e4);
-  try {
-    const p = readProfile(storage());
-    if (p) render(p);
-  } catch {
+  $("year").max = Number(koreanToday().slice(0, 4));
+  var loaded = loadProfile(storage);
+  if (loaded.profile) {
+    personal = loaded.profile;
+    remembered = true;
+    render(personal, false, "이 브라우저에 저장된 정보를 불러왔어요.");
+  } else if (loaded.status !== "empty") {
+    $("form-error").textContent = "저장 정보를 불러오지 못했어요. 새로 입력하면 저장 없이도 이용할 수 있어요.";
   }
+  sync();
 })();
-/*! Bundled license information:
-
-manseryeok/dist/index.js:
-  (**
-   * 만세력(萬歲曆) 계산 라이브러리
-   * Korean Saju (Four Pillars) and Manseryeok calculation library
-   *
-   * @author Yoohyojun
-   * @license MIT
-   *)
-*/

@@ -1,0 +1,2439 @@
+<!doctype html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f5ef"><meta name="description" content="오늘의 점수와 최근 흐름을 가볍게 확인하는 하루점"><title>하루점 — 오늘 하루, 몇 점?</title><style>:root{--bg:#f7f5ef;--ink:#26392f;--green:#42684c;--muted:#747c71;--line:#dedfd5;--white:#fffefa}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.65}button,input,select{font:inherit}button,a,input,select,summary{-webkit-tap-highlight-color:transparent}button,a,summary{cursor:pointer}button{border:0}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #b3aa62;outline-offset:4px}input:focus,select:focus{outline:2px solid #628664;outline-offset:1px}[hidden]{display:none!important}header{max-width:1180px;margin:auto;height:104px;display:flex;align-items:center;justify-content:space-between;padding:0 38px;border-bottom:1px solid var(--line)}.brand{text-decoration:none;color:var(--ink);font-size:27px;font-weight:800;letter-spacing:-1px;display:flex;align-items:center;gap:7px}.brand-icon{font-size:35px;color:var(--green)}.brand-dot,.green{color:#6d8c53}.header-note{font-size:13px;color:var(--muted)}.text-button{color:var(--green);background:transparent;font-size:13px;padding:12px 5px}main{max-width:1104px;margin:0 auto;padding:58px 0 48px}#welcome{display:grid;grid-template-columns:1.05fr 1fr;gap:85px}.eyebrow{font-size:10px;font-weight:650;letter-spacing:2.3px;color:var(--green)}h1{font-size:46px;font-weight:650;line-height:1.35;letter-spacing:-2px;margin:21px 0}h2{font-size:20px;letter-spacing:-.6px;font-weight:650;margin:0 0 8px}p{margin:0 0 12px}.intro>p{font-size:15px;line-height:1.95;color:var(--muted)}.orb{width:265px;height:265px;border-radius:50%;background:#e7ebd7;margin:40px 0 40px 48px;position:relative;display:flex;align-items:center;justify-content:center}.orb:before{content:'';position:absolute;inset:-15px;border:1px solid #d9decb;border-radius:50%;transform:scaleX(1.18) rotate(-25deg)}.orb>span{font-size:160px;color:#648151;line-height:1;transform:rotate(12deg)}.orb i{position:absolute;bottom:15px;right:-40px;background:#fffefa;border:1px solid var(--line);border-radius:25px;padding:8px 20px;font-size:12px;font-style:normal;transform:rotate(-7deg)}.intro-foot{display:flex;gap:20px;font-size:10px;color:var(--muted);letter-spacing:.4px}.form-card{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:32px;box-shadow:0 12px 36px #253b2b04}.tag{display:inline-block;border:1px solid #dce2d3;border-radius:20px;padding:5px 12px;font-size:10px;color:var(--green);background:#f1f4e9;margin-bottom:16px}.muted{color:var(--muted);font-size:12px}.form-card>p{margin-bottom:24px}fieldset{padding:0;border:0;margin:0 0 17px}label,legend{font-size:12px;font-weight:600}legend{margin-bottom:8px}input:not([type=checkbox]),select{width:100%;height:44px;border:1px solid var(--line);border-radius:8px;background:#fffefa;padding:10px 12px;color:var(--ink);font-size:13px}select{display:block;margin-top:8px}.date-inputs{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:9px}.row{display:flex;gap:18px;align-items:center;margin-bottom:16px}.row>input{flex:1;min-width:0}.grow{flex:1}.check{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:400;white-space:nowrap}input[type=checkbox]{accent-color:var(--green);width:16px;height:16px}.hint{font-size:10px;color:var(--muted);margin-top:6px;line-height:1.7}.privacy{margin-top:20px}.primary{background:var(--green);color:white;border-radius:9px;min-height:47px;padding:12px 19px;display:flex;justify-content:space-between;align-items:center;width:100%;font-size:13px}.primary:hover{background:#34543c}.secondary{background:#e9ecdf;color:var(--ink);border-radius:9px;min-height:44px;padding:10px 18px;margin-top:10px;width:100%}.demo{display:block;margin:16px auto 0;background:none;color:var(--muted);font-size:11px;padding:8px}.error{color:#a03f32;font-size:12px}.dashboard-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}.dashboard-heading h1{font-size:32px;margin:12px 0}.dashboard-heading .tag{margin:0}.dashboard-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px}.score-card{background:#e6ecd9;border:1px solid #dce4ce;border-radius:18px;padding:28px;position:relative;overflow:hidden}.card-top{display:flex;justify-content:space-between;align-items:center;font-size:13px}.tiny-sun{font-size:25px;color:#788d58}.score-number{display:flex;align-items:baseline;gap:12px;margin:15px 0 0}.score-number strong{font-size:112px;line-height:1.15;font-weight:500;letter-spacing:-8px}.score-number>span{font-size:17px;color:#819071}.score-label{font-size:10px;background:#f7f9ee;padding:4px 9px;border-radius:15px;display:inline-block;margin:10px 0 18px}.score-card h2{font-size:21px}.score-card>p{font-size:12px;max-width:300px;color:#62735a}.score-bottom{display:flex;justify-content:space-between;border-top:1px solid #cad4be;margin-top:25px;padding-top:15px;font-size:9px;color:#738269}.section-title{display:flex;justify-content:space-between;align-items:center;gap:10px}.section-title h2{font-size:17px;margin:0}.chart{margin-top:24px}.chart svg{width:100%;height:auto;overflow:visible;display:block}.flow-text{font-size:13px;margin:14px 0 2px}.fields-card{grid-column:1 / -1}.fields{display:grid;grid-template-columns:repeat(4,1fr);gap:23px;margin-top:25px}.field+.field{border-left:1px solid var(--line);padding-left:23px}.field-icon{background:#f1f1e6;border-radius:12px;height:36px;width:36px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:var(--green);font-size:19px}.field h3{font-size:14px;margin:0 0 8px}.field p{font-size:12px;color:var(--muted);line-height:1.8}.caution-card{grid-column:1/-1;background:#eeece0;border-radius:16px;padding:24px 28px;display:flex;gap:22px;align-items:center}.caution-icon{width:48px;height:48px;border:1px solid #d5d5c2;border-radius:50%;display:grid;place-items:center;font-size:24px;flex-shrink:0}.caution-card h2{font-size:15px;margin:4px 0}.caution-card p{font-size:13px;margin-bottom:3px}.caution-card .eyebrow{font-size:8px;letter-spacing:1.7px}.method{font-size:11px;color:var(--muted);margin-top:27px;border-bottom:1px solid var(--line);padding-bottom:17px}.method summary{padding:8px 0;color:var(--green)}.method p{margin-top:12px}.method a{color:var(--green)}.bottom-actions{display:flex;justify-content:space-between;padding-top:8px}.notice{padding:12px 16px;background:#edeedc;border-radius:8px;font-size:12px;margin-bottom:20px}footer{max-width:1104px;margin:auto;border-top:1px solid var(--line);padding:28px 0 35px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:9px}footer p{margin:0}.brand.small{font-size:18px}dialog{border:1px solid var(--line);border-radius:18px;padding:28px;max-width:calc(100% - 32px);color:var(--ink);background:var(--white)}dialog::backdrop{background:#1d2e2966}dialog p{font-size:13px}dialog .row{margin:20px 0 0}dialog .secondary{margin:0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:1180px){main,footer{margin-left:32px;margin-right:32px}#welcome{gap:45px}}@media(max-width:720px){header{height:77px;padding:0 22px}.brand{font-size:23px}.header-note{font-size:10px}main{padding:30px 0;margin:0 20px}#welcome{display:block}.intro{position:relative;margin-bottom:28px}.intro .eyebrow{font-size:8px;letter-spacing:1.6px}h1{font-size:34px;margin:15px 0}.intro>p{font-size:12px;max-width:270px}.orb{position:absolute;width:85px;height:85px;right:5px;top:33px;margin:0;opacity:.5;z-index:-1}.orb>span{font-size:60px}.orb i{display:none}.intro-foot{gap:14px;margin-top:20px;font-size:8px}.form-card{padding:24px;border-radius:17px}.form-card h2{font-size:19px}.dashboard-heading{align-items:flex-start;gap:8px;margin-bottom:20px}.dashboard-heading h1{font-size:25px;letter-spacing:-1.2px}.dashboard-heading .eyebrow{font-size:9px;letter-spacing:1px}.dashboard-heading .tag{font-size:8px;white-space:nowrap;padding:4px 8px;margin-top:4px}.dashboard-grid{grid-template-columns:1fr;gap:16px}.card,.score-card{padding:24px}.score-number strong{font-size:100px}.score-card>p{max-width:none}.fields{grid-template-columns:1fr 1fr;gap:20px}.field+.field{padding-left:0;border:0}.field:nth-child(even){padding-left:18px;border-left:1px solid var(--line)}.field p{font-size:11px}.fields-card,.caution-card{grid-column:auto}.caution-card{padding:22px 20px;gap:13px}.caution-icon{width:35px;height:35px;font-size:19px}.caution-card p{font-size:12px}footer{margin:10px 20px 0;flex-wrap:wrap;padding-top:22px}footer>span:last-child{width:100%;font-size:8px}.flow-card .chart{max-width:450px;margin:20px auto 0}.method{font-size:10px}}
+
+/* 최종 개발: 기존 색상과 카드 구조를 유지한 가독성·접근성 보완 */
+body{font-size:16px;color:#26392f}button,input,select{font:inherit}button{min-height:44px}button.brand{background:none;border:0;padding:0;cursor:pointer;color:inherit}.hint,.muted,.header-note,.eyebrow,.tag,.intro-foot,.score-bottom,footer,.method{font-size:14px}.hint,.muted{color:#596451}.form-card>p{font-size:15px}label,legend,.check{font-size:15px}.date-inputs label span{display:block;margin-bottom:6px}.field p,.flow-text,.score-card p,.caution-card p{font-size:16px;line-height:1.7}.field h3{font-size:16px}.error{color:#993d31;font-size:15px;line-height:1.6}.notice{font-size:15px;line-height:1.6}.chart-values{font-size:14px;color:#42684c;line-height:1.8}.chart svg{height:auto;width:100%;display:block}.fields{align-items:stretch}.field{min-width:0}.field p{word-break:keep-all;overflow-wrap:anywhere}input,select{min-height:46px;min-width:0}input[type=checkbox]{min-height:20px;width:20px;height:20px;flex-shrink:0}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #42684c;outline-offset:4px}[aria-invalid=true]{border:2px solid #993d31}#result-heading:focus{outline:none}.brand{white-space:nowrap}.row{flex-wrap:wrap}dialog{max-width:min(440px,calc(100vw - 32px));box-sizing:border-box}dialog::backdrop{background:#26392f66}.method p{line-height:1.8;overflow-wrap:anywhere}.license{max-width:1104px;margin:20px auto;padding:0 24px}.license pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}footer{line-height:1.7}.score-card .score-bottom{font-size:12px}.score-label{font-size:14px}.text-button,.demo{font-size:14px}.form-card .hint{font-size:14px}.chart{min-height:0}
+@media(max-width:720px){header{gap:10px;flex-wrap:wrap}.header-note{display:none}.dashboard-heading{align-items:flex-start;gap:12px}.dashboard-heading .tag{white-space:normal}.field p{font-size:16px}.form-card{padding:24px}.score-bottom{gap:10px}.intro>p{font-size:16px}.date-inputs{grid-template-columns:1.4fr 1fr 1fr}.fields{gap:16px}.field{padding:16px}.check{line-height:1.6}.bottom-actions{flex-wrap:wrap;gap:12px}}
+@media(max-width:380px){main{padding-left:16px;padding-right:16px}.form-card{padding:18px}.fields{grid-template-columns:1fr}.dashboard-heading{flex-direction:column}.intro h1{font-size:36px}.card{padding:20px}.date-inputs{gap:8px}header{padding-left:16px;padding-right:16px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* QA: 장식 원의 회전 가상요소가 모바일 뷰포트를 넘지 않도록 내부 배치 */
+@media(max-width:720px){.orb{right:48px}.check{white-space:normal}.intro-foot{flex-wrap:wrap}.field p,.intro>p,.method,footer,.demo{color:#596451}.intro .eyebrow,.dashboard-heading .eyebrow,.caution-card .eyebrow{font-size:12px}.dashboard-heading .tag,footer>span:last-child{font-size:12px}input:not([type=checkbox]),select,.primary{font-size:16px}}
+@media(max-width:380px){main{padding-left:0;padding-right:0}.field:nth-child(even){padding-left:16px;border-left:0}}
+</style></head><body>
+<header><button type="button" id="home" class="brand" aria-label="하루점 홈"><span class="brand-icon">✳</span> 하루점<span class="brand-dot">.</span></button><span class="header-note">하루를 여는 작은 힌트</span><button id="edit" class="text-button" hidden>내 정보 수정 ↗</button></header>
+<main><section id="welcome"><div class="intro"><span class="eyebrow">A LITTLE GUIDE FOR YOUR DAY</span><h1>오늘 하루,<br>어떤 흐름일까요<span class="green">?</span></h1><p>복잡한 풀이 대신, 가볍게 보는 오늘의 점수.<br>당신의 하루에 작은 힌트를 더해드릴게요.</p><div class="orb" aria-hidden="true"><span>✳</span><i>오늘도, 나답게.</i></div><div class="intro-foot"><span>01 오늘의 점수</span><span>02 최근 흐름</span><span>03 하루의 힌트</span></div></div>
+<div class="form-card"><span class="tag">처음 만나는 하루점</span><h2>당신에 대해 알려주세요</h2><p class="muted">저장을 선택하면 다음 방문에 바로 확인할 수 있어요.</p><form id="profile-form" novalidate><fieldset><legend>생년월일</legend><div class="date-inputs"><label><span>연도</span><input aria-describedby="form-error" id="year" type="number" inputmode="numeric" placeholder="YYYY" min="1900" required></label><label><span>월</span><input aria-describedby="form-error" id="month" type="number" inputmode="numeric" placeholder="MM" min="1" max="12" required></label><label><span>일</span><input aria-describedby="form-error" id="day" type="number" inputmode="numeric" placeholder="DD" min="1" max="31" required></label></div></fieldset>
+<div class="row"><label class="grow">달력<select id="calendar"><option value="solar">양력</option><option value="lunar">음력</option></select></label><label class="check" id="leap-label" hidden><input type="checkbox" id="leap"> 윤달이에요</label></div>
+<fieldset><legend>태어난 시간</legend><div class="row"><input type="time" aria-describedby="form-error" id="time" value="12:00" aria-label="태어난 시간"><label class="check"><input type="checkbox" id="unknown"> 시간을 몰라요</label></div><p class="hint">모르는 경우 시주를 제외한 세 기둥으로 계산해요.</p></fieldset>
+<label>성별<select id="gender"><option value="unspecified">선택하지 않음</option><option value="female">여성</option><option value="male">남성</option></select></label><p class="hint">성별은 저장만 하며, 현재 일일 점수에는 사용하지 않아요.</p>
+<label class="check privacy"><input id="remember" type="checkbox"> 이 브라우저에 내 정보 기억하기</label><p class="hint">입력 정보는 서버로 전송하지 않아요. 저장은 선택 사항이며 공용 기기에서는 선택하지 마세요.</p><p id="form-error" class="error" role="alert"></p><button type="submit" class="primary">오늘의 운세 확인하기 <span>↗</span></button><button id="cancel" type="button" class="secondary" hidden>결과로 돌아가기</button></form><button id="demo" class="demo">입력 전에 예시 먼저 보기 →</button></div></section>
+<section id="dashboard" hidden><div class="dashboard-heading"><div><span class="eyebrow" id="today-date"></span><h1 id="result-heading" tabindex="-1">오늘도, 나만의 속도로<span class="green">.</span></h1><p id="profile-summary" class="muted"></p></div><span class="tag" id="mode-label">오늘의 운세</span></div><p id="notice" class="notice" role="status" hidden></p>
+<div class="dashboard-grid"><article class="score-card"><div class="card-top"><span>오늘의 총운</span><span class="tiny-sun">✳</span></div><div class="score-number"><strong id="score"></strong><span>/ 100</span></div><span class="score-label" id="score-label"></span><h2 id="score-title"></h2><p id="score-description"></p><div class="score-bottom"><span>오늘을 위한 가벼운 참고</span><span>HARUJEOM ✳</span></div></article>
+<article class="card flow-card"><div class="section-title"><h2>요즘 나의 흐름</h2><span class="muted">최근 3일</span></div><div id="chart" class="chart"></div><p id="chart-values" class="chart-values"></p><p id="trend" class="flow-text"></p><p class="hint">내일의 점수는 내일 만나요.</p></article>
+<article class="card fields-card"><div class="section-title"><h2>분야별 작은 힌트</h2><span class="muted">네 가지 시선</span></div><div id="fields" class="fields"></div></article>
+<article class="caution-card"><div class="caution-icon">↗</div><div><span class="eyebrow">TAKE A LITTLE CARE</span><h2>오늘의 주의 포인트</h2><p id="caution"></p><span class="hint">정해진 미래보다, 오늘의 선택이 더 중요해요.</span></div></article></div>
+<details class="method"><summary>이 점수는 어떻게 만들어지나요?</summary><p>manseryeok 2.0.0으로 생년월일시의 간지와 오늘의 간지를 계산한 뒤, 오행 관계에 서비스 자체 가중치를 적용해요. 4개 분야 점수의 평균을 총운으로 표시하며 같은 입력과 날짜에는 같은 결과를 보여드려요. 전통 명리학의 공식 점수 체계나 과학적 예측이 아니에요.</p><p>한국 날짜(Asia/Seoul) 기준 · 자정 일자 변경 · 출생지 진태양시 보정 미적용 · 출생시간 미상은 시주 제외 · 성별은 일일 점수에 미사용</p><p id="pillars"></p><a href="https://github.com/yhj1024/manseryeok" target="_blank" rel="noopener">사용한 만세력 라이브러리 ↗</a></details><div class="bottom-actions"><button id="new-profile" class="text-button">내 정보 입력·수정</button><button id="delete" class="text-button">저장 정보 삭제</button></div></section>
+</main><footer><span class="brand small">하루점.</span><p>운세는 재미와 참고를 위한 콘텐츠입니다.<br>오늘의 가능성을 점수 하나로 정하지 마세요.</p><span>© 2026 HARUJEOM · 최종 개발 검증본 · 계산 v0.1</span></footer>
+<dialog id="delete-dialog" aria-labelledby="delete-title"><h2 id="delete-title">저장한 정보를 삭제할까요?</h2><p>이 브라우저의 생년월일과 출생시간을 삭제해요.</p><div class="row"><button id="delete-cancel" class="secondary">취소</button><button id="delete-confirm" class="primary">삭제하기</button></div></dialog><details class="license"><summary>오픈소스 라이선스 · manseryeok 2.0.0 (MIT)</summary><pre>MIT License
+
+Copyright (c) 2025 Yoohyojun
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</pre></details><script>(() => {
+  var __create = Object.create;
+  var __defProp = Object.defineProperty;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __getProtoOf = Object.getPrototypeOf;
+  var __hasOwnProp = Object.prototype.hasOwnProperty;
+  var __commonJS = (cb, mod) => function __require() {
+    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  };
+  var __copyProps = (to, from, except, desc) => {
+    if (from && typeof from === "object" || typeof from === "function") {
+      for (let key of __getOwnPropNames(from))
+        if (!__hasOwnProp.call(to, key) && key !== except)
+          __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+    }
+    return to;
+  };
+  var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+    // If the importer is in node compatibility mode or this is not an ESM
+    // file that has been converted to a CommonJS file using a Babel-
+    // compatible transform (i.e. "__esModule" has not been set), then set
+    // "default" to the CommonJS "module.exports" for node compatibility.
+    isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+    mod
+  ));
+
+  // node_modules/manseryeok/dist/constants.js
+  var require_constants = __commonJS({
+    "node_modules/manseryeok/dist/constants.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.DAY_PILLAR_ANCHOR = exports.TEN_GOD_HANJA = exports.ELEMENT_CONTROLS = exports.ELEMENT_GENERATES = exports.MONTH_BRANCHES = exports.BRANCH_MAIN_STEM = exports.BRANCH_ELEMENTS = exports.STEM_ELEMENTS = exports.FIVE_ELEMENTS = exports.YIN_YANG = exports.EARTHLY_BRANCHES_HANJA = exports.EARTHLY_BRANCHES = exports.HEAVENLY_STEMS_HANJA = exports.HEAVENLY_STEMS = void 0;
+      exports.HEAVENLY_STEMS = ["갑", "을", "병", "정", "무", "기", "경", "신", "임", "계"];
+      exports.HEAVENLY_STEMS_HANJA = [
+        "甲",
+        "乙",
+        "丙",
+        "丁",
+        "戊",
+        "己",
+        "庚",
+        "辛",
+        "壬",
+        "癸"
+      ];
+      exports.EARTHLY_BRANCHES = [
+        "자",
+        "축",
+        "인",
+        "묘",
+        "진",
+        "사",
+        "오",
+        "미",
+        "신",
+        "유",
+        "술",
+        "해"
+      ];
+      exports.EARTHLY_BRANCHES_HANJA = [
+        "子",
+        "丑",
+        "寅",
+        "卯",
+        "辰",
+        "巳",
+        "午",
+        "未",
+        "申",
+        "酉",
+        "戌",
+        "亥"
+      ];
+      exports.YIN_YANG = ["양", "음"];
+      exports.FIVE_ELEMENTS = ["목", "화", "토", "금", "수"];
+      exports.STEM_ELEMENTS = [
+        "목",
+        "목",
+        "화",
+        "화",
+        "토",
+        "토",
+        "금",
+        "금",
+        "수",
+        "수"
+      ];
+      exports.BRANCH_ELEMENTS = [
+        "수",
+        // 자
+        "토",
+        // 축
+        "목",
+        // 인
+        "목",
+        // 묘
+        "토",
+        // 진
+        "화",
+        // 사
+        "화",
+        // 오
+        "토",
+        // 미
+        "금",
+        // 신
+        "금",
+        // 유
+        "토",
+        // 술
+        "수"
+        // 해
+      ];
+      exports.BRANCH_MAIN_STEM = {
+        자: "계",
+        축: "기",
+        인: "갑",
+        묘: "을",
+        진: "무",
+        사: "병",
+        오: "정",
+        미: "기",
+        신: "경",
+        유: "신",
+        술: "무",
+        해: "임"
+      };
+      exports.MONTH_BRANCHES = {
+        1: "인",
+        2: "묘",
+        3: "진",
+        4: "사",
+        5: "오",
+        6: "미",
+        7: "신",
+        8: "유",
+        9: "술",
+        10: "해",
+        11: "자",
+        12: "축"
+      };
+      exports.ELEMENT_GENERATES = {
+        목: "화",
+        화: "토",
+        토: "금",
+        금: "수",
+        수: "목"
+      };
+      exports.ELEMENT_CONTROLS = {
+        목: "토",
+        토: "수",
+        수: "화",
+        화: "금",
+        금: "목"
+      };
+      exports.TEN_GOD_HANJA = {
+        비견: "比肩",
+        겁재: "劫財",
+        식신: "食神",
+        상관: "傷官",
+        편재: "偏財",
+        정재: "正財",
+        편관: "偏官",
+        정관: "正官",
+        편인: "偏印",
+        정인: "正印"
+      };
+      exports.DAY_PILLAR_ANCHOR = {
+        year: 1992,
+        month: 10,
+        day: 24,
+        ganjiIndex: 9
+      };
+    }
+  });
+
+  // node_modules/manseryeok/dist/validation.js
+  var require_validation = __commonJS({
+    "node_modules/manseryeok/dist/validation.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.assertIntegerInRange = assertIntegerInRange;
+      exports.assertFiniteNumber = assertFiniteNumber;
+      exports.assertBoolean = assertBoolean;
+      exports.assertOptionalBoolean = assertOptionalBoolean;
+      exports.assertHeavenlyStem = assertHeavenlyStem;
+      exports.assertEarthlyBranch = assertEarthlyBranch;
+      exports.assertPillar = assertPillar;
+      exports.assertGender = assertGender;
+      exports.assertDayBoundary = assertDayBoundary;
+      var constants_1 = require_constants();
+      function assertIntegerInRange(value, min, max, name) {
+        if (typeof value !== "number" || !Number.isInteger(value)) {
+          throw new RangeError(`${name}은 정수여야 합니다: ${String(value)}`);
+        }
+        if (value < min || value > max) {
+          throw new RangeError(`${name}은 ${min}~${max} 범위여야 합니다: ${value}`);
+        }
+      }
+      function assertFiniteNumber(value, name) {
+        if (typeof value !== "number" || !Number.isFinite(value)) {
+          throw new RangeError(`${name}은 유한한 숫자여야 합니다: ${String(value)}`);
+        }
+      }
+      function assertBoolean(value, name) {
+        if (typeof value !== "boolean") {
+          throw new TypeError(`${name}은 boolean 이어야 합니다: ${String(value)}`);
+        }
+      }
+      function assertOptionalBoolean(value, name) {
+        if (value !== void 0) {
+          assertBoolean(value, name);
+        }
+      }
+      function assertHeavenlyStem(value, name = "천간") {
+        if (typeof value !== "string" || !constants_1.HEAVENLY_STEMS.includes(value)) {
+          throw new RangeError(`${name}은 유효한 천간이어야 합니다: ${String(value)}`);
+        }
+      }
+      function assertEarthlyBranch(value, name = "지지") {
+        if (typeof value !== "string" || !constants_1.EARTHLY_BRANCHES.includes(value)) {
+          throw new RangeError(`${name}은 유효한 지지여야 합니다: ${String(value)}`);
+        }
+      }
+      function assertPillar(value, name = "기둥") {
+        if (value === null || typeof value !== "object") {
+          throw new TypeError(`${name}은 객체여야 합니다.`);
+        }
+        const pillar = value;
+        assertHeavenlyStem(pillar.heavenlyStem, `${name}.heavenlyStem`);
+        assertEarthlyBranch(pillar.earthlyBranch, `${name}.earthlyBranch`);
+      }
+      function assertGender(value, name = "성별(gender)") {
+        if (value !== "male" && value !== "female") {
+          throw new RangeError(`${name}은 'male' 또는 'female' 이어야 합니다: ${String(value)}`);
+        }
+      }
+      function assertDayBoundary(value, name = "일 경계(dayBoundary)") {
+        if (value !== "midnight" && value !== "jasi" && value !== "splitJasi") {
+          throw new RangeError(`${name}는 'midnight', 'jasi', 'splitJasi' 중 하나여야 합니다: ${String(value)}`);
+        }
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/elements.js
+  var require_elements = __commonJS({
+    "node_modules/manseryeok/dist/elements.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.getHeavenlyStemYinYang = getHeavenlyStemYinYang;
+      exports.getHeavenlyStemElement = getHeavenlyStemElement2;
+      exports.getEarthlyBranchYinYang = getEarthlyBranchYinYang;
+      exports.getEarthlyBranchElement = getEarthlyBranchElement2;
+      var constants_1 = require_constants();
+      var validation_1 = require_validation();
+      function getHeavenlyStemYinYang(stem) {
+        (0, validation_1.assertHeavenlyStem)(stem);
+        return constants_1.HEAVENLY_STEMS.indexOf(stem) % 2 === 0 ? "양" : "음";
+      }
+      function getHeavenlyStemElement2(stem) {
+        (0, validation_1.assertHeavenlyStem)(stem);
+        return constants_1.STEM_ELEMENTS[constants_1.HEAVENLY_STEMS.indexOf(stem)];
+      }
+      function getEarthlyBranchYinYang(branch) {
+        (0, validation_1.assertEarthlyBranch)(branch);
+        return constants_1.EARTHLY_BRANCHES.indexOf(branch) % 2 === 0 ? "양" : "음";
+      }
+      function getEarthlyBranchElement2(branch) {
+        (0, validation_1.assertEarthlyBranch)(branch);
+        return constants_1.BRANCH_ELEMENTS[constants_1.EARTHLY_BRANCHES.indexOf(branch)];
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/calendar/lunar-data.js
+  var require_lunar_data = __commonJS({
+    "node_modules/manseryeok/dist/calendar/lunar-data.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.LUNAR_BASE_UTC_MS = exports.LUNAR_MAX_YEAR = exports.LUNAR_MIN_YEAR = void 0;
+      exports.getLeapMonth = getLeapMonth;
+      exports.getLeapMonthDays = getLeapMonthDays;
+      exports.getLunarMonthDays = getLunarMonthDays;
+      exports.getLunarYearDays = getLunarYearDays;
+      var validation_1 = require_validation();
+      var LUNAR_DATA = [
+        25904,
+        92828,
+        23200,
+        43856,
+        76632,
+        11104,
+        41840,
+        21221,
+        53600,
+        58544,
+        87331,
+        55968,
+        88907,
+        22224,
+        10976,
+        106967,
+        41680,
+        53584,
+        117076,
+        46368,
+        112268,
+        44448,
+        21968,
+        75193,
+        17840,
+        41648,
+        107189,
+        43344,
+        46368,
+        92833,
+        43872,
+        87468,
+        19312,
+        17776,
+        86391,
+        21168,
+        26960,
+        92500,
+        23200,
+        109388,
+        42720,
+        19168,
+        107752,
+        42336,
+        53920,
+        60070,
+        54608,
+        22176,
+        103842,
+        38352,
+        84699,
+        18864,
+        42192,
+        118999,
+        45728,
+        46416,
+        27987,
+        11680,
+        38320,
+        71025,
+        18864,
+        107641,
+        25776,
+        27280,
+        109222,
+        27472,
+        11104,
+        43746,
+        37744,
+        84331,
+        51552,
+        58544,
+        92455,
+        55968,
+        23248,
+        71379,
+        9952,
+        37600,
+        103122,
+        51536,
+        119897,
+        46240,
+        46736,
+        87462,
+        21936,
+        9680,
+        42418,
+        37552,
+        108858,
+        26960,
+        29856,
+        111784,
+        43872,
+        21424,
+        11124,
+        9584,
+        21168,
+        86705,
+        26960,
+        92761,
+        23200,
+        43856,
+        83669,
+        19168,
+        42352,
+        83171,
+        53920,
+        121163,
+        46416,
+        22176,
+        103847,
+        38352,
+        19168,
+        43444,
+        42192,
+        53840,
+        109217,
+        46416,
+        87641,
+        11680,
+        38320,
+        82805,
+        18800,
+        42160,
+        107700,
+        27280,
+        109900,
+        23376,
+        11104,
+        103656,
+        37616,
+        18800,
+        26980,
+        54432,
+        125516,
+        54928,
+        22224,
+        76634,
+        9952,
+        37600,
+        51926,
+        51536,
+        54432,
+        111778,
+        46480,
+        87756,
+        21936,
+        9680,
+        102839,
+        37552,
+        43344,
+        110933,
+        27808,
+        44368,
+        76641,
+        19376,
+        75129,
+        9584,
+        21168,
+        43686,
+        59728,
+        27296,
+        105123,
+        43856,
+        84827,
+        19168,
+        42352,
+        86231,
+        53856,
+        55632,
+        87381,
+        22176,
+        38608,
+        71122,
+        19168,
+        107706,
+        42192,
+        53840,
+        119446,
+        46416,
+        13728,
+        43938,
+        38320,
+        84412,
+        18800,
+        42160,
+        45752,
+        27216,
+        27968,
+        109396,
+        11104,
+        37744,
+        21234,
+        18800,
+        25833,
+        54432,
+        59984,
+        92822,
+        22224,
+        11104,
+        99811,
+        37600,
+        51579,
+        43344,
+        54432,
+        55976,
+        46416,
+        22192,
+        11700,
+        9680,
+        37584,
+        53938,
+        43344,
+        46297,
+        27296,
+        44368,
+        22358,
+        19376,
+        9648,
+        83315,
+        21168,
+        108875,
+        59728,
+        27296,
+        44456,
+        39760,
+        19296,
+        43748,
+        42224,
+        21088,
+        119394,
+        54608,
+        88730,
+        22176,
+        38608,
+        84438,
+        18912,
+        42192,
+        54484,
+        53840,
+        54587,
+        46400,
+        46496,
+        103848,
+        38320,
+        18864,
+        43380,
+        42160,
+        43600,
+        59985,
+        27968,
+        44475,
+        11104,
+        37744,
+        19190,
+        18800,
+        25776,
+        29859,
+        55888,
+        27483,
+        22224,
+        10976,
+        37863,
+        37600,
+        51552,
+        119125,
+        54432,
+        55888,
+        87379,
+        22176,
+        42919,
+        42448,
+        37584,
+        43702,
+        43344,
+        46240,
+        47780,
+        44368,
+        21920,
+        101282,
+        42416,
+        21367,
+        21168,
+        26928,
+        94549,
+        27296,
+        44368,
+        23379,
+        19296,
+        42472,
+        42208,
+        53856,
+        60006,
+        54560,
+        55968,
+        91812,
+        22224,
+        19168,
+        43475,
+        42192,
+        53943,
+        45648,
+        54560,
+        120133,
+        46496,
+        21968,
+        21939,
+        18864,
+        25975,
+        42160,
+        43600,
+        46678,
+        27936,
+        44448,
+        23396,
+        37744,
+        18800,
+        26995,
+        25808,
+        27303,
+        55888,
+        23200,
+        44741,
+        43744,
+        37600,
+        53987,
+        51552,
+        119896,
+        54432,
+        54608,
+        88406,
+        22176,
+        42704,
+        21972,
+        21200,
+        43344,
+        117075,
+        46240,
+        111783,
+        44368,
+        21920,
+        107429,
+        42416,
+        21168,
+        45427,
+        26928,
+        27321,
+        27296,
+        43856,
+        20310,
+        19296,
+        42352,
+        21220,
+        53600,
+        59696,
+        29987,
+        55968,
+        88743,
+        22224,
+        19168,
+        106965,
+        41680,
+        53584,
+        55892,
+        46368,
+        54953,
+        44448,
+        21968,
+        76214,
+        17840,
+        41648,
+        45749,
+        43344,
+        46368,
+        109346,
+        44384,
+        87399,
+        21360,
+        17776,
+        25973,
+        21168,
+        26960,
+        31059,
+        23200,
+        43882,
+        42704,
+        19168,
+        42726,
+        42336,
+        53920,
+        60069,
+        54608,
+        23200,
+        46755,
+        42704,
+        19415,
+        19120,
+        43216,
+        54613,
+        45728,
+        46416,
+        23892,
+        19872,
+        38352,
+        21874,
+        18864,
+        43382,
+        25776,
+        27280,
+        47780,
+        27472,
+        11168,
+        43874,
+        37744,
+        21222,
+        53600,
+        58544,
+        27941,
+        55952,
+        23376,
+        14035,
+        10976,
+        41696,
+        58066,
+        51536,
+        54614,
+        46368,
+        46736,
+        23972,
+        21968,
+        9680,
+        42419,
+        41648,
+        108727,
+        43344,
+        46240,
+        111269,
+        44368,
+        21936,
+        11124,
+        9584,
+        21241,
+        21168,
+        26960,
+        27990,
+        23200,
+        43856,
+        22228,
+        19168,
+        42352,
+        83299,
+        53920,
+        125095,
+        54608,
+        23200,
+        44453,
+        38352,
+        19168,
+        43700,
+        42192,
+        53944,
+        45712,
+        46416,
+        22359,
+        11680,
+        38352,
+        19829,
+        18864,
+        42160,
+        107699,
+        27280,
+        44440,
+        27472,
+        11104,
+        103269,
+        37744,
+        18800,
+        26980,
+        58528,
+        60010,
+        55952,
+        23248,
+        76502,
+        10976,
+        37600,
+        51925,
+        51536,
+        54432,
+        119971,
+        46736,
+        22439,
+        21936,
+        9680,
+        38325,
+        37552,
+        43344,
+        55636,
+        46240,
+        46416,
+        27986,
+        21936,
+        10102,
+        9584,
+        21168,
+        43685,
+        59728,
+        27296,
+        47779,
+        43856,
+        19416,
+        19168,
+        42352,
+        21717,
+        53856,
+        55632,
+        91476,
+        22176,
+        39632,
+        21970,
+        19168,
+        42422,
+        42192,
+        53840,
+        55957,
+        46416,
+        22176,
+        44450,
+        38352,
+        19383,
+        18864,
+        42160,
+        46261,
+        27280,
+        44352,
+        47956,
+        11104,
+        38320,
+        21362,
+        18800,
+        25958,
+        58528,
+        59984,
+        92821,
+        23376,
+        11104,
+        101091,
+        37600,
+        116951,
+        51536,
+        54432,
+        120998,
+        46736,
+        22224,
+        75188,
+        9680,
+        37584,
+        53938,
+        43344,
+        54615,
+        46240,
+        46416,
+        87381,
+        19888,
+        9648,
+        99699,
+        21168,
+        43448,
+        26960,
+        27296,
+        44710,
+        43856,
+        19296,
+        43748,
+        42352,
+        21104,
+        29283,
+        55632,
+        27479,
+        22176,
+        39632,
+        19925,
+        19168,
+        42208,
+        54484,
+        53840,
+        54680,
+        46400,
+        54944,
+        103846,
+        38320,
+        18864,
+        43444,
+        42160,
+        45690,
+        27216,
+        27968,
+        46934,
+        11104,
+        38320,
+        19317,
+        18800,
+        25776,
+        29859,
+        59984,
+        28056,
+        23248,
+        11104,
+        38629,
+        37600,
+        51552,
+        59732,
+        54432,
+        55888,
+        30034,
+        22208,
+        43959,
+        9680,
+        37584,
+        51893,
+        43344,
+        46240,
+        111779,
+        46416,
+        21977,
+        19360,
+        42416,
+        21877,
+        21168,
+        43344,
+        47444,
+        27296,
+        44368,
+        27474,
+        19296,
+        42726,
+        42352,
+        21104,
+        27237,
+        55600,
+        23200,
+        46755,
+        38608,
+        19195,
+        19168,
+        42192,
+        118998,
+        53840,
+        54560,
+        56645,
+        46752,
+        38608,
+        21938,
+        18864,
+        42359,
+        42160,
+        45648,
+        111189,
+        27968,
+        44448,
+        84835,
+        37744,
+        18936,
+        18800,
+        25776,
+        92326,
+        59984,
+        27424,
+        108228,
+        43744,
+        37600,
+        53987,
+        51552,
+        54615,
+        54432,
+        55888,
+        23893,
+        22176,
+        42704,
+        21972,
+        21200,
+        43448,
+        43344,
+        46240,
+        46758,
+        44368,
+        21920,
+        43940,
+        42416,
+        21168,
+        45683,
+        26928,
+        29495,
+        27296,
+        44368,
+        84821,
+        19296,
+        42352,
+        21732,
+        53600,
+        59752,
+        54560,
+        55968,
+        92838,
+        22224,
+        19168,
+        43476,
+        41680,
+        53584,
+        62034,
+        54560
+      ];
+      exports.LUNAR_MIN_YEAR = 1391;
+      exports.LUNAR_MAX_YEAR = exports.LUNAR_MIN_YEAR + LUNAR_DATA.length - 1;
+      exports.LUNAR_BASE_UTC_MS = Date.UTC(1391, 1, 13);
+      function assertYear(year) {
+        (0, validation_1.assertIntegerInRange)(year, exports.LUNAR_MIN_YEAR, exports.LUNAR_MAX_YEAR, "음력 연도(year)");
+      }
+      function getLeapMonth(year) {
+        assertYear(year);
+        return LUNAR_DATA[year - exports.LUNAR_MIN_YEAR] & 15;
+      }
+      function getLeapMonthDays(year) {
+        assertYear(year);
+        const data = LUNAR_DATA[year - exports.LUNAR_MIN_YEAR];
+        if ((data & 15) === 0)
+          return 0;
+        return data & 65536 ? 30 : 29;
+      }
+      function getLunarMonthDays(year, month) {
+        assertYear(year);
+        (0, validation_1.assertIntegerInRange)(month, 1, 12, "음력 월(month)");
+        return LUNAR_DATA[year - exports.LUNAR_MIN_YEAR] & 65536 >> month ? 30 : 29;
+      }
+      function getLunarYearDays(year) {
+        assertYear(year);
+        let sum = 348;
+        for (let i = 32768; i > 8; i >>= 1) {
+          sum += LUNAR_DATA[year - exports.LUNAR_MIN_YEAR] & i ? 1 : 0;
+        }
+        return sum + getLeapMonthDays(year);
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/calendar/convert.js
+  var require_convert = __commonJS({
+    "node_modules/manseryeok/dist/calendar/convert.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.isValidSolarDate = isValidSolarDate;
+      exports.lunarToSolar = lunarToSolar2;
+      exports.solarToLunar = solarToLunar;
+      var lunar_data_1 = require_lunar_data();
+      var validation_1 = require_validation();
+      var MS_PER_DAY = 864e5;
+      function isValidSolarDate(year, month, day) {
+        if (!Number.isInteger(year) || !Number.isInteger(month) || !Number.isInteger(day)) {
+          return false;
+        }
+        if (month < 1 || month > 12 || day < 1 || day > 31) {
+          return false;
+        }
+        const d = new Date(Date.UTC(year, month - 1, day));
+        return d.getUTCFullYear() === year && d.getUTCMonth() === month - 1 && d.getUTCDate() === day;
+      }
+      function lunarToSolar2(year, month, day, isLeapMonth) {
+        (0, validation_1.assertIntegerInRange)(year, lunar_data_1.LUNAR_MIN_YEAR, lunar_data_1.LUNAR_MAX_YEAR, "음력 연도(year)");
+        (0, validation_1.assertIntegerInRange)(month, 1, 12, "음력 월(month)");
+        (0, validation_1.assertBoolean)(isLeapMonth, "윤달 여부(isLeapMonth)");
+        const leapMonth = (0, lunar_data_1.getLeapMonth)(year);
+        if (isLeapMonth && leapMonth !== month) {
+          throw new RangeError(`${year}년에는 윤${month}월이 존재하지 않습니다.`);
+        }
+        const maxDay = isLeapMonth && leapMonth === month ? (0, lunar_data_1.getLeapMonthDays)(year) : (0, lunar_data_1.getLunarMonthDays)(year, month);
+        (0, validation_1.assertIntegerInRange)(day, 1, maxDay, `${year}년 ${isLeapMonth ? "윤" : ""}${month}월 일자(day)`);
+        let offset = 0;
+        for (let y = lunar_data_1.LUNAR_MIN_YEAR; y < year; y++) {
+          offset += (0, lunar_data_1.getLunarYearDays)(y);
+        }
+        for (let m = 1; m < month; m++) {
+          offset += (0, lunar_data_1.getLunarMonthDays)(year, m);
+          if (leapMonth > 0 && m === leapMonth) {
+            offset += (0, lunar_data_1.getLeapMonthDays)(year);
+          }
+        }
+        if (isLeapMonth && leapMonth === month) {
+          offset += (0, lunar_data_1.getLunarMonthDays)(year, month);
+        }
+        offset += day - 1;
+        const solar = new Date(lunar_data_1.LUNAR_BASE_UTC_MS + offset * MS_PER_DAY);
+        return {
+          year: solar.getUTCFullYear(),
+          month: solar.getUTCMonth() + 1,
+          day: solar.getUTCDate()
+        };
+      }
+      function solarToLunar(year, month, day) {
+        if (!isValidSolarDate(year, month, day)) {
+          throw new RangeError(`유효하지 않은 양력 날짜입니다: ${year}-${month}-${day}`);
+        }
+        const targetUTC = Date.UTC(year, month - 1, day);
+        let offset = Math.floor((targetUTC - lunar_data_1.LUNAR_BASE_UTC_MS) / MS_PER_DAY);
+        if (offset < 0) {
+          const base = new Date(lunar_data_1.LUNAR_BASE_UTC_MS);
+          const baseStr = `${base.getUTCFullYear()}-${String(base.getUTCMonth() + 1).padStart(2, "0")}-${String(base.getUTCDate()).padStart(2, "0")}`;
+          throw new RangeError(`음력 변환 지원 범위(양력 ${baseStr}) 이전 날짜입니다: ${year}-${month}-${day}`);
+        }
+        let lunarYear = lunar_data_1.LUNAR_MIN_YEAR;
+        for (; lunarYear <= lunar_data_1.LUNAR_MAX_YEAR; lunarYear++) {
+          const yearDays = (0, lunar_data_1.getLunarYearDays)(lunarYear);
+          if (offset < yearDays)
+            break;
+          offset -= yearDays;
+        }
+        if (lunarYear > lunar_data_1.LUNAR_MAX_YEAR) {
+          throw new RangeError(`음력 변환 지원 범위(${lunar_data_1.LUNAR_MAX_YEAR}년)를 벗어났습니다: ${year}-${month}-${day}`);
+        }
+        const leapMonth = (0, lunar_data_1.getLeapMonth)(lunarYear);
+        let lunarMonth = 1;
+        let isLeapMonth = false;
+        for (let m = 1; m <= 12; m++) {
+          const monthDays = (0, lunar_data_1.getLunarMonthDays)(lunarYear, m);
+          if (offset < monthDays) {
+            lunarMonth = m;
+            isLeapMonth = false;
+            break;
+          }
+          offset -= monthDays;
+          if (leapMonth > 0 && m === leapMonth) {
+            const leapDays = (0, lunar_data_1.getLeapMonthDays)(lunarYear);
+            if (offset < leapDays) {
+              lunarMonth = m;
+              isLeapMonth = true;
+              break;
+            }
+            offset -= leapDays;
+          }
+        }
+        return {
+          year: lunarYear,
+          month: lunarMonth,
+          day: offset + 1,
+          isLeapMonth
+        };
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/astro/solar-terms-data.js
+  var require_solar_terms_data = __commonJS({
+    "node_modules/manseryeok/dist/astro/solar-terms-data.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.SOLAR_TERM_DATA_MAX_YEAR = exports.SOLAR_TERM_DATA_MIN_YEAR = void 0;
+      exports.solarTermCorrectionMinutes = solarTermCorrectionMinutes;
+      exports.SOLAR_TERM_DATA_MIN_YEAR = 1800;
+      exports.SOLAR_TERM_DATA_MAX_YEAR = 2300;
+      var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+      var OFFSET = 31;
+      var PACKED = [
+        "fjejeiehegeeececgdjgmhmhlgkekflgninjmhjgffdededgeggihlkomrmrlpjlfiefdfehfjhkikijighehdhchchdiejfjflgmglgjghghihkimhlfibe",
+        "ZdYeafdjflgmjnlnnnnmmiieedcdffihlhlfjdicieigjgjgifieifihiihiehcgcjelhnhmgjcgZdYcYcaeefhhkimkokokoilhkfididjfkhkikiiihggh",
+        "gijkkmmolokoimhmhmilhlhlhmjnkokmiigdebfchemipkpkpjoininingkghgghhkhlilhkgiehdiflhnjpjokmkljkkkkjjkjkklllnkmhlfjcgafaebgd",
+        "iflhminilijhghdgchchcgbfaeafafafZfbgehhjkklikgidfcdbdbgciejfkglhkhkhhefbbZbaceghikjmhmglhmhmimhlgkeibfaeZcabaacafdkhokrm",
+        "qknhkdgaeYdZecffhiijikiljkijhifheidjelgmhmjljlilimlompnomkjfgbfZfagcidjfliplsnsormmhgecebgdigkgkfjeiekfkgmgkgjgihijjljlj",
+        "jiihhhkjnlqlqjnhkehcfcfdgehfkimmpqpsorlpilfjdiciejfkfkejeiehghihkhkhkgjfjfieiejdidjekhmknnmmkjhecbbbbcdgfiflgnjplrmpknij",
+        "dgbebgchfgfeebfbgciflgmhmglfjeidhdgbebccbfejimjmikfgbdYcWbWdYecheihkjklmllkkjjhghehdidididhcgchdjgljolqmpmmkhifiejejekek",
+        "gminjpingkdgbcacddhhlinknkmkmknjnhlgkejeifhgihighfgfhgjklnmqlpkoimgkfjejfkglhokolollkiiehbfafagcielhnjpjoinhlhihhhghefdd",
+        "bcbcbdcgchdkfmiolplnkkggddadaedhiiljnjnjojnilfhbfZeZebifljmllljmjmjojnjmhkehbeZdYeZeaecggikmooqppnmjiffbdYcZfciflhlilili",
+        "lhjgjegeffegejgmiojojoiniokplqlpikffcbaacbgdifkhljnlpmqkohkcgZbYbbefgiiiigggfgghfieidididiekglilhkgjgkhljmmllhjdhaeZeZfb",
+        "gdjfmiokqmrnolkjghdgcfcfeifjgjgidichchdifhghghggfgfhghgghfhejflhninhkegadYcYdagdjijkkmkolqlpjngkdhbgcidkfjeidfddeehgkili",
+        "likgjfjeidhbhbfbfdhhkjlkliiffccbbcbfchekgmininjninimhmglhkhiigigjfjeididjflipmsmsmqjmhjiiiikikikjkjkkljlgkdibgbgdiglknmo",
+        "kmjlikikjikhkgkflflglfkfkfjdjejhmjolnnlnjmgkgkfjekgkhlhmglgkehdfdcdcccefghijlklilgkejdhdidhegdebdZdZcadbdccfdhflhninhldh",
+        "beYdYfahejgjhhhgjgjfiehbeaebfdiekhmhlfjfhgiijkkjjihfedbcZbXcYdZfbiflinlqmpknhjegcdccediekfkfkfkfkflglglglgkgjijlkmjlhkgj",
+        "hkjomqmqlngjcfadaddffiijjkkmnoooomnhjdhbgciejgkfjdhchdhfjijjikhkglhlhmgkfkejekgmjplplnkjifgcfcecfdhgkimjplrlqkojkhhffdfd",
+        "fegehegeeedgdielgmimhlgkeidhcgbgcfdfggkinkojmfibeYcWcYeahdkflhlkmnnolnkjghefegdgdgbfZdYdafdihlkmkmikgheedccZcYcYeahekglh",
+        "mgleibeYcXbacddhfkglhlhlinimhmhmgkdidfcedeeefdeeggiknoqoqmoildhcgcgeigjhkhlilikijgfebeZeagdjgnhninhmhmhmhmikhiigheiehdhe",
+        "heiejgliolqmrlpkmijhgffgghiikllmlnjmgkeichbebfbgdiflimimjljhjgjglflfjdgaeYdYdZfbgdifjjlmnpnolmghcdZcZebhflgmgmhlikikiigg",
+        "eecddefhiililhlgkgminjoknikdgadYbYaaZdbhekhnkqmrlpkngjcfZeZebffhijkikikhjhkjlilikgkekfkhlimjljkikjmkomomlkfgZdXcXeahdjgl",
+        "hnjolplpkmihfccZdbgdiekfjeididjekflfkfighhgigighfhgigiiljokojngkdfbdZcZdbfejhmknmnolojmhkehbgbgafbhchchcfcfdeffigkhmhkfi",
+        "dgcfbgchchdiejilkllkkhgdbZaZabddhgkhniniokolnjmhjehdhdgegfffbeaeagckgmjpkpingkeicgbecdddfeifkhlhlhjfidgafZfahejgkjlkkkjj",
+        "jjkjklkljlikfkejeieieheidigljpmqnpnlkhjeidjekgkfkfkejekejdhdfcdeehhljnkokmikgifiejekfkgjfhghfhffefeeeffhjimjninimfjeidhd",
+        "iejgmhlhjggfeebeafafagbhdiekglgkdicgbeceffhegdeabYaYbZcaeafbidjgljmkliifebcZcbeeghfieichbidididhcgbgchdifkhihfgdfchdjgmh",
+        "mhkehaeYcWbWcYdceggjjllnmnllijfhcfafbhdjfkgififheigkilklllkikhlhlhmhmglgkgmjplqlpjkgecacZebhejglhninjplqkoilfgcedeefhghg",
+        "gffefehgjhlininhmgkgjfififheigkimmmolnhleibeZdYdZgcjgmiokplplmljkhiehcgbfbebebfaeZeagcihkkllkkigfccbbbbdcecgdjfmjojnikfg",
+        "adYbYcZedhghjhliniojojnhkeidhbfaeYdYbYZZadchglknlokmhjehaeYcXcYcaeehgihjijhifgedcacZdahdjflflgkgkglhmjnjmjjhfebeaeafagbh",
+        "djfmkqmsmrknhhddccddgeififififigjeichbgbfdhfjikjkijgihihikjmimhlfjdicgbgbgbhdjfljomponplnilficgbgdjfkhmhmgkfiehfffffefef",
+        "eggihjhjgjeiejekglikhieeabXaXbacddgfigmiplqlpjmfibfZdZfcjfkhihfifjfkgkfkfididhdidjfkeiegefghijlkljigecbYZWaVbYfbiflinkom",
+        "plojlhieecccbfcjelfkfjejdjekglhmhlgjghhgjhkhlhkgkgmjnlpknhkbfYbXaZdeghjkllllmmlljkghcgaeZfagdheiehdhcheigjiijhkfkfjejejd",
+        "ieiekfmhojnjmihgdeacYbZcafejimkojojnimgjehefcdccbdbdceddecebgcielhmilhjegaeaeaecgeghgihminimhkdgZeYcYeahelhnkmklllmknklj",
+        "khifhegdgbgafaeafdhgkjnlomnlmiifedceafbhdjekglglgkglfjeidgdgggjinknjoimgkglhmjpjojnhkegeffegfgfgfhiklnnrnqlohkdhcgdhgkhk",
+        "hjgiehfhfffdgdhciejflhmhlgkeicidifkijjijgiehcgbfbgdheiglhnjokpknjjiggeeeeefgiiihiegcfagbgcgcgdhdgdheieifhfeecfchekglfjcf",
+        "YcWbWcYeafdgfgiilkolojlghcdZdafcidjejdgcedffghihihhhghghfieidhcgafchfkimimhkehbdZaYZbZebiekgmhojnjoinhlejdhdgfghgjhjfieh",
+        "ehfkjnlpmpkpimilhkikjjiihjjlknmnmklfhbfZeagdjgminjojojojmkkjhhfheidjeididichchdjfminknlmlkkijghfhehfihljnkojpimgjfhdebdc",
+        "edhgjilklljmimhlgkfjeicgaeYdYdYdZdadcegglkplpjngjcfZeZeZfahcifihjklljkhhddbbabbeciekflfkgkhlkmjmjmhkfidfccbZbXbXdZgdkhok",
+        "rlqlpildgbcYaaadcgeifjfkfkgkglfjdichcheihjjjkijhihijlmonplnhjcgZeZebgdheigljomqpronmiidgaeagcjekfkejejejekfighgfhfigkhlh",
+        "lhjgjgkglhojpkojkhhfecccddefhijmmonrnsmqknhkdhcgchdkglikhjhhheiekfkfkejdidiejfjekejehfiijmkmikfgbcYaYbZeciekgmjomqoqoolk",
+        "ggddbddfhgjgkeididjfkglhlglgjfieifggggeheiekgmiojnhlehaeXbWbYccfhilknkmkmjlikhifhcgbhchejgkgjghfhfihkjnmnnkmhkfkfkflhmgl",
+        "gmhninjnhkfgcbbYbYfcjglinjnjnjnhmgkfidfdeeeffgfgffegfgfihkhminhmhlfifhdgeheigkillmlklhkeicfZeYdZeaielhnjnjmjjihifiehdgbf",
+        "ZcZdYdZeZfZfbhfjjlmnmkjhfecbbaccfdifkgmhminjmhjfgceaebfehikljmiminhnjojoinimfkdhaeZdabccedigkjolqnqmpkmfibfZfbgeiijijjii",
+        "ihiijijjhigjfkgniojnjmikgkhliolqnomkjfgcgbhdjekglgmipkqlrlpjkgfededhfjgjgiegdgchchdididifihjikjkjjhighgghhliminglfichbfa",
+        "fbgciekhmjnmmnknjlfjdhcgbhdjflfkeicgbfdfffhgjhighfhfhfiehdgagbhejhliliiefbbZbZcceffigkgmiokpkoingjdhdidifjgifffcfbfcifkh",
+        "mjnjmimglfjdhdfdeedfgihjjljjiiffbeZeZgbjfliljmjlimimjlkljkjikglglglfkeididjgnjpmsornomklililhlhlhlhnjnkpjnhkfhcfdfghjjll",
+        "mllllklkmjlhlglglgkgjfiehdhdiejgkjmnmpmqlpjohkejdjdjfmhnioknkkjijghegcfbfchfjhmjmimglgkhkikijihfecbabZabbcaebhdliolqlpkl",
+        "fhadYcYcaedggfifkhlhmhleidhbgagbiekgkhjihjhkjmknknkliidfadXbWbXcafdiillonqoommjigcdZdYfbiekflgkfkflgmhlilhjhghfjgmininhm",
+        "glgnjpmrmrkmggdcbbccffigjjllonqosnpjmeibeaecgeigigififighihjgkgkflfkfkfkfkfkfkflhnlonnnkmgjcfZeZeagdkgmjqlrmrnroomkjgfee",
+        "deegfhgjfiehcidjglimjmikfidhdhegfggehekhokqkqjmfhaeXcXeZgdihkkkmmpmqnqloikfidhdiejdjeidgdgfhijlmnnmmllkiiehbgagbgdhekhli",
+        "mimgkfgcdaaaZdbhflhnjnjnjninininhlgjghgfhfifjeiehfjhlkpmrmrkoikfifhghhiikjkjllkljkhidgZeZfcifkhnkokojmimikjiigifjeidichc",
+        "hchdiekglinkomnmlmjkgiegdgeihlknkojnhmgifhdfcdcdcfeiiklmmklhkfkekflgkehbeZdYdYdaecfefhgliolqlpilfhbfaeagcjfliljkkjkikijh",
+        "iffegfhgkhmiojoimililjmknlnklhiffebdafbhdkgmhnjqlrmqkpilfidfefhgkinjmhlfjfkgkhminimimimkmnnonnlljjijknmpnpkmgjcgbgcgfihk",
+        "iljmkolomnmjkficgchdjflglfjeichcheifighigkhkgkgkgjfjfidjekhmimilhhfedccbbcdfgjkknlokojoinhkfidgcfcgdiehegdecbebhekfmgmhk",
+        "fjdhchbhcgcfcffhjjmjnilfhcdZcZdagciekglilkmlmmmlkijhhghhghehdgafZeagdjhmkplqlojlhifeecebgchdjekflhlglfkdhbfaecffhkjmkljk",
+        "hjhkimknjojnglfjfhfhfhfhfhgjjmnqrqsnpjnglejejfkglglglililikhggdfcheiglininimhmhmgmhmiljlkjjhifgdfdfdffhglinkrlrmqlnjkghe",
+        "gdgeigkjkkjlhkfkfkejdichchcjekgkgkghffgfiglglgjdfZbWaWaWbXdZecgfjkmnmnlkhgdcbbacbfdidjdidieifjgjfifhehehfggfieidididiflh",
+        "ojoimgjcfYbXZYZbbfdiglinkomqmojleibfaebgehhiihhgffghijlkmkmilglglglhlhkgkgkhnkpnqnnlhhbeYdYeagdkflhnjpkqlqkmiifeececgdgd",
+        "gdgdfdgdiekflglhkijhiggffefegfgiilkokpkohkehaeXbXcZgdjhlknmmnmnloimfjcgbfZeagbgbgagbfcfgikknkmjkfgdebeaeafagciekhmknlmji",
+        "feaaYaZbddhfkhminjpkqlpknilfjdhdgcecdcbdbfbhdjgnjokojngjdgZdYcZbcdgfhgjhihihiggdfadYdZfbigkimjlhjgjgjhjijihidhbfafagbhbg",
+        "bidkgnjplpmnjhgdfcebgcifkgkfkfkfjdibfacabbcefghjjjijiihifieiejejdhdfbeaeaeaecgfihjkkmjojnhlficgZeZgcjflhmhkghfffdfcebeae",
+        "afbgejgkgkeidhcfeghhihfecaZYXYYZbaebgdielinkojnhjdfZdZdaeeghgjfididjdjejejeidjdjekgkhiihigheigjhlilikgicfZcWcXdaffhhkjkk",
+        "llmklkkiggcfbgciekglhkfjdidiekhljmjkkijhlhlhmhlfkekglhnioimghddbabaddhfihkjlkmjnimfkdhbfadbededfdececdbcccfdhdjejeidicgb",
+        "fbfbhchdifjijjhjegbeYbWaWbYfbiflglglhkhihhgefcdbbababacacZcXcYeagejhlikgidebcZcZbbbdbfbhekgmglficfZdWbXdZfdhghigjhkhlhlh",
+        "lgkgjeidhafZdYbYaZbccefijllmmmkkfgbeYcXdZfbfcgdgdhdgdheheedcdbfcielglfkdididjflhmjnijgffdebebfbfbfchfkiplqlpjmgieeddeeef",
+        "gffgfffegegchbhbhchdifjfjfjeidgcgegggjhlhlficfZdXdXdYfahdjgljmmmmkmijegbdbdcfdhdhcgafZebededfddcdbcbdcddcdZbXcXdZhdjeieg",
+        "acWZUXTYVZYaZZdcgekgmhmgjcfZcXbWcXdZdacaabacaecfegehfhehdgbgbgafadbcbfehgjhjghedbYYUXTZWdZgcjekfkglglgkficebbcaecgdhdhbf",
+        "aeagdigmhmhmhjfhfggghfhfgeggiiljmikehadXaVZXcbfehgjhkikjkjhiegaeZdYeYeZdZdYeZeZeagehghigjgidgbeZdYdZebhdjflhmhkghedbaZWX",
+        "WXYbcegjhlhlglglgjfideacZbXZWZXaYaZZaZebhelhmhmfiaeYcVbVbXdaedfghjilikgidfZbWaWaXeahdifjhjijjjijiihhgfeccZbXbWaWcXdZfdig",
+        "ljokojlfgbaYWYVaXdagbhcgbgbgcgagZdYbYaZaddgfifiegdfdgfjglgkeiaeYbXZYaZbbccedghkllmjlfibeYbXbXcZebgcgbfafbdbcbabYdYeZeagc",
+        "hbhbhbgbfbgchegfgfddaaXYWYXZZccfdielhminikhhddabYaYbbedffefbeZdZfafbfaeZdYdZeafbfbdaaaZdbgejeicfZbUXSWSYUaXcZecefgiikjjh",
+        "gddaaZaZbZfbgbfaeZdZdbecgdgehehffedecfbgafZfZfbhdjejdibfYbWYWXYZdchekfkfjeifieidgaeZeaebeefgffddbbacceeigjhlgkeidieieiei",
+        "eheheifighfdcZbVZVaWdZgchdjeieichbfacaZaYbYbYbYbXbXbYbXcXdZfafcgdfddccbaZaZaabccedgcgbgaeZcXZUYTYTZXcagdhfgfdebfafafZeYc",
+        "WbVZUZTZUZUYUXWYbbgfjgjefbcYaWZVZVbWdYeaebfdfefdeabYZYaaacbechcichbhchdiejfjeidgacYYYVYVaVbWdZfbjelhmhlfibeXaWYXabbecebd",
+        "acadbecgcfafaeZfcgehfhdfcebecffijikgidgZdXbWbXcXdZfbhflhmjmjjhefacXbYcZeaeafZdYdYeYeadbddcdddcdcdcdbcbdadafcidkfjehdeZaW",
+        "YVYVZYcbeefhgkhmhmfibfZbVaVaXdZeZcYaXZYYbZebfbfadZcYcXcYcWbVZUZXbbefggecaZWVTTSTSWUZVbXdZgdieifidfbcYaXZXZZZbYbWbVbVbXdZ",
+        "gbididhcgbdZaZZZYaYbZcZecgdgdgaeXaUXSXTYXbceffffefegfffefceZeYdYeZeaeZdYdXcYechfjikihhdgbfafZeafafbhciejeidgacYYXWYWZYcb",
+        "fdheiehehchbfaeZcZcZaYZXYWYWYXZaacbfdiekejcgaeXbVZVaXcZfcgeggegcgbeXbVZSYTZUcYebhchcgcedefdfcebbYYVWUVTWTXTZVaXdbgfjilhj",
+        "eeZaWXTVVVYXbYeagbhchchbfZdXbVbVbXbadddgdgchdidiejgkfjcfXbUXSWSVVXZZcbeehhiijhiefZaTXRXSYWbadadZcZbZdadbdcbbZbXcYeZfbgbf",
+        "aeZfafciejfgdbZWXTWTYUaWbYdbgdjflgkeibdYZWXXXYYaabaaaaZaYbXbXcXcYcYcZcZcZdZdYdZcaccdfdhdhcfYbVYSXSXUbXeahdifihiigiegbdYa",
+        "VZWaYcaeZdYcXbWaYcbdcdccbbaaZZZaaZaXaVbXdagchdgadXZTXRWTXWZZbdbfchdididicgaeYcXcYcYdacaaaYZXaXbZdcgehfjehcfZeYdYbZcacbdb",
+        "dbdcdbcbZYWYTZUbYechdjdhbfafafafcecdcbdbfbgbfafYdXcXdZgciekfjegdedcdcdcdcecececeaeYdWbUYUXUYXaZdcfegdfcecbbYbXcWcWcXbWaU",
+        "ZUZUaUZVbXbacccfcfbeZcWZUYUZVbYeZgafadZcaaZYXVWUVUWWZZcbeceZdXcXbXcZcabXZUXSURTRTTUVTXUaWeahdjeicfXbUYSWSXUZYaaacZdaeaea",
+        "eZcYbXbXbXdYeaebecdcccddefgghgeeabVXSWRXTZWbYdagchfkgkfhddaYYUYUaXeZeZdYdXcXdYeafbfcebccbecfcgbeadadagdiflfkdgZbXYWWWXXY",
+        "ZabddfghihjficgYcWaWZWaWbXbXbWaWZXZZacafbfbfaeYdXcWbWbWbWcYebfegfffbcXYTURUTWVaYdZgbhcieififfccZZWYXZYZZYYVXTWSYVcYfbgcg",
+        "aeYcVaUYUXTVTTVUZYdagbgbeXaTXRWQWRYUZWaZaccedfefefcdacZcYbWaUaUYTWUXVYWbafdhfighfdcZaVYTZUaVbXcYdZeZfaeZcXZVWVUYWbYebfbf",
+        "aeZeafbgbhbgbeZbZaZZaZZXYYZYbcfejglhleicfZcYcYbYcaebecfdedccZbWaUZUZUaXdZfagbgafaeadbcbbcacYbVZUXSXUYVaWcXebhdhfiggfcbZX",
+        "WVVWXYZdbfbfafZeZdYcXaVXTXUYWbZebedccZdZeZfagbfYcUYRVPTPVQVTXWYabeeigjghdeZaUWSVSXTaWdZdbecdcdccccbbaaZZZYbYdZeZfbeafaea",
+        "gchcgbfZaVVSRSQUSYVcYfagchdidjchadWYSVTUWXaZdacZaXaXZYcYdZdXdXcWbYbacbdbcZbZcceffgefacWYSWQVRXTZXcZfbhdieiefcaaWYTXSXTYU",
+        "ZWaWaVZUaVaVbXaabbabYaYZXYXZXZYbYcYfahcgbfabXXUURTRVTYYccdfdgdidichbfYcVZTYTYUZVaVZWXWVYXbYebgbfZdXaWZUYTZTYUYVZZbcdfeec",
+        "bYYVUTUSVTYVcYeZfagbgdfdfcebdacabZZZXaVaUaVZUaWcYfbiejejcfabXXXWYWaYbYcYcYcYcYcXbWZUZUYWaacdfffddbbbbabcbeaeZdYdXcXbXbXa",
+        "WaVaWcZfeggggdgaeXbWcXcXdZfafafYdXcWYVWWVWUYVaXbZdaeadZcWbVaVaWbXaYZXXVVTUTUUWWXYYaYeafbgcgadYaUXTXTYVbYcZbZZZWZVZVaVZUY",
+        "SYTYUaXcYdXbWYVWXXZYcacZZVXSTRSPTPVRXSYVaYdceegeebbYYVVVVVVYWbXdXcWaWaXcXcYdZeZdadadcbdaeZdYcXcXeagcidhbeXaTWSUTVXXaacad",
+        "bedfegfgceZbVZUZWbZcacaaXZWYWaZcdefdgcgbfZfafaeZdXcXcZgcheheecaaVYTXSXUZWbYdagbgcichbeabYYYYYXYWXWWVWUWUWUYUaXdafbfbdYaX",
+        "YUXUWUYVYXZaaebgbgadXbTWQVQWRYVbXdadbcdcecfbeZcXaVXTXTWSWQVPUPTRVWZacededbaYXVVUTURURWRYUaXdaebdZbWZTWSURUUVXVaXdXdYeZeZ",
+        "fafafZeZcWaVWTUUTUSWTXVZYdcgeificfYaTXRVRVVXXYYZYZYZYZZZZXYUYTYTZWbYdZeZdYcYbYdZecedccZbXaUZUZTZTaVaXeahdjfkfhdcbZZWYVYW",
+        "ZYbZdadZcXbWbVaUYUXWXXYXaYbZbabaaaYaXcYeYeYcVZTWQVQVRWUZWbZdddgeieicfYbUXRWSXUbXdYdYcXaYaaZaZZWXWWUWVYWaYbXbVaUZVaYdbebc",
+        "YYTUPROQQQRRVUZWcZgciejehaeXaTXRVSWUXXYZXbWaWbWaWcXcYdYcWbWbVaXZYZZZZZZZbcddfddaaVWQTNSOURYWbZcbdbecfbebcYXWSURWSYUaWbWa",
+        "VZUZVaWcYeadabaZaYaWaXbXaWbYcafbhbgadXZTUSSRSSTVWYZacdeedfbeZcWaUXSWSWRWSWSXSWTWUWWXZYbZeZeXcVZTXRWSXTYUaXcZdadccdZaWWST",
+        "PROSRXVbYfafafbfbecdabYYWWUUTUTUVTVRVRWSYVbYebgbfZbWYTWRVSUTUWUYWbYeYeZdXcVZTXSXRXTZWbabcbdbdacadacbdbeacXaUYSXSWTWVXWYX",
+        "ZZdbfegeedZZUXSWSYVbXcXbWaVZUZUZVYVXVVXVZXdYeaeYcWaUZUaWcXdZdYaYXXWXVXVXWXWYXaadbfchbfZcWZVXVXVYXaXaXZWXVVVTVRWRWRXSYTZV",
+        "bWbWbWaUYTXUVVWYXbWZUXSVQTPUQVRXTZUbWcYcbccbaYXVTTSSUVXWaWZUYSXRXSXTYUXVXUXTYUYWYWXXTVRVQXTaWcXbVZSVOSNRNSPTSVVVYXaYdZdZ",
+        "dZbWZUYSXSYTZVZWYWXVVVVWWXZaacccbdZcXbWbWbWaVZVZXbZdaeadYZVUSQSQWSZWcYdYeYeZeZfZdYcWYVWWXYXaXbXZVYTWVYWbYeafbfadZbZaYZYZ",
+        "YZXZYabcdceacWaUXRWRVRWT"
+      ].join("");
+      function solarTermCorrectionMinutes(year, index) {
+        if (year < exports.SOLAR_TERM_DATA_MIN_YEAR || year > exports.SOLAR_TERM_DATA_MAX_YEAR)
+          return 0;
+        return ALPHABET.indexOf(PACKED[(year - exports.SOLAR_TERM_DATA_MIN_YEAR) * 24 + index]) - OFFSET;
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/astro/sun-longitude.js
+  var require_sun_longitude = __commonJS({
+    "node_modules/manseryeok/dist/astro/sun-longitude.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.apparentSolarLongitude = apparentSolarLongitude;
+      exports.equationOfTimeMinutes = equationOfTimeMinutes;
+      exports.solveSolarLongitudeInstant = solveSolarLongitudeInstant;
+      var DEG2RAD = Math.PI / 180;
+      var RAD2DEG = 180 / Math.PI;
+      function julianDayFromMs(ms) {
+        return ms / 864e5 + 24405875e-1;
+      }
+      function normalizeDegrees(deg) {
+        const d = deg % 360;
+        return d < 0 ? d + 360 : d;
+      }
+      function solarElements(jd) {
+        const T = (jd - 2451545) / 36525;
+        const L0 = normalizeDegrees(280.46646 + 36000.76983 * T + 3032e-7 * T * T);
+        const M = 357.52911 + 35999.05029 * T - 1537e-7 * T * T;
+        const e = 0.016708634 - 42037e-9 * T - 1267e-10 * T * T;
+        const Mrad = M * DEG2RAD;
+        const C = (1.914602 - 4817e-6 * T - 14e-6 * T * T) * Math.sin(Mrad) + (0.019993 - 101e-6 * T) * Math.sin(2 * Mrad) + 289e-6 * Math.sin(3 * Mrad);
+        const epsilon0 = 23 + 26 / 60 + 21.448 / 3600 - 46.815 / 3600 * T - 59e-5 / 3600 * T * T + 1813e-6 / 3600 * T * T * T;
+        return { L0, M, e, C, epsilon: epsilon0, T };
+      }
+      function apparentSolarLongitude(ms) {
+        const jd = julianDayFromMs(ms);
+        const { L0, C, T } = solarElements(jd);
+        const trueLong = L0 + C;
+        const omega = 125.04 - 1934.136 * T;
+        const apparent = trueLong - 569e-5 - 478e-5 * Math.sin(omega * DEG2RAD);
+        return normalizeDegrees(apparent);
+      }
+      function equationOfTimeMinutes(ms) {
+        const jd = julianDayFromMs(ms);
+        const { L0, M, e, epsilon } = solarElements(jd);
+        const epsRad = epsilon * DEG2RAD;
+        const y = Math.tan(epsRad / 2) ** 2;
+        const L0rad = L0 * DEG2RAD;
+        const Mrad = M * DEG2RAD;
+        const E = y * Math.sin(2 * L0rad) - 2 * e * Math.sin(Mrad) + 4 * e * y * Math.sin(Mrad) * Math.cos(2 * L0rad) - 0.5 * y * y * Math.sin(4 * L0rad) - 1.25 * e * e * Math.sin(2 * Mrad);
+        return E * RAD2DEG * 4;
+      }
+      function solveSolarLongitudeInstant(targetLongitude, guessMs) {
+        let ms = guessMs;
+        const degPerDay = 360 / 365.2422;
+        for (let i = 0; i < 8; i++) {
+          const current = apparentSolarLongitude(ms);
+          let diff = (current - targetLongitude + 540) % 360 - 180;
+          if (Math.abs(diff) < 1e-7)
+            break;
+          ms -= diff / degPerDay * 864e5;
+        }
+        return ms;
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/time/korea-timezone.js
+  var require_korea_timezone = __commonJS({
+    "node_modules/manseryeok/dist/time/korea-timezone.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.koreaCivilOffsetMin = koreaCivilOffsetMin;
+      var STANDARD_EPOCHS = [
+        { year: 1908, month: 4, day: 1, offsetMin: 510 },
+        { year: 1912, month: 1, day: 1, offsetMin: 540 },
+        { year: 1954, month: 3, day: 21, offsetMin: 510 },
+        { year: 1961, month: 8, day: 10, offsetMin: 540 }
+      ];
+      var DEFAULT_OFFSET_MIN = 540;
+      var DST_INTERVALS = [
+        { start: { y: 1948, mo: 6, d: 1, h: 0 }, end: { y: 1948, mo: 9, d: 13, h: 0 } },
+        { start: { y: 1949, mo: 4, d: 3, h: 0 }, end: { y: 1949, mo: 9, d: 11, h: 0 } },
+        { start: { y: 1950, mo: 4, d: 1, h: 0 }, end: { y: 1950, mo: 9, d: 10, h: 0 } },
+        { start: { y: 1951, mo: 5, d: 6, h: 0 }, end: { y: 1951, mo: 9, d: 9, h: 0 } },
+        { start: { y: 1955, mo: 5, d: 5, h: 0 }, end: { y: 1955, mo: 9, d: 9, h: 0 } },
+        { start: { y: 1956, mo: 5, d: 20, h: 0 }, end: { y: 1956, mo: 9, d: 30, h: 0 } },
+        { start: { y: 1957, mo: 5, d: 5, h: 0 }, end: { y: 1957, mo: 9, d: 22, h: 0 } },
+        { start: { y: 1958, mo: 5, d: 4, h: 0 }, end: { y: 1958, mo: 9, d: 21, h: 0 } },
+        { start: { y: 1959, mo: 5, d: 3, h: 0 }, end: { y: 1959, mo: 9, d: 20, h: 0 } },
+        { start: { y: 1960, mo: 5, d: 1, h: 0 }, end: { y: 1960, mo: 9, d: 18, h: 0 } },
+        { start: { y: 1987, mo: 5, d: 10, h: 2 }, end: { y: 1987, mo: 10, d: 11, h: 3 } },
+        { start: { y: 1988, mo: 5, d: 8, h: 2 }, end: { y: 1988, mo: 10, d: 9, h: 3 } }
+      ];
+      function key(y, mo, d, h) {
+        return ((y * 12 + (mo - 1)) * 31 + (d - 1)) * 24 + h;
+      }
+      function standardOffsetMin(y, mo, d) {
+        const k = key(y, mo, d, 0);
+        let offset = DEFAULT_OFFSET_MIN;
+        for (const e of STANDARD_EPOCHS) {
+          if (k >= key(e.year, e.month, e.day, 0)) {
+            offset = e.offsetMin;
+          } else {
+            break;
+          }
+        }
+        return offset;
+      }
+      function isDst(y, mo, d, h) {
+        const k = key(y, mo, d, h);
+        for (const iv of DST_INTERVALS) {
+          if (k >= key(iv.start.y, iv.start.mo, iv.start.d, iv.start.h) && k < key(iv.end.y, iv.end.mo, iv.end.d, iv.end.h)) {
+            return true;
+          }
+        }
+        return false;
+      }
+      function koreaCivilOffsetMin(y, mo, d, h) {
+        const base = standardOffsetMin(y, mo, d);
+        return base + (isDst(y, mo, d, h) ? 60 : 0);
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/time/true-solar-time.js
+  var require_true_solar_time = __commonJS({
+    "node_modules/manseryeok/dist/time/true-solar-time.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.DEFAULT_LONGITUDE = void 0;
+      exports.resolveInstant = resolveInstant;
+      var sun_longitude_1 = require_sun_longitude();
+      var korea_timezone_1 = require_korea_timezone();
+      var MINUTE_MS = 6e4;
+      var KST_STANDARD_MERIDIAN = 135;
+      var KST_OFFSET_MIN = 540;
+      exports.DEFAULT_LONGITUDE = 127.5;
+      function resolveInstant(year, month, day, hour, minute, options) {
+        const wallMs = Date.UTC(year, month - 1, day, hour, minute, 0);
+        if (!options) {
+          const instantUTCms2 = wallMs - KST_OFFSET_MIN * MINUTE_MS;
+          const apparentMs2 = instantUTCms2 + KST_STANDARD_MERIDIAN * 4 * MINUTE_MS;
+          return { instantUTCms: instantUTCms2, apparentMs: apparentMs2 };
+        }
+        const longitude = options.longitude ?? exports.DEFAULT_LONGITUDE;
+        const applyEoT = options.applyEquationOfTime ?? true;
+        const applyDst = options.applyHistoricalDst ?? true;
+        const civilOffsetMin = applyDst ? (0, korea_timezone_1.koreaCivilOffsetMin)(year, month, day, hour) : KST_OFFSET_MIN;
+        const instantUTCms = wallMs - civilOffsetMin * MINUTE_MS;
+        const eotMin = applyEoT ? (0, sun_longitude_1.equationOfTimeMinutes)(instantUTCms) : 0;
+        const apparentMs = instantUTCms + (longitude * 4 + eotMin) * MINUTE_MS;
+        return { instantUTCms, apparentMs };
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/ganji.js
+  var require_ganji = __commonJS({
+    "node_modules/manseryeok/dist/ganji.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.ganjiIndexOf = ganjiIndexOf;
+      exports.pillarFromGanji = pillarFromGanji;
+      var constants_1 = require_constants();
+      function ganjiIndexOf(stemIndex, branchIndex) {
+        if ((stemIndex - branchIndex) % 2 !== 0) {
+          throw new RangeError(`존재하지 않는 천간·지지 조합입니다: ${constants_1.HEAVENLY_STEMS[stemIndex]}${constants_1.EARTHLY_BRANCHES[branchIndex]}`);
+        }
+        return ((6 * stemIndex - 5 * branchIndex) % 60 + 60) % 60;
+      }
+      function pillarFromGanji(ganjiIndex) {
+        return {
+          heavenlyStem: constants_1.HEAVENLY_STEMS[ganjiIndex % 10],
+          earthlyBranch: constants_1.EARTHLY_BRANCHES[ganjiIndex % 12]
+        };
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/astro/solar-terms.js
+  var require_solar_terms = __commonJS({
+    "node_modules/manseryeok/dist/astro/solar-terms.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.SOLAR_TERM_NAMES_HANJA = exports.SOLAR_TERM_NAMES = void 0;
+      exports.solarTermInstantMs = solarTermInstantMs;
+      exports.getSolarTerm = getSolarTerm;
+      exports.getSolarTermsOfYear = getSolarTermsOfYear;
+      exports.sajuYearForInstant = sajuYearForInstant;
+      exports.sajuMonthForInstant = sajuMonthForInstant;
+      var sun_longitude_1 = require_sun_longitude();
+      var validation_1 = require_validation();
+      var solar_terms_data_1 = require_solar_terms_data();
+      var SOLAR_TERM_MIN_YEAR = 100;
+      var SOLAR_TERM_MAX_YEAR = 9999;
+      var MS_PER_MINUTE = 6e4;
+      var SOLAR_TERM_CACHE = /* @__PURE__ */ new Map();
+      function assertSolarTermYear(year) {
+        (0, validation_1.assertIntegerInRange)(year, SOLAR_TERM_MIN_YEAR, SOLAR_TERM_MAX_YEAR, "절기 연도(year)");
+      }
+      exports.SOLAR_TERM_NAMES = [
+        "소한",
+        "대한",
+        "입춘",
+        "우수",
+        "경칩",
+        "춘분",
+        "청명",
+        "곡우",
+        "입하",
+        "소만",
+        "망종",
+        "하지",
+        "소서",
+        "대서",
+        "입추",
+        "처서",
+        "백로",
+        "추분",
+        "한로",
+        "상강",
+        "입동",
+        "소설",
+        "대설",
+        "동지"
+      ];
+      exports.SOLAR_TERM_NAMES_HANJA = [
+        "小寒",
+        "大寒",
+        "立春",
+        "雨水",
+        "驚蟄",
+        "春分",
+        "淸明",
+        "穀雨",
+        "立夏",
+        "小滿",
+        "芒種",
+        "夏至",
+        "小暑",
+        "大暑",
+        "立秋",
+        "處暑",
+        "白露",
+        "秋分",
+        "寒露",
+        "霜降",
+        "立冬",
+        "小雪",
+        "大雪",
+        "冬至"
+      ];
+      var LICHUN_INDEX = 2;
+      function solarTermLongitude(index) {
+        (0, validation_1.assertIntegerInRange)(index, 0, 23, "절기 인덱스(index)");
+        return (285 + 15 * index) % 360;
+      }
+      function solarTermInstantMs(year, index) {
+        assertSolarTermYear(year);
+        const target = solarTermLongitude(index);
+        const cacheKey = year * 24 + index;
+        const cached = SOLAR_TERM_CACHE.get(cacheKey);
+        if (cached !== void 0)
+          return cached;
+        const month = Math.floor(index / 2);
+        const guessMs = Date.UTC(year, month, 15, 0, 0, 0);
+        const meeusMin = Math.round((0, sun_longitude_1.solveSolarLongitudeInstant)(target, guessMs) / MS_PER_MINUTE);
+        const instantMs = (meeusMin + (0, solar_terms_data_1.solarTermCorrectionMinutes)(year, index)) * MS_PER_MINUTE;
+        SOLAR_TERM_CACHE.set(cacheKey, instantMs);
+        return instantMs;
+      }
+      function getSolarTerm(year, index) {
+        const ms = solarTermInstantMs(year, index);
+        return {
+          index,
+          name: exports.SOLAR_TERM_NAMES[index],
+          hanja: exports.SOLAR_TERM_NAMES_HANJA[index],
+          date: new Date(ms)
+        };
+      }
+      function getSolarTermsOfYear(year) {
+        return Array.from({ length: 24 }, (_, i) => getSolarTerm(year, i));
+      }
+      function sajuYearForInstant(instantMs, calendarYear) {
+        (0, validation_1.assertFiniteNumber)(instantMs, "절대 순간(instantMs)");
+        const lichunMs = solarTermInstantMs(calendarYear, LICHUN_INDEX);
+        return instantMs < lichunMs ? calendarYear - 1 : calendarYear;
+      }
+      var JEOL_TO_MONTH = [
+        [2, 1],
+        [4, 2],
+        [6, 3],
+        [8, 4],
+        [10, 5],
+        [12, 6],
+        [14, 7],
+        [16, 8],
+        [18, 9],
+        [20, 10],
+        [22, 11],
+        [0, 12]
+      ];
+      function sajuMonthForInstant(instantMs) {
+        (0, validation_1.assertFiniteNumber)(instantMs, "절대 순간(instantMs)");
+        const year = new Date(instantMs).getUTCFullYear();
+        let bestBoundary = -Infinity;
+        let month = 12;
+        for (const yr of [year - 1, year, year + 1]) {
+          for (const [index, mon] of JEOL_TO_MONTH) {
+            const boundary = solarTermInstantMs(yr, index);
+            if (boundary <= instantMs && boundary > bestBoundary) {
+              bestBoundary = boundary;
+              month = mon;
+            }
+          }
+        }
+        return month;
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/pillars.js
+  var require_pillars = __commonJS({
+    "node_modules/manseryeok/dist/pillars.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.computeFourPillars = computeFourPillars;
+      var constants_1 = require_constants();
+      var ganji_1 = require_ganji();
+      var solar_terms_1 = require_solar_terms();
+      var MS_PER_DAY = 864e5;
+      function mod(n, m) {
+        return (n % m + m) % m;
+      }
+      function getYearPillar(sajuYear) {
+        return {
+          heavenlyStem: constants_1.HEAVENLY_STEMS[mod(sajuYear - 4, 10)],
+          earthlyBranch: constants_1.EARTHLY_BRANCHES[mod(sajuYear - 4, 12)]
+        };
+      }
+      function getMonthPillar(sajuYear, monthNumber) {
+        const yearStem = mod(sajuYear - 4, 10);
+        const yearStemMod5 = yearStem % 5;
+        const monthStemIndex = (yearStemMod5 * 2 + monthNumber + 1) % 10;
+        return {
+          heavenlyStem: constants_1.HEAVENLY_STEMS[monthStemIndex],
+          earthlyBranch: constants_1.MONTH_BRANCHES[monthNumber]
+        };
+      }
+      function ganjiIndexForDate(year, month, day) {
+        const anchorMs = Date.UTC(constants_1.DAY_PILLAR_ANCHOR.year, constants_1.DAY_PILLAR_ANCHOR.month - 1, constants_1.DAY_PILLAR_ANCHOR.day);
+        const targetMs = Date.UTC(year, month - 1, day);
+        const daysDiff = Math.round((targetMs - anchorMs) / MS_PER_DAY);
+        return mod(constants_1.DAY_PILLAR_ANCHOR.ganjiIndex + daysDiff, 60);
+      }
+      function computeDayPillar(apparentMs, dayBoundary) {
+        const d = new Date(apparentMs);
+        const baseGanji = ganjiIndexForDate(d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate());
+        const isLateZi = d.getUTCHours() >= 23;
+        const nextGanji = (baseGanji + 1) % 60;
+        let dayGanji = baseGanji;
+        let hourStemGanji = baseGanji;
+        if (isLateZi) {
+          if (dayBoundary === "jasi") {
+            dayGanji = nextGanji;
+            hourStemGanji = nextGanji;
+          } else if (dayBoundary === "splitJasi") {
+            hourStemGanji = nextGanji;
+          }
+        }
+        return { pillar: (0, ganji_1.pillarFromGanji)(dayGanji), dayStemIndex: hourStemGanji % 10 };
+      }
+      function shichenForApparent(apparentMs) {
+        const d = new Date(apparentMs);
+        const totalMinutes = d.getUTCHours() * 60 + d.getUTCMinutes();
+        return Math.floor((totalMinutes + 60) % 1440 / 120);
+      }
+      function getHourPillar(dayStemIndex, shichen) {
+        const hourStemBase = dayStemIndex % 5 * 2;
+        const hourStemIndex = (hourStemBase + shichen) % 10;
+        return {
+          heavenlyStem: constants_1.HEAVENLY_STEMS[hourStemIndex],
+          earthlyBranch: constants_1.EARTHLY_BRANCHES[shichen]
+        };
+      }
+      function computeFourPillars(resolved, calendarYear, dayBoundary) {
+        const sajuYear = (0, solar_terms_1.sajuYearForInstant)(resolved.instantUTCms, calendarYear);
+        const monthNumber = (0, solar_terms_1.sajuMonthForInstant)(resolved.instantUTCms);
+        const yearPillar = getYearPillar(sajuYear);
+        const monthPillar = getMonthPillar(sajuYear, monthNumber);
+        const { pillar: dayPillar, dayStemIndex } = computeDayPillar(resolved.apparentMs, dayBoundary);
+        const shichen = shichenForApparent(resolved.apparentMs);
+        const hourPillar = getHourPillar(dayStemIndex, shichen);
+        return { year: yearPillar, month: monthPillar, day: dayPillar, hour: hourPillar };
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/features/ten-gods.js
+  var require_ten_gods = __commonJS({
+    "node_modules/manseryeok/dist/features/ten-gods.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.getTenGod = getTenGod;
+      exports.getBranchTenGod = getBranchTenGod;
+      exports.getTenGodChart = getTenGodChart;
+      var constants_1 = require_constants();
+      var elements_1 = require_elements();
+      var validation_1 = require_validation();
+      function getTenGod(dayMaster, target) {
+        const dayEl = (0, elements_1.getHeavenlyStemElement)(dayMaster);
+        const targetEl = (0, elements_1.getHeavenlyStemElement)(target);
+        const sameYinYang = (0, elements_1.getHeavenlyStemYinYang)(dayMaster) === (0, elements_1.getHeavenlyStemYinYang)(target);
+        if (targetEl === dayEl) {
+          return sameYinYang ? "비견" : "겁재";
+        }
+        if (constants_1.ELEMENT_GENERATES[dayEl] === targetEl) {
+          return sameYinYang ? "식신" : "상관";
+        }
+        if (constants_1.ELEMENT_CONTROLS[dayEl] === targetEl) {
+          return sameYinYang ? "편재" : "정재";
+        }
+        if (constants_1.ELEMENT_CONTROLS[targetEl] === dayEl) {
+          return sameYinYang ? "편관" : "정관";
+        }
+        return sameYinYang ? "편인" : "정인";
+      }
+      function getBranchTenGod(dayMaster, branch) {
+        (0, validation_1.assertEarthlyBranch)(branch);
+        return getTenGod(dayMaster, constants_1.BRANCH_MAIN_STEM[branch]);
+      }
+      function getTenGodChart(pillars) {
+        const dayMaster = pillars.day.heavenlyStem;
+        return {
+          year: {
+            stem: getTenGod(dayMaster, pillars.year.heavenlyStem),
+            branch: getBranchTenGod(dayMaster, pillars.year.earthlyBranch)
+          },
+          month: {
+            stem: getTenGod(dayMaster, pillars.month.heavenlyStem),
+            branch: getBranchTenGod(dayMaster, pillars.month.earthlyBranch)
+          },
+          day: {
+            stem: "일간",
+            branch: getBranchTenGod(dayMaster, pillars.day.earthlyBranch)
+          },
+          hour: {
+            stem: getTenGod(dayMaster, pillars.hour.heavenlyStem),
+            branch: getBranchTenGod(dayMaster, pillars.hour.earthlyBranch)
+          }
+        };
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/features/void-branches.js
+  var require_void_branches = __commonJS({
+    "node_modules/manseryeok/dist/features/void-branches.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.getVoidBranches = getVoidBranches;
+      var constants_1 = require_constants();
+      var ganji_1 = require_ganji();
+      var validation_1 = require_validation();
+      function getVoidBranches(dayStem, dayBranch) {
+        (0, validation_1.assertHeavenlyStem)(dayStem, "일간(dayStem)");
+        (0, validation_1.assertEarthlyBranch)(dayBranch, "일지(dayBranch)");
+        const dayGanji = (0, ganji_1.ganjiIndexOf)(constants_1.HEAVENLY_STEMS.indexOf(dayStem), constants_1.EARTHLY_BRANCHES.indexOf(dayBranch));
+        const xunStartBranch = (dayGanji - dayGanji % 10) % 12;
+        return [
+          constants_1.EARTHLY_BRANCHES[(xunStartBranch + 10) % 12],
+          constants_1.EARTHLY_BRANCHES[(xunStartBranch + 11) % 12]
+        ];
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/features/luck-pillars.js
+  var require_luck_pillars = __commonJS({
+    "node_modules/manseryeok/dist/features/luck-pillars.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.getLuckPillars = getLuckPillars;
+      var constants_1 = require_constants();
+      var ganji_1 = require_ganji();
+      var solar_terms_1 = require_solar_terms();
+      var validation_1 = require_validation();
+      var MS_PER_DAY = 864e5;
+      var JEOL_INDICES = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22];
+      function collectJeolInstants(birthYear) {
+        const result = [];
+        for (let y = birthYear - 1; y <= birthYear + 1; y++) {
+          for (const idx of JEOL_INDICES) {
+            result.push((0, solar_terms_1.solarTermInstantMs)(y, idx));
+          }
+        }
+        return result.sort((a, b) => a - b);
+      }
+      function getLuckPillars(params) {
+        const { instantUTCms, birthYear, monthPillar, sajuYearStemIndex, gender, count = 10 } = params;
+        (0, validation_1.assertFiniteNumber)(instantUTCms, "출생 절대 순간(instantUTCms)");
+        (0, validation_1.assertIntegerInRange)(birthYear, 101, 9998, "입력 양력 연도(birthYear)");
+        (0, validation_1.assertPillar)(monthPillar, "월주(monthPillar)");
+        (0, validation_1.assertIntegerInRange)(sajuYearStemIndex, 0, 9, "사주 연간 인덱스(sajuYearStemIndex)");
+        (0, validation_1.assertGender)(gender);
+        (0, validation_1.assertIntegerInRange)(count, 1, 120, "대운 개수(count)");
+        const yangYear = sajuYearStemIndex % 2 === 0;
+        const male = gender === "male";
+        const forward = yangYear && male || !yangYear && !male;
+        const jeols = collectJeolInstants(birthYear);
+        let days;
+        if (forward) {
+          const next = jeols.find((ms) => ms > instantUTCms);
+          days = next ? (next - instantUTCms) / MS_PER_DAY : 0;
+        } else {
+          const prev = [...jeols].reverse().find((ms) => ms <= instantUTCms);
+          days = prev ? (instantUTCms - prev) / MS_PER_DAY : 0;
+        }
+        const startAge = Math.max(1, Math.round(days / 3));
+        let startYears = Math.floor(days / 3);
+        const remMonths = (days - startYears * 3) * 4;
+        let startMonths = Math.floor(remMonths);
+        let startDays = Math.round((remMonths - startMonths) * 30);
+        if (startDays >= 30) {
+          startDays -= 30;
+          startMonths += 1;
+        }
+        if (startMonths >= 12) {
+          startMonths -= 12;
+          startYears += 1;
+        }
+        const monthGanji = (0, ganji_1.ganjiIndexOf)(constants_1.HEAVENLY_STEMS.indexOf(monthPillar.heavenlyStem), constants_1.EARTHLY_BRANCHES.indexOf(monthPillar.earthlyBranch));
+        const pillars = [];
+        for (let i = 0; i < count; i++) {
+          const step = i + 1;
+          const ganji = forward ? (monthGanji + step) % 60 : ((monthGanji - step) % 60 + 60) % 60;
+          const pillar = (0, ganji_1.pillarFromGanji)(ganji);
+          pillars.push({
+            age: startAge + i * 10,
+            pillar,
+            korean: `${pillar.heavenlyStem}${pillar.earthlyBranch}`
+          });
+        }
+        return { forward, startAge, startYears, startMonths, startDays, pillars };
+      }
+    }
+  });
+
+  // node_modules/manseryeok/dist/index.js
+  var require_dist = __commonJS({
+    "node_modules/manseryeok/dist/index.js"(exports) {
+      "use strict";
+      /**
+       * 만세력(萬歲曆) 계산 라이브러리
+       * Korean Saju (Four Pillars) and Manseryeok calculation library
+       *
+       * @author Yoohyojun
+       * @license MIT
+       */
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.DEFAULT_LONGITUDE = exports.getLuckPillars = exports.getVoidBranches = exports.getTenGodChart = exports.getBranchTenGod = exports.getTenGod = exports.equationOfTimeMinutes = exports.apparentSolarLongitude = exports.SOLAR_TERM_NAMES_HANJA = exports.SOLAR_TERM_NAMES = exports.getSolarTermsOfYear = exports.getSolarTerm = exports.LUNAR_MAX_YEAR = exports.LUNAR_MIN_YEAR = exports.isValidSolarDate = exports.solarToLunar = exports.lunarToSolar = exports.getEarthlyBranchElement = exports.getEarthlyBranchYinYang = exports.getHeavenlyStemElement = exports.getHeavenlyStemYinYang = exports.TEN_GOD_HANJA = exports.FIVE_ELEMENTS = exports.YIN_YANG = exports.EARTHLY_BRANCHES_HANJA = exports.EARTHLY_BRANCHES = exports.HEAVENLY_STEMS_HANJA = exports.HEAVENLY_STEMS = void 0;
+      exports.calculateFourPillars = calculateFourPillars2;
+      exports.fourPillarsToString = fourPillarsToString;
+      var constants_1 = require_constants();
+      var elements_1 = require_elements();
+      var convert_1 = require_convert();
+      var lunar_data_1 = require_lunar_data();
+      var solar_terms_data_1 = require_solar_terms_data();
+      var true_solar_time_1 = require_true_solar_time();
+      var pillars_1 = require_pillars();
+      var ten_gods_1 = require_ten_gods();
+      var void_branches_1 = require_void_branches();
+      var luck_pillars_1 = require_luck_pillars();
+      var validation_1 = require_validation();
+      var constants_2 = require_constants();
+      Object.defineProperty(exports, "HEAVENLY_STEMS", { enumerable: true, get: function() {
+        return constants_2.HEAVENLY_STEMS;
+      } });
+      Object.defineProperty(exports, "HEAVENLY_STEMS_HANJA", { enumerable: true, get: function() {
+        return constants_2.HEAVENLY_STEMS_HANJA;
+      } });
+      Object.defineProperty(exports, "EARTHLY_BRANCHES", { enumerable: true, get: function() {
+        return constants_2.EARTHLY_BRANCHES;
+      } });
+      Object.defineProperty(exports, "EARTHLY_BRANCHES_HANJA", { enumerable: true, get: function() {
+        return constants_2.EARTHLY_BRANCHES_HANJA;
+      } });
+      Object.defineProperty(exports, "YIN_YANG", { enumerable: true, get: function() {
+        return constants_2.YIN_YANG;
+      } });
+      Object.defineProperty(exports, "FIVE_ELEMENTS", { enumerable: true, get: function() {
+        return constants_2.FIVE_ELEMENTS;
+      } });
+      Object.defineProperty(exports, "TEN_GOD_HANJA", { enumerable: true, get: function() {
+        return constants_2.TEN_GOD_HANJA;
+      } });
+      var elements_2 = require_elements();
+      Object.defineProperty(exports, "getHeavenlyStemYinYang", { enumerable: true, get: function() {
+        return elements_2.getHeavenlyStemYinYang;
+      } });
+      Object.defineProperty(exports, "getHeavenlyStemElement", { enumerable: true, get: function() {
+        return elements_2.getHeavenlyStemElement;
+      } });
+      Object.defineProperty(exports, "getEarthlyBranchYinYang", { enumerable: true, get: function() {
+        return elements_2.getEarthlyBranchYinYang;
+      } });
+      Object.defineProperty(exports, "getEarthlyBranchElement", { enumerable: true, get: function() {
+        return elements_2.getEarthlyBranchElement;
+      } });
+      var convert_2 = require_convert();
+      Object.defineProperty(exports, "lunarToSolar", { enumerable: true, get: function() {
+        return convert_2.lunarToSolar;
+      } });
+      Object.defineProperty(exports, "solarToLunar", { enumerable: true, get: function() {
+        return convert_2.solarToLunar;
+      } });
+      Object.defineProperty(exports, "isValidSolarDate", { enumerable: true, get: function() {
+        return convert_2.isValidSolarDate;
+      } });
+      var lunar_data_2 = require_lunar_data();
+      Object.defineProperty(exports, "LUNAR_MIN_YEAR", { enumerable: true, get: function() {
+        return lunar_data_2.LUNAR_MIN_YEAR;
+      } });
+      Object.defineProperty(exports, "LUNAR_MAX_YEAR", { enumerable: true, get: function() {
+        return lunar_data_2.LUNAR_MAX_YEAR;
+      } });
+      var solar_terms_1 = require_solar_terms();
+      Object.defineProperty(exports, "getSolarTerm", { enumerable: true, get: function() {
+        return solar_terms_1.getSolarTerm;
+      } });
+      Object.defineProperty(exports, "getSolarTermsOfYear", { enumerable: true, get: function() {
+        return solar_terms_1.getSolarTermsOfYear;
+      } });
+      Object.defineProperty(exports, "SOLAR_TERM_NAMES", { enumerable: true, get: function() {
+        return solar_terms_1.SOLAR_TERM_NAMES;
+      } });
+      Object.defineProperty(exports, "SOLAR_TERM_NAMES_HANJA", { enumerable: true, get: function() {
+        return solar_terms_1.SOLAR_TERM_NAMES_HANJA;
+      } });
+      var sun_longitude_1 = require_sun_longitude();
+      Object.defineProperty(exports, "apparentSolarLongitude", { enumerable: true, get: function() {
+        return sun_longitude_1.apparentSolarLongitude;
+      } });
+      Object.defineProperty(exports, "equationOfTimeMinutes", { enumerable: true, get: function() {
+        return sun_longitude_1.equationOfTimeMinutes;
+      } });
+      var ten_gods_2 = require_ten_gods();
+      Object.defineProperty(exports, "getTenGod", { enumerable: true, get: function() {
+        return ten_gods_2.getTenGod;
+      } });
+      Object.defineProperty(exports, "getBranchTenGod", { enumerable: true, get: function() {
+        return ten_gods_2.getBranchTenGod;
+      } });
+      Object.defineProperty(exports, "getTenGodChart", { enumerable: true, get: function() {
+        return ten_gods_2.getTenGodChart;
+      } });
+      var void_branches_2 = require_void_branches();
+      Object.defineProperty(exports, "getVoidBranches", { enumerable: true, get: function() {
+        return void_branches_2.getVoidBranches;
+      } });
+      var luck_pillars_2 = require_luck_pillars();
+      Object.defineProperty(exports, "getLuckPillars", { enumerable: true, get: function() {
+        return luck_pillars_2.getLuckPillars;
+      } });
+      var true_solar_time_2 = require_true_solar_time();
+      Object.defineProperty(exports, "DEFAULT_LONGITUDE", { enumerable: true, get: function() {
+        return true_solar_time_2.DEFAULT_LONGITUDE;
+      } });
+      function validateBirthInfo(birthInfo) {
+        if (birthInfo === null || typeof birthInfo !== "object") {
+          throw new TypeError("생년월일시 정보(birthInfo)는 객체여야 합니다.");
+        }
+        const { year, month, day, hour, minute } = birthInfo;
+        if (birthInfo.isLunar !== void 0) {
+          (0, validation_1.assertBoolean)(birthInfo.isLunar, "음력 여부(isLunar)");
+        }
+        if (birthInfo.isLeapMonth !== void 0) {
+          (0, validation_1.assertBoolean)(birthInfo.isLeapMonth, "윤달 여부(isLeapMonth)");
+        }
+        if (birthInfo.dayBoundary !== void 0) {
+          (0, validation_1.assertDayBoundary)(birthInfo.dayBoundary);
+        }
+        if (birthInfo.gender !== void 0) {
+          (0, validation_1.assertGender)(birthInfo.gender);
+        }
+        if (birthInfo.trueSolarTime !== void 0) {
+          const { trueSolarTime } = birthInfo;
+          if (trueSolarTime === null || typeof trueSolarTime !== "object" || Array.isArray(trueSolarTime)) {
+            throw new TypeError("진태양시 옵션(trueSolarTime)은 객체여야 합니다.");
+          }
+          if (trueSolarTime.longitude !== void 0) {
+            (0, validation_1.assertFiniteNumber)(trueSolarTime.longitude, "출생지 경도(trueSolarTime.longitude)");
+            if (trueSolarTime.longitude < -180 || trueSolarTime.longitude > 180) {
+              throw new RangeError(`출생지 경도(trueSolarTime.longitude)는 -180~180 범위여야 합니다: ${trueSolarTime.longitude}`);
+            }
+          }
+          (0, validation_1.assertOptionalBoolean)(trueSolarTime.applyEquationOfTime, "균시차 보정 여부(trueSolarTime.applyEquationOfTime)");
+          (0, validation_1.assertOptionalBoolean)(trueSolarTime.applyHistoricalDst, "과거 표준시·서머타임 보정 여부(trueSolarTime.applyHistoricalDst)");
+        }
+        const minYear = solar_terms_data_1.SOLAR_TERM_DATA_MIN_YEAR;
+        const maxYear = birthInfo.isLunar ? lunar_data_1.LUNAR_MAX_YEAR : solar_terms_data_1.SOLAR_TERM_DATA_MAX_YEAR;
+        if (!Number.isInteger(year) || year < minYear || year > maxYear) {
+          throw new RangeError(`연도(year)는 ${minYear}~${maxYear} 정수여야 합니다: ${year}`);
+        }
+        if (!Number.isInteger(hour) || hour < 0 || hour > 23) {
+          throw new RangeError(`시(hour)는 0~23 정수여야 합니다: ${hour}`);
+        }
+        if (!Number.isInteger(minute) || minute < 0 || minute > 59) {
+          throw new RangeError(`분(minute)은 0~59 정수여야 합니다: ${minute}`);
+        }
+        if (birthInfo.isLunar) {
+          if (!Number.isInteger(month) || month < 1 || month > 12) {
+            throw new RangeError(`월(month)은 1~12 정수여야 합니다: ${month}`);
+          }
+          if (!Number.isInteger(day) || day < 1 || day > 30) {
+            throw new RangeError(`음력 일(day)은 1~30 정수여야 합니다: ${day}`);
+          }
+        } else if (!(0, convert_1.isValidSolarDate)(year, month, day)) {
+          throw new RangeError(`유효하지 않은 양력 날짜입니다: ${year}-${month}-${day}`);
+        }
+      }
+      function hanjaOf(pillar) {
+        return constants_1.HEAVENLY_STEMS_HANJA[constants_1.HEAVENLY_STEMS.indexOf(pillar.heavenlyStem)] + constants_1.EARTHLY_BRANCHES_HANJA[constants_1.EARTHLY_BRANCHES.indexOf(pillar.earthlyBranch)];
+      }
+      function elementOf(pillar) {
+        return {
+          stem: (0, elements_1.getHeavenlyStemElement)(pillar.heavenlyStem),
+          branch: (0, elements_1.getEarthlyBranchElement)(pillar.earthlyBranch)
+        };
+      }
+      function yinYangOf(pillar) {
+        return {
+          stem: (0, elements_1.getHeavenlyStemYinYang)(pillar.heavenlyStem),
+          branch: (0, elements_1.getEarthlyBranchYinYang)(pillar.earthlyBranch)
+        };
+      }
+      function calculateFourPillars2(birthInfo) {
+        validateBirthInfo(birthInfo);
+        const { hour, minute } = birthInfo;
+        let { year, month, day } = birthInfo;
+        if (birthInfo.isLunar) {
+          const solar = (0, convert_1.lunarToSolar)(year, month, day, birthInfo.isLeapMonth ?? false);
+          year = solar.year;
+          month = solar.month;
+          day = solar.day;
+        }
+        const resolved = (0, true_solar_time_1.resolveInstant)(year, month, day, hour, minute, birthInfo.trueSolarTime);
+        const dayBoundary = birthInfo.dayBoundary ?? "midnight";
+        const pillars = (0, pillars_1.computeFourPillars)(resolved, year, dayBoundary);
+        const fourPillars = {
+          year: pillars.year,
+          month: pillars.month,
+          day: pillars.day,
+          hour: pillars.hour
+        };
+        const tenGods = (0, ten_gods_1.getTenGodChart)(fourPillars);
+        const voidBranches = (0, void_branches_1.getVoidBranches)(pillars.day.heavenlyStem, pillars.day.earthlyBranch);
+        let luckPillars;
+        if (birthInfo.gender) {
+          luckPillars = (0, luck_pillars_1.getLuckPillars)({
+            instantUTCms: resolved.instantUTCms,
+            birthYear: year,
+            monthPillar: pillars.month,
+            sajuYearStemIndex: constants_1.HEAVENLY_STEMS.indexOf(pillars.year.heavenlyStem),
+            gender: birthInfo.gender
+          });
+        }
+        const yearString = `${pillars.year.heavenlyStem}${pillars.year.earthlyBranch}`;
+        const monthString = `${pillars.month.heavenlyStem}${pillars.month.earthlyBranch}`;
+        const dayString = `${pillars.day.heavenlyStem}${pillars.day.earthlyBranch}`;
+        const hourString = `${pillars.hour.heavenlyStem}${pillars.hour.earthlyBranch}`;
+        const yearHanja = hanjaOf(pillars.year);
+        const monthHanja = hanjaOf(pillars.month);
+        const dayHanja = hanjaOf(pillars.day);
+        const hourHanja = hanjaOf(pillars.hour);
+        return {
+          ...fourPillars,
+          yearElement: elementOf(pillars.year),
+          monthElement: elementOf(pillars.month),
+          dayElement: elementOf(pillars.day),
+          hourElement: elementOf(pillars.hour),
+          yearYinYang: yinYangOf(pillars.year),
+          monthYinYang: yinYangOf(pillars.month),
+          dayYinYang: yinYangOf(pillars.day),
+          hourYinYang: yinYangOf(pillars.hour),
+          yearString,
+          monthString,
+          dayString,
+          hourString,
+          yearHanja,
+          monthHanja,
+          dayHanja,
+          hourHanja,
+          tenGods,
+          voidBranches,
+          luckPillars,
+          toString() {
+            return fourPillarsToString(fourPillars);
+          },
+          toObject() {
+            return { year: yearString, month: monthString, day: dayString, hour: hourString };
+          },
+          toHanjaObject() {
+            return {
+              year: { korean: yearString, hanja: yearHanja },
+              month: { korean: monthString, hanja: monthHanja },
+              day: { korean: dayString, hanja: dayHanja },
+              hour: { korean: hourString, hanja: hourHanja }
+            };
+          },
+          toHanjaString() {
+            return `${yearHanja}年柱, ${monthHanja}月柱, ${dayHanja}日柱, ${hourHanja}時柱`;
+          }
+        };
+      }
+      function fourPillarsToString(fourPillars) {
+        const { year, month, day, hour } = fourPillars;
+        (0, validation_1.assertPillar)(year, "year");
+        (0, validation_1.assertPillar)(month, "month");
+        (0, validation_1.assertPillar)(day, "day");
+        (0, validation_1.assertPillar)(hour, "hour");
+        return [
+          `${year.heavenlyStem}${year.earthlyBranch}연주`,
+          `${month.heavenlyStem}${month.earthlyBranch}월주`,
+          `${day.heavenlyStem}${day.earthlyBranch}일주`,
+          `${hour.heavenlyStem}${hour.earthlyBranch}시주`
+        ].join(", ");
+      }
+    }
+  });
+
+  // src/messages.js
+  var fields = {
+    money: [
+      ["구매를 결정하기 전에 필요한 물건인지 살펴보세요.", "작은 지출을 적어보면 오늘의 예산이 또렷해져요.", "할인보다 실제 사용할 횟수를 먼저 생각해보세요.", "장바구니를 잠시 비워두고 다시 살펴봐도 좋아요.", "정기 결제 내역 하나만 확인해보세요."],
+      ["계획한 예산 안에서 기분 좋은 선택을 해보세요.", "필요한 물건의 가격을 차분히 비교해보세요.", "이번 주 지출을 가볍게 정리하기 좋은 날이에요.", "작은 절약 목표 하나를 정해보세요.", "이미 가진 물건을 활용하면 새로운 만족을 찾을 수 있어요."],
+      ["미뤄둔 소비 계획을 비교하며 정리해보세요.", "예산을 세우고 필요한 곳에 알맞게 써보세요.", "저축 목표를 작은 단위로 나누어 시작해보세요.", "좋은 선택의 기준을 적으면 소비가 한결 편해져요.", "여유 자금을 어디에 둘지 차분히 계획해보세요."]
+    ],
+    love: [
+      ["마음을 서둘러 확인하지 않아도 괜찮아요.", "잠깐 혼자 쉬며 내 기분을 먼저 살펴보세요.", "답장이 늦어도 여러 이유가 있을 수 있어요.", "중요한 이야기는 편안한 시간에 나누어보세요.", "상대의 마음을 추측하기보다 가볍게 물어보세요."],
+      ["짧은 안부 한마디로 대화를 시작해보세요.", "함께 즐길 소소한 이야기를 찾아보세요.", "고마웠던 일을 떠올려 마음을 전해보세요.", "서로의 하루를 천천히 들어보세요.", "편안한 거리와 내 속도를 함께 존중해주세요."],
+      ["따뜻한 마음을 구체적인 말로 표현해보세요.", "함께하고 싶은 작은 계획을 제안해보세요.", "좋았던 순간을 나누며 대화를 이어가보세요.", "상대의 장점을 발견하면 솔직하게 전해보세요.", "부담 없는 관심으로 반가운 대화를 열어보세요."]
+    ],
+    work: [
+      ["할 일을 하나만 골라 시작해보세요.", "짧게 쉬고 나서 중요한 부분부터 다시 읽어보세요.", "오늘의 목표를 조금 작게 잡아도 괜찮아요.", "막히는 부분은 메모하고 도움을 구해보세요.", "마감 전에 확인할 시간을 따로 남겨두세요."],
+      ["작은 목표를 세워 차근차근 진행해보세요.", "익숙한 일부터 끝내면 다음 일이 편해져요.", "집중할 시간을 짧게 나누어 사용해보세요.", "오늘 배운 내용을 한 줄로 정리해보세요.", "할 일의 순서를 정하면 시작이 쉬워져요."],
+      ["미뤄둔 일의 첫 단추를 끼워보세요.", "집중할 시간을 확보해 중요한 일에 써보세요.", "떠오른 아이디어를 작은 실험으로 옮겨보세요.", "완료한 작업을 정리하고 다음 목표를 세워보세요.", "배운 것을 직접 적용하며 자신감을 쌓아보세요."]
+    ],
+    people: [
+      ["답하기 전에 상대의 말을 끝까지 들어보세요.", "의도가 모호한 말은 편하게 다시 물어보세요.", "어려운 부탁에는 내 상황도 차분히 설명해주세요.", "잠시 생각할 시간을 가진 뒤 답해도 괜찮아요.", "대화가 길어지면 서로의 요점을 정리해보세요."],
+      ["익숙한 사람에게 가벼운 안부를 건네보세요.", "도움을 받았다면 짧게 감사 인사를 전해보세요.", "서로의 일정을 확인하고 약속을 정해보세요.", "작은 공통 관심사로 대화를 시작해보세요.", "함께할 일의 역할을 분명히 나누어보세요."],
+      ["함께할 작은 활동을 제안해보세요.", "서로의 아이디어를 열린 마음으로 나누어보세요.", "누군가의 노력을 알아보고 말로 전해보세요.", "협력할 일을 찾아 먼저 손을 내밀어보세요.", "반가운 소식을 나누며 연결을 이어가보세요."]
+    ]
+  };
+  var overall = [
+    ["오늘은 여유를 조금 남겨두세요. 한 가지를 해내도 충분해요.", "급한 일과 기다려도 되는 일을 나누어보세요.", "내 컨디션을 확인하고 하루의 속도를 정해보세요.", "잠깐의 휴식이 다음 시작을 편하게 만들 수 있어요.", "익숙하고 편안한 선택으로 하루를 채워보세요."],
+    ["내 속도를 지키며 차근차근 이어가보세요.", "평소의 작은 습관이 하루를 든든하게 받쳐줘요.", "가까운 목표 하나를 마무리하는 데 집중해보세요.", "일과 휴식의 균형을 가볍게 살펴보세요.", "오늘 할 수 있는 만큼 꾸준히 움직여보세요."],
+    ["작은 시도로 하루에 새로운 경험을 더해보세요.", "미뤄둔 계획을 실행할 첫걸음을 정해보세요.", "관심 있던 일에 집중할 시간을 마련해보세요.", "좋은 기분을 주변과 나누며 하루를 시작해보세요.", "하고 싶은 일을 구체적인 행동 하나로 옮겨보세요."]
+  ];
+  var trends = [
+    ["최근 점수가 내려갔어요. 여유 있게 우선순위를 정해보세요.", "그제보다 낮은 점수예요. 오늘의 속도를 편하게 조절해보세요.", "점수 흐름이 낮아졌지만 하루의 선택은 열려 있어요.", "최근 흐름은 하락이에요. 쉬어갈 시간을 챙겨보세요.", "그제와 비교해 내려간 흐름이에요. 작은 목표부터 시작해보세요."],
+    ["최근 점수가 비슷해요. 익숙한 리듬을 이어가보세요.", "그제와 큰 차이가 없는 흐름이에요. 차근차근 움직여보세요.", "최근 흐름이 대체로 유지되고 있어요. 나만의 속도를 지켜보세요.", "큰 변화 없는 흐름이에요. 작은 일상의 즐거움을 찾아보세요.", "그제와 비슷한 범위예요. 오늘 할 일 하나에 집중해보세요."],
+    ["그제보다 점수가 올랐어요. 가벼운 시도를 해보세요.", "최근 흐름이 올라가고 있어요. 작은 계획을 시작해보세요.", "그제와 비교해 상승한 흐름이에요. 관심 있는 일에 시간을 써보세요.", "최근 점수가 높아졌어요. 할 수 있는 일부터 옮겨보세요.", "상승한 흐름을 참고해 미뤄둔 일을 하나 골라보세요."]
+  ];
+  var cautions = {
+    money: ["결제 전 예산을 한 번 확인해보세요.", "계획하지 않은 소비는 잠시 기다려보세요.", "자동 결제 항목을 가볍게 점검해보세요.", "가격뿐 아니라 꼭 필요한지도 생각해보세요.", "빌리거나 공유할 수 있는 물건인지 살펴보세요."],
+    love: ["중요한 이야기는 서두르지 않아도 괜찮아요.", "답변을 재촉하기보다 서로의 시간을 존중해주세요.", "내 감정을 차분히 설명하는 표현을 골라보세요.", "다른 사람과 관계를 비교하지 않아도 괜찮아요.", "추측이 앞서면 한 번 더 물어보세요."],
+    work: ["너무 많은 일을 한꺼번에 시작하지 마세요.", "중요한 제출물은 마지막으로 한 번 확인해보세요.", "짧은 휴식 시간을 일정에 포함해주세요.", "모르는 부분은 혼자 오래 고민하기보다 질문해보세요.", "오늘 마칠 수 있는 범위로 목표를 줄여보세요."],
+    people: ["주변 사람의 말을 조금 더 들어보세요.", "부탁을 받으면 가능한 범위를 먼저 생각해보세요.", "문자로 오해하기 쉬운 내용은 분명하게 확인해주세요.", "약속의 시간과 장소를 다시 살펴보세요.", "의견이 다를 때는 공통점을 먼저 찾아보세요."]
+  };
+  var tier = (score) => score >= 80 ? 2 : score >= 60 ? 1 : 0;
+  function choose(items, seed, date, channel) {
+    let hash = 0;
+    for (const c of seed + channel) hash = hash * 31 + c.charCodeAt(0) >>> 0;
+    const day = Math.floor(Date.parse(date + "T00:00:00Z") / 864e5);
+    return items[((hash + day) % items.length + items.length) % items.length];
+  }
+  function seedFor(solar, p) {
+    return `${solar.year}-${solar.month}-${solar.day}/${p.unknownTime ? "unknown" : p.hour + ":" + p.minute}`;
+  }
+
+  // src/fortune.js
+  var import_manseryeok = __toESM(require_dist(), 1);
+  function koreanToday(now = /* @__PURE__ */ new Date()) {
+    return new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit" }).format(now);
+  }
+  function shiftDate(date, offset) {
+    const d = /* @__PURE__ */ new Date(date + "T12:00:00Z");
+    d.setUTCDate(d.getUTCDate() + offset);
+    return d.toISOString().slice(0, 10);
+  }
+  function validateProfile(p, today = koreanToday()) {
+    if (!p || !["solar", "lunar"].includes(p.calendar) || !["female", "male", "unspecified"].includes(p.gender)) throw Error("입력 항목을 다시 확인해주세요.");
+    if (!Number.isInteger(p.year) || p.year < 1900 || p.year > Math.min(Number(today.slice(0, 4)), p.calendar === "lunar" ? 2100 : 2300)) throw Error("출생 연도는 1900년부터 올해까지 입력해주세요. 지원 상한은 양력 2300년, 음력 2100년이에요.");
+    if (!Number.isInteger(p.month) || p.month < 1 || p.month > 12 || !Number.isInteger(p.day) || p.day < 1 || p.day > 31) throw Error("월과 일을 확인해주세요.");
+    if (typeof p.unknownTime !== "boolean" || typeof p.leap !== "boolean" || !Number.isInteger(p.hour) || p.hour < 0 || p.hour > 23 || !Number.isInteger(p.minute) || p.minute < 0 || p.minute > 59) throw Error("출생시간을 확인해주세요.");
+    if (p.calendar === "solar" && p.leap) throw Error("윤달은 음력에서만 선택할 수 있어요.");
+    let solar;
+    try {
+      solar = p.calendar === "lunar" ? (0, import_manseryeok.lunarToSolar)(p.year, p.month, p.day, p.leap) : { year: p.year, month: p.month, day: p.day };
+      const d = new Date(Date.UTC(solar.year, solar.month - 1, solar.day));
+      if (d.getUTCFullYear() !== solar.year || d.getUTCMonth() + 1 !== solar.month || d.getUTCDate() !== solar.day) throw Error();
+      if (d.toISOString().slice(0, 10) > today) throw Error();
+      (0, import_manseryeok.calculateFourPillars)({ year: solar.year, month: solar.month, day: solar.day, hour: p.unknownTime ? 12 : p.hour, minute: p.unknownTime ? 0 : p.minute });
+    } catch {
+      throw Error("존재하지 않는 날짜·윤달이거나 미래의 생일이에요. 날짜를 확인해주세요.");
+    }
+    return solar;
+  }
+  var elements = ["목", "화", "토", "금", "수"];
+  function relation(a, b) {
+    return [8, 5, -6, -9, 10][(elements.indexOf(b) - elements.indexOf(a) + 5) % 5];
+  }
+  function calculateDay(p, date) {
+    validateDate(date);
+    const solar = validateProfile(p);
+    const seed = seedFor(solar, p);
+    const birth = (0, import_manseryeok.calculateFourPillars)({ ...solar, hour: p.unknownTime ? 12 : p.hour, minute: p.unknownTime ? 0 : p.minute });
+    const [year, month, day] = date.split("-").map(Number);
+    const daily = (0, import_manseryeok.calculateFourPillars)({ year, month, day, hour: 12, minute: 0 });
+    const keys = p.unknownTime ? ["year", "month", "day"] : ["year", "month", "day", "hour"];
+    const dayStem = (0, import_manseryeok.getHeavenlyStemElement)(daily.day.heavenlyStem);
+    const dayBranch = (0, import_manseryeok.getEarthlyBranchElement)(daily.day.earthlyBranch);
+    const mean = keys.reduce((sum, k) => sum + relation((0, import_manseryeok.getHeavenlyStemElement)(birth[k].heavenlyStem), dayStem) + relation((0, import_manseryeok.getEarthlyBranchElement)(birth[k].earthlyBranch), dayBranch), 0) / (keys.length * 2);
+    const base = 65 + mean * 2;
+    const targets = [elements[(elements.indexOf(dayStem) + 2) % 5], elements[(elements.indexOf(dayBranch) + 1) % 5], dayStem, dayBranch];
+    const fields2 = Object.keys(fields).map((key, i) => {
+      const score2 = Math.max(0, Math.min(100, Math.round(base + relation(birth.dayElement.stem, targets[i]))));
+      return { key, score: score2, text: choose(fields[key][tier(score2)], seed, date, key) };
+    });
+    const score = Math.round(fields2.reduce((s, f) => s + f.score, 0) / 4);
+    const lowest = fields2.reduce((best, f, i) => f.score < fields2[best].score ? i : best, 0);
+    return { date, score, fields: fields2, caution: choose(cautions[fields2[lowest].key], seed, date, "caution"), description: choose(overall[tier(score)], seed, date, "overall"), pillars: birth.toObject(), daily: daily.toObject().day, unknownTime: p.unknownTime };
+  }
+  function getFortune(p, today = koreanToday()) {
+    validateDate(today);
+    const days = [-2, -1, 0].map((n) => calculateDay(p, shiftDate(today, n)));
+    const delta = days[2].score - days[0].score;
+    return { days, today: days[2], trend: choose(trends[delta >= 6 ? 2 : delta <= -6 ? 0 : 1], seedFor(validateProfile(p), p), today, "trend") };
+  }
+  function validateDate(date) {
+    const d = /* @__PURE__ */ new Date(date + "T12:00:00Z");
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !Number.isFinite(d.valueOf()) || d.toISOString().slice(0, 10) !== date || Number(date.slice(0, 4)) < 1800 || Number(date.slice(0, 4)) > 2300) throw Error("계산 날짜는 1800~2300년의 유효한 날짜여야 해요.");
+  }
+  var STORAGE_KEY = "harujeom.profile.v1";
+
+  // src/profile.js
+  function parseProfile(values) {
+    for (const [key, label] of [["year", "출생 연도를"], ["month", "출생 월을"], ["day", "출생 일을"]]) if (!String(values[key] ?? "").trim()) {
+      const e = Error(`${label} 입력해주세요.`);
+      e.field = key;
+      throw e;
+    }
+    if (!values.unknownTime && !/^\d{2}:\d{2}$/.test(values.time ?? "")) {
+      const e = Error("출생시간을 입력하거나 시간을 몰라요를 선택해주세요.");
+      e.field = "time";
+      throw e;
+    }
+    const [hour, minute] = (values.time || "12:00").split(":").map(Number);
+    const p = { year: Number(values.year), month: Number(values.month), day: Number(values.day), hour: values.unknownTime ? 12 : hour, minute: values.unknownTime ? 0 : minute, calendar: values.calendar, gender: values.gender, leap: !!values.leap, unknownTime: !!values.unknownTime };
+    validateProfile(p);
+    return p;
+  }
+  function loadProfile(getStorage) {
+    try {
+      const raw = getStorage().getItem(STORAGE_KEY);
+      if (raw === null) return { profile: null, status: "empty" };
+      const profile = JSON.parse(raw);
+      validateProfile(profile);
+      return { profile, status: "saved" };
+    } catch (error) {
+      return { profile: null, status: error instanceof SyntaxError ? "corrupt" : "unavailable" };
+    }
+  }
+  function saveProfile(getStorage, p, remember) {
+    try {
+      if (remember) getStorage().setItem(STORAGE_KEY, JSON.stringify(p));
+      else getStorage().removeItem(STORAGE_KEY);
+      return { ok: true, status: remember ? "saved" : "session" };
+    } catch {
+      return { ok: false, status: "unavailable" };
+    }
+  }
+  function deleteProfile(getStorage) {
+    try {
+      getStorage().removeItem(STORAGE_KEY);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+  function needsRefresh(renderedDate2, currentDate, visible) {
+    return !!renderedDate2 && visible && renderedDate2 !== currentDate;
+  }
+
+  // src/app.js
+  var $ = (id) => document.getElementById(id);
+  var active = null;
+  var personal = null;
+  var isDemo = false;
+  var renderedDate = "";
+  var remembered = false;
+  var lastNotice = "";
+  var example = { year: 2e3, month: 5, day: 15, hour: 9, minute: 30, calendar: "solar", leap: false, unknownTime: false, gender: "unspecified" };
+  function storage() {
+    return window.localStorage;
+  }
+  function form(p = example) {
+    for (const k of ["year", "month", "day", "calendar", "gender"]) $(k).value = p[k];
+    $("time").value = String(p.hour).padStart(2, "0") + ":" + String(p.minute).padStart(2, "0");
+    $("unknown").checked = p.unknownTime;
+    $("leap").checked = p.leap;
+    sync();
+  }
+  function sync() {
+    $("time").disabled = $("unknown").checked;
+    $("leap-label").hidden = $("calendar").value !== "lunar";
+    if ($("calendar").value !== "lunar") $("leap").checked = false;
+  }
+  $("calendar").addEventListener("change", sync);
+  $("unknown").addEventListener("change", sync);
+  function showForm() {
+    if (personal) form(personal);
+    else {
+      $("profile-form").reset();
+      sync();
+    }
+    $("remember").checked = remembered;
+    $("welcome").hidden = false;
+    $("dashboard").hidden = true;
+    $("edit").hidden = true;
+    $("cancel").hidden = !active;
+    $("form-error").textContent = "";
+    window.scrollTo(0, 0);
+    $("year").focus();
+  }
+  function render(p, demo = false, message = "", focus = true) {
+    const result = getFortune(p);
+    active = p;
+    isDemo = demo;
+    renderedDate = koreanToday();
+    $("welcome").hidden = true;
+    $("dashboard").hidden = false;
+    $("edit").hidden = false;
+    $("today-date").textContent = renderedDate.replaceAll("-", ". ") + " · 오늘의 작은 힌트";
+    $("mode-label").textContent = demo ? "예시 체험" : "오늘의 운세";
+    $("profile-summary").textContent = (demo ? "가상 예시 · " : "") + `${p.calendar === "solar" ? "양력" : "음력"} ${p.year}.${p.month}.${p.day}${p.leap ? " (윤달)" : ""} · ${p.unknownTime ? "출생시간 미상" : String(p.hour).padStart(2, "0") + ":" + String(p.minute).padStart(2, "0")}`;
+    lastNotice = message;
+    const notice = demo ? "가상 정보로 보는 예시예요. 내 정보를 입력하면 나의 결과를 확인할 수 있어요." : message;
+    $("notice").hidden = !notice;
+    $("notice").textContent = notice;
+    const s = result.today.score;
+    $("score").textContent = s;
+    $("score-label").textContent = s >= 80 ? "가볍게 한 걸음" : s >= 60 ? "차분히 이어가는 날" : "여유를 챙기는 날";
+    $("score-title").textContent = s >= 80 ? "작은 시작이 기대되는 하루" : s >= 60 ? "나만의 리듬을 찾아가는 하루" : "잠깐 쉬어가도 괜찮은 하루";
+    $("score-description").textContent = result.today.description;
+    const xs = [35, 145, 255];
+    const ys = result.days.map((d) => 140 - d.score);
+    const points = xs.map((x, i) => `${x},${ys[i]}`).join(" ");
+    $("chart").innerHTML = `<svg viewBox="0 0 400 190" role="img" aria-label="최근 운세: 그제 ${result.days[0].score}점, 어제 ${result.days[1].score}점, 오늘 ${s}점, 내일 미공개"><path d="M20 140 H380 M20 90 H380 M20 40 H380" stroke="#e9ebe2" fill="none"/><polygon points="35,140 ${points} 255,140" fill="#edf1e3"/><polyline points="${points}" stroke="#648252" stroke-width="2.5" fill="none"/>${xs.map((x, i) => `<circle cx="${x}" cy="${ys[i]}" r="${i === 2 ? 6 : 4}" fill="${i === 2 ? "#42684c" : "#a4b18e"}"/><text x="${x}" y="${ys[i] - 16}" text-anchor="middle" fill="#42684c" font-size="15">${result.days[i].score}</text><text x="${x}" y="167" text-anchor="middle" fill="#747c71" font-size="15">${["그제", "어제", "오늘"][i]}</text><text x="${x}" y="184" text-anchor="middle" fill="#59634f" font-size="13">${result.days[i].date.slice(5).replace("-", ".")}</text>`).join("")}<circle cx="365" cy="80" r="17" fill="#f2f2e8"/><text x="365" y="86" text-anchor="middle" font-size="17" fill="#59634f">?</text><text x="365" y="167" text-anchor="middle" font-size="15" fill="#59634f">내일</text></svg>`;
+    $("chart-values").textContent = result.days.map((d, i) => `${["그제", "어제", "오늘"][i]} ${d.date.slice(5)} · ${d.score}점`).join(" / ") + " / 내일 ?";
+    $("trend").textContent = result.trend;
+    const names = ["금전운", "연애운", "일·공부운", "대인운"];
+    const icons = ["₩", "♡", "✎", "☺"];
+    $("fields").replaceChildren();
+    result.today.fields.forEach((f, i) => {
+      const el = document.createElement("div");
+      el.className = "field";
+      const icon = document.createElement("span");
+      icon.className = "field-icon";
+      icon.textContent = icons[i];
+      icon.setAttribute("aria-hidden", "true");
+      const h = document.createElement("h3");
+      h.textContent = names[i] + " · " + f.score + "점";
+      const text = document.createElement("p");
+      text.textContent = f.text;
+      el.append(icon, h, text);
+      $("fields").append(el);
+    });
+    $("caution").textContent = result.today.caution;
+    $("pillars").textContent = "계산 확인 · " + Object.entries(result.today.pillars).filter(([k]) => !p.unknownTime || k !== "hour").map(([k, v]) => ({ year: "연주", month: "월주", day: "일주", hour: "시주" })[k] + " " + v).join(" / ") + " · 오늘 일진 " + result.today.daily;
+    $("delete").hidden = demo;
+    if (focus) {
+      window.scrollTo(0, 0);
+      $("result-heading").focus();
+    }
+  }
+  $("profile-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    for (const el of document.querySelectorAll("[aria-invalid]")) el.removeAttribute("aria-invalid");
+    try {
+      const p = parseProfile({ year: $("year").value, month: $("month").value, day: $("day").value, time: $("time").value, unknownTime: $("unknown").checked, calendar: $("calendar").value, leap: $("leap").checked, gender: $("gender").value });
+      const state = saveProfile(storage, p, $("remember").checked);
+      personal = p;
+      remembered = state.ok && state.status === "saved";
+      const message = state.ok ? remembered ? "이 브라우저에 정보를 저장했어요. 아래에서 언제든 삭제할 수 있어요." : "정보를 저장하지 않고 이번 방문에서만 보여드려요." : "브라우저 저장소에 접근할 수 없어 이번 방문에서만 보여드려요. 기존 저장 정보가 있다면 삭제되지 않았을 수 있으니 브라우저 설정에서 확인해주세요.";
+      render(p, false, message);
+    } catch (err) {
+      $("form-error").textContent = err.message;
+      const el = $(err.field || "year");
+      el.setAttribute("aria-invalid", "true");
+      el.focus();
+    }
+  });
+  $("demo").onclick = () => render(example, true);
+  $("edit").onclick = showForm;
+  $("home").onclick = showForm;
+  $("new-profile").onclick = showForm;
+  $("cancel").onclick = () => render(active, isDemo, lastNotice);
+  $("delete").onclick = () => $("delete-dialog").showModal();
+  $("delete-cancel").onclick = () => $("delete-dialog").close();
+  $("delete-confirm").onclick = () => {
+    const deleted = deleteProfile(storage);
+    $("delete-dialog").close();
+    active = null;
+    personal = null;
+    isDemo = false;
+    remembered = false;
+    $("profile-form").reset();
+    showForm();
+    $("form-error").textContent = deleted ? "정보를 삭제했어요." : "화면의 정보는 지웠지만 저장소 삭제에 실패했어요. 브라우저 설정에서 사이트 데이터를 삭제해주세요.";
+  };
+  function refresh() {
+    if (active && needsRefresh(renderedDate, koreanToday(), !$("dashboard").hidden)) render(active, isDemo, lastNotice, false);
+  }
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) refresh();
+  });
+  setInterval(refresh, 3e4);
+  $("year").max = Number(koreanToday().slice(0, 4));
+  var loaded = loadProfile(storage);
+  if (loaded.profile) {
+    personal = loaded.profile;
+    remembered = true;
+    render(personal, false, "이 브라우저에 저장된 정보를 불러왔어요.");
+  } else if (loaded.status !== "empty") {
+    $("form-error").textContent = "저장 정보를 불러오지 못했어요. 새로 입력하면 저장 없이도 이용할 수 있어요.";
+  }
+  sync();
+})();
+</script></body></html>
