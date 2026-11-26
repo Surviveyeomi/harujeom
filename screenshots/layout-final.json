@@ -1,0 +1,74 @@
+[
+  {
+    "overflow": false,
+    "screen": "input",
+    "scroll": 320,
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "screen": "input",
+    "scroll": 360,
+    "width": 360
+  },
+  {
+    "overflow": false,
+    "screen": "input",
+    "scroll": 390,
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "screen": "input",
+    "scroll": 430,
+    "width": 430
+  },
+  {
+    "overflow": false,
+    "screen": "input",
+    "scroll": 768,
+    "width": 768
+  },
+  {
+    "overflow": false,
+    "screen": "input",
+    "scroll": 1280,
+    "width": 1280
+  },
+  {
+    "overflow": false,
+    "screen": "result",
+    "scroll": 320,
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "screen": "result",
+    "scroll": 360,
+    "width": 360
+  },
+  {
+    "overflow": false,
+    "screen": "result",
+    "scroll": 390,
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "screen": "result",
+    "scroll": 430,
+    "width": 430
+  },
+  {
+    "overflow": false,
+    "screen": "result",
+    "scroll": 768,
+    "width": 768
+  },
+  {
+    "overflow": false,
+    "screen": "result",
+    "scroll": 1280,
+    "width": 1280
+  }
+]
