@@ -54,3 +54,6 @@ presentation/
 
 # Generated browser QA fixture
 dist/qa-storage.html
+
+# GitHub Pages staging
+_site/

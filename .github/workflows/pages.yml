@@ -1,0 +1,49 @@
+name: Validate and deploy Pages
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, feat/final-development]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - run: node scripts/check-artifact.mjs
+      - name: Prepare public-only site
+        run: |
+          mkdir -p _site
+          cp dist/harujeom.html _site/index.html
+          cp dist/harujeom.html _site/harujeom.html
+          cp dist/manseryeok-LICENSE.txt _site/manseryeok-LICENSE.txt
+          touch _site/.nojekyll
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - uses: actions/deploy-pages@v4
+        id: deployment
