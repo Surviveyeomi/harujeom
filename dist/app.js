@@ -2272,6 +2272,7 @@
   $("calendar").addEventListener("change", sync);
   $("unknown").addEventListener("change", sync);
   function showForm() {
+    for (const el of document.querySelectorAll("[aria-invalid]")) el.removeAttribute("aria-invalid");
     if (personal) form(personal);
     else {
       $("profile-form").reset();

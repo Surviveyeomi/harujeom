@@ -8,6 +8,7 @@ body{font-size:16px;color:#26392f}button,input,select{font:inherit}button{min-he
 /* QA: 장식 원의 회전 가상요소가 모바일 뷰포트를 넘지 않도록 내부 배치 */
 @media(max-width:720px){.orb{right:48px}.check{white-space:normal}.intro-foot{flex-wrap:wrap}.field p,.intro>p,.method,footer,.demo{color:#596451}.intro .eyebrow,.dashboard-heading .eyebrow,.caution-card .eyebrow{font-size:12px}.dashboard-heading .tag,footer>span:last-child{font-size:12px}input:not([type=checkbox]),select,.primary{font-size:16px}}
 @media(max-width:380px){main{padding-left:0;padding-right:0}.field:nth-child(even){padding-left:16px;border-left:0}}
+:root{--muted:#596451}.score-number>span,.score-bottom,.score-card>p{color:#536347}input:not([type=checkbox]),select,.primary{font-size:16px}
 </style></head><body>
 <header><button type="button" id="home" class="brand" aria-label="하루점 홈"><span class="brand-icon">✳</span> 하루점<span class="brand-dot">.</span></button><span class="header-note">하루를 여는 작은 힌트</span><button id="edit" class="text-button" hidden>내 정보 수정 ↗</button></header>
 <main><section id="welcome"><div class="intro"><span class="eyebrow">A LITTLE GUIDE FOR YOUR DAY</span><h1>오늘 하루,<br>어떤 흐름일까요<span class="green">?</span></h1><p>복잡한 풀이 대신, 가볍게 보는 오늘의 점수.<br>당신의 하루에 작은 힌트를 더해드릴게요.</p><div class="orb" aria-hidden="true"><span>✳</span><i>오늘도, 나답게.</i></div><div class="intro-foot"><span>01 오늘의 점수</span><span>02 최근 흐름</span><span>03 하루의 힌트</span></div></div>
@@ -2318,6 +2319,7 @@ SOFTWARE.
   $("calendar").addEventListener("change", sync);
   $("unknown").addEventListener("change", sync);
   function showForm() {
+    for (const el of document.querySelectorAll("[aria-invalid]")) el.removeAttribute("aria-invalid");
     if (personal) form(personal);
     else {
       $("profile-form").reset();

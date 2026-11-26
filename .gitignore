@@ -51,3 +51,6 @@ presentation/
 
 # Local hosting identity; already committed historical metadata is retained
 .openai/
+
+# Generated browser QA fixture
+dist/qa-storage.html

@@ -8,3 +8,4 @@ body{font-size:16px;color:#26392f}button,input,select{font:inherit}button{min-he
 /* QA: 장식 원의 회전 가상요소가 모바일 뷰포트를 넘지 않도록 내부 배치 */
 @media(max-width:720px){.orb{right:48px}.check{white-space:normal}.intro-foot{flex-wrap:wrap}.field p,.intro>p,.method,footer,.demo{color:#596451}.intro .eyebrow,.dashboard-heading .eyebrow,.caution-card .eyebrow{font-size:12px}.dashboard-heading .tag,footer>span:last-child{font-size:12px}input:not([type=checkbox]),select,.primary{font-size:16px}}
 @media(max-width:380px){main{padding-left:0;padding-right:0}.field:nth-child(even){padding-left:16px;border-left:0}}
+:root{--muted:#596451}.score-number>span,.score-bottom,.score-card>p{color:#536347}input:not([type=checkbox]),select,.primary{font-size:16px}

@@ -6,7 +6,7 @@ function storage(){return window.localStorage;}
 function form(p=example){for(const k of ['year','month','day','calendar','gender'])$(k).value=p[k];$('time').value=String(p.hour).padStart(2,'0')+':'+String(p.minute).padStart(2,'0');$('unknown').checked=p.unknownTime;$('leap').checked=p.leap;sync();}
 function sync(){$('time').disabled=$('unknown').checked;$('leap-label').hidden=$('calendar').value!=='lunar';if($('calendar').value!=='lunar')$('leap').checked=false;}
 $('calendar').addEventListener('change',sync);$('unknown').addEventListener('change',sync);
-function showForm(){if(personal)form(personal);else {$('profile-form').reset();sync();}$('remember').checked=remembered;$('welcome').hidden=false;$('dashboard').hidden=true;$('edit').hidden=true;$('cancel').hidden=!active;$('form-error').textContent='';window.scrollTo(0,0);$('year').focus();}
+function showForm(){for(const el of document.querySelectorAll('[aria-invalid]'))el.removeAttribute('aria-invalid');if(personal)form(personal);else {$('profile-form').reset();sync();}$('remember').checked=remembered;$('welcome').hidden=false;$('dashboard').hidden=true;$('edit').hidden=true;$('cancel').hidden=!active;$('form-error').textContent='';window.scrollTo(0,0);$('year').focus();}
 function render(p,demo=false,message='',focus=true){
  const result=getFortune(p);active=p;isDemo=demo;renderedDate=koreanToday();$('welcome').hidden=true;$('dashboard').hidden=false;$('edit').hidden=false;
  $('today-date').textContent=renderedDate.replaceAll('-','. ')+' · 오늘의 작은 힌트';$('mode-label').textContent=demo?'예시 체험':'오늘의 운세';
