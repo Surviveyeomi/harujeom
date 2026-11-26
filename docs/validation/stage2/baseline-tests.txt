@@ -1,0 +1,194 @@
+
+> harujeom@0.1.0 test
+> node --test tests/*.test.js
+
+TAP version 13
+# Subtest: F01 v0.1 기준 10개 총운/분야 점수 보존
+ok 1 - F01 v0.1 기준 10개 총운/분야 점수 보존
+  ---
+  duration_ms: 11.559083
+  ...
+# Subtest: F02 분야별 구간 5종, 총60종, 보조50종
+ok 2 - F02 분야별 구간 5종, 총60종, 보조50종
+  ---
+  duration_ms: 0.098958
+  ...
+# Subtest: F03 366일 연속 문장 반복 방지 및 구간 일치
+ok 3 - F03 366일 연속 문장 반복 방지 및 구간 일치
+  ---
+  duration_ms: 32.030917
+  ...
+# Subtest: F04 최저점 동점 우선순위 및 주의 문장
+ok 4 - F04 최저점 동점 우선순위 및 주의 문장
+  ---
+  duration_ms: 8.010583
+  ...
+# Subtest: F05 총운과 흐름 설명 구간 일치
+ok 5 - F05 총운과 흐름 설명 구간 일치
+  ---
+  duration_ms: 16.263208
+  ...
+# Subtest: F06 필수 날짜 누락 시 한국어 안내 및 포커스 대상
+ok 6 - F06 필수 날짜 누락 시 한국어 안내 및 포커스 대상
+  ---
+  duration_ms: 0.345541
+  ...
+# Subtest: F07 시간 누락 차단 및 미상 정오 정규화
+ok 7 - F07 시간 누락 차단 및 미상 정오 정규화
+  ---
+  duration_ms: 0.330083
+  ...
+# Subtest: F08 프로필 저장 복원 수정 삭제, 다른 키 보존
+ok 8 - F08 프로필 저장 복원 수정 삭제, 다른 키 보존
+  ---
+  duration_ms: 0.321208
+  ...
+# Subtest: F09 저장 선택 해제는 해당 키만 삭제
+ok 9 - F09 저장 선택 해제는 해당 키만 삭제
+  ---
+  duration_ms: 0.356
+  ...
+# Subtest: F10 저장소 getter 제한 및 쓰기 용량 오류
+ok 10 - F10 저장소 getter 제한 및 쓰기 용량 오류
+  ---
+  duration_ms: 0.616
+  ...
+# Subtest: F11 손상 JSON과 유효하지 않은 저장 프로필
+ok 11 - F11 손상 JSON과 유효하지 않은 저장 프로필
+  ---
+  duration_ms: 0.445625
+  ...
+# Subtest: F12 자정 갱신 조건 및 숨김 화면 보류
+ok 12 - F12 자정 갱신 조건 및 숨김 화면 보류
+  ---
+  duration_ms: 0.054167
+  ...
+# Subtest: F13 윤년/월말과 날짜 형식 검증
+ok 13 - F13 윤년/월말과 날짜 형식 검증
+  ---
+  duration_ms: 0.241875
+  ...
+# Subtest: F14 서비스 출생 연도 및 달력 지원 상한
+ok 14 - F14 서비스 출생 연도 및 달력 지원 상한
+  ---
+  duration_ms: 0.74575
+  ...
+# Subtest: F15 일진 계산 지원 1800/2300 경계
+ok 15 - F15 일진 계산 지원 1800/2300 경계
+  ---
+  duration_ms: 0.289584
+  ...
+# Subtest: F16 KASI 2024 음력 초하루 및 일진 독립 대조
+ok 16 - F16 KASI 2024 음력 초하루 및 일진 독립 대조
+  ---
+  duration_ms: 0.857125
+  ...
+# Subtest: F17 KASI 입춘 2024-02-04 17:27 KST 분 단위 대조
+ok 17 - F17 KASI 입춘 2024-02-04 17:27 KST 분 단위 대조
+  ---
+  duration_ms: 0.062959
+  ...
+# Subtest: F18 절기 전후 연주/월주 변경
+ok 18 - F18 절기 전후 연주/월주 변경
+  ---
+  duration_ms: 0.085667
+  ...
+# Subtest: F19 자시23시와 자정 일주 경계
+ok 19 - F19 자시23시와 자정 일주 경계
+  ---
+  duration_ms: 0.111292
+  ...
+# Subtest: F20 3년 일별 점수 범위 및 결정성
+ok 20 - F20 3년 일별 점수 범위 및 결정성
+  ---
+  duration_ms: 75.234625
+  ...
+# Subtest: F21 단일 HTML 외부 실행 의존성 없음 및 MIT 포함
+ok 21 - F21 단일 HTML 외부 실행 의존성 없음 및 MIT 포함
+  ---
+  duration_ms: 2.577416
+  ...
+# Subtest: F22 원본 14개 테스트 파일 변경 없음
+ok 22 - F22 원본 14개 테스트 파일 변경 없음
+  ---
+  duration_ms: 0.587125
+  ...
+# Subtest: 같은 입력과 날짜의 결과가 동일
+ok 23 - 같은 입력과 날짜의 결과가 동일
+  ---
+  duration_ms: 10.4585
+  ...
+# Subtest: 공식 README 예제 사주와 일치
+ok 24 - 공식 README 예제 사주와 일치
+  ---
+  duration_ms: 0.585125
+  ...
+# Subtest: 동일 생일 양력·음력 결과 동일
+ok 25 - 동일 생일 양력·음력 결과 동일
+  ---
+  duration_ms: 0.809458
+  ...
+# Subtest: 윤달을 양력으로 정확히 변환
+ok 26 - 윤달을 양력으로 정확히 변환
+  ---
+  duration_ms: 0.331959
+  ...
+# Subtest: 존재하지 않는 양력 날짜 거부
+ok 27 - 존재하지 않는 양력 날짜 거부
+  ---
+  duration_ms: 0.310042
+  ...
+# Subtest: 미래 생일 거부
+ok 28 - 미래 생일 거부
+  ---
+  duration_ms: 0.067458
+  ...
+# Subtest: 잘못된 윤달 거부
+ok 29 - 잘못된 윤달 거부
+  ---
+  duration_ms: 0.1355
+  ...
+# Subtest: 시간 및 누락된 입력 거부
+ok 30 - 시간 및 누락된 입력 거부
+  ---
+  duration_ms: 0.357209
+  ...
+# Subtest: 월·연도 경계 날짜 순서
+ok 31 - 월·연도 경계 날짜 순서
+  ---
+  duration_ms: 1.010167
+  ...
+# Subtest: KST 자정 전후 날짜 전환
+ok 32 - KST 자정 전후 날짜 전환
+  ---
+  duration_ms: 0.408375
+  ...
+# Subtest: 시간 미상은 입력 시각에 영향받지 않음
+ok 33 - 시간 미상은 입력 시각에 영향받지 않음
+  ---
+  duration_ms: 0.515958
+  ...
+# Subtest: 성별은 일일 점수에 영향을 주지 않음
+ok 34 - 성별은 일일 점수에 영향을 주지 않음
+  ---
+  duration_ms: 0.416416
+  ...
+# Subtest: 365일 점수 범위·4개 분야·주의 포인트
+ok 35 - 365일 점수 범위·4개 분야·주의 포인트
+  ---
+  duration_ms: 30.445167
+  ...
+# Subtest: 저장 정보 복원 및 손상·저장소 차단 처리
+ok 36 - 저장 정보 복원 및 손상·저장소 차단 처리
+  ---
+  duration_ms: 0.695
+  ...
+1..36
+# tests 36
+# suites 0
+# pass 36
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 264.714917

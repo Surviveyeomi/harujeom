@@ -1,0 +1,28 @@
+TAP version 13
+# Subtest: S2-01 자정 사이 렌더 날짜 일치 및 다음 갱신
+not ok 1 - S2-01 자정 사이 렌더 날짜 일치 및 다음 갱신
+  ---
+  duration_ms: 58.188291
+  location: '<repo>/tests/render-date.test.js:7:1'
+  failureType: 'testCodeFailure'
+  error: '표시 날짜는 계산 결과의 날짜여야 함'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (<repo>/tests/render-date.test.js:17:9)
+    process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    async Test.run (node:internal/test_runner/test:857:9)
+    async Test.processPendingSubtests (node:internal/test_runner/test:565:7)
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 173.77

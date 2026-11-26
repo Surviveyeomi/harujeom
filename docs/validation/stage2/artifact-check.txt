@@ -1,0 +1,7 @@
+Standalone: 121645 bytes; sha256 1b1a7151fef4aa3d04ac6588b64eafaf1b3c2ff4195a2b17b125fa6a38013412; external runtime dependency scan PASS
+Submission is byte-identical: PASS
+body: 11.27:1 PASS (selected text pair, not a full accessibility audit)
+muted: 6.18:1 PASS (selected text pair, not a full accessibility audit)
+score text: 5.35:1 PASS (selected text pair, not a full accessibility audit)
+button: 6.33:1 PASS (selected text pair, not a full accessibility audit)
+error: 6.79:1 PASS (selected text pair, not a full accessibility audit)

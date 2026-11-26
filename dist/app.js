@@ -2291,7 +2291,7 @@
     const result = getFortune(p);
     active = p;
     isDemo = demo;
-    renderedDate = koreanToday();
+    renderedDate = result.today.date;
     $("welcome").hidden = true;
     $("dashboard").hidden = false;
     $("edit").hidden = false;

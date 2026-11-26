@@ -8,7 +8,7 @@ function sync(){$('time').disabled=$('unknown').checked;$('leap-label').hidden=$
 $('calendar').addEventListener('change',sync);$('unknown').addEventListener('change',sync);
 function showForm(){for(const el of document.querySelectorAll('[aria-invalid]'))el.removeAttribute('aria-invalid');if(personal)form(personal);else {$('profile-form').reset();sync();}$('remember').checked=remembered;$('welcome').hidden=false;$('dashboard').hidden=true;$('edit').hidden=true;$('cancel').hidden=!active;$('form-error').textContent='';window.scrollTo(0,0);$('year').focus();}
 function render(p,demo=false,message='',focus=true){
- const result=getFortune(p);active=p;isDemo=demo;renderedDate=koreanToday();$('welcome').hidden=true;$('dashboard').hidden=false;$('edit').hidden=false;
+ const result=getFortune(p);active=p;isDemo=demo;renderedDate=result.today.date;$('welcome').hidden=true;$('dashboard').hidden=false;$('edit').hidden=false;
  $('today-date').textContent=renderedDate.replaceAll('-','. ')+' · 오늘의 작은 힌트';$('mode-label').textContent=demo?'예시 체험':'오늘의 운세';
  $('profile-summary').textContent=(demo?'가상 예시 · ':'')+`${p.calendar==='solar'?'양력':'음력'} ${p.year}.${p.month}.${p.day}${p.leap?' (윤달)':''} · ${p.unknownTime?'출생시간 미상':String(p.hour).padStart(2,'0')+':'+String(p.minute).padStart(2,'0')}`;
  lastNotice=message;const notice=demo?'가상 정보로 보는 예시예요. 내 정보를 입력하면 나의 결과를 확인할 수 있어요.':message;$('notice').hidden=!notice;$('notice').textContent=notice;
