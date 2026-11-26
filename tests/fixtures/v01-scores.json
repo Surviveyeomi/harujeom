@@ -1,0 +1,212 @@
+[
+  {
+    "profile": {
+      "year": 2000,
+      "month": 5,
+      "day": 15,
+      "hour": 9,
+      "minute": 30,
+      "calendar": "solar",
+      "leap": false,
+      "unknownTime": false,
+      "gender": "unspecified"
+    },
+    "date": "2024-02-04",
+    "score": 76,
+    "fields": [
+      84,
+      86,
+      67,
+      67
+    ]
+  },
+  {
+    "profile": {
+      "year": 2000,
+      "month": 5,
+      "day": 15,
+      "hour": 9,
+      "minute": 30,
+      "calendar": "solar",
+      "leap": false,
+      "unknownTime": false,
+      "gender": "unspecified"
+    },
+    "date": "2024-02-29",
+    "score": 67,
+    "fields": [
+      57,
+      68,
+      71,
+      71
+    ]
+  },
+  {
+    "profile": {
+      "year": 2000,
+      "month": 5,
+      "day": 15,
+      "hour": 9,
+      "minute": 30,
+      "calendar": "solar",
+      "leap": false,
+      "unknownTime": false,
+      "gender": "unspecified"
+    },
+    "date": "2025-12-31",
+    "score": 72,
+    "fields": [
+      64,
+      83,
+      78,
+      64
+    ]
+  },
+  {
+    "profile": {
+      "year": 2000,
+      "month": 5,
+      "day": 15,
+      "hour": 9,
+      "minute": 30,
+      "calendar": "solar",
+      "leap": false,
+      "unknownTime": false,
+      "gender": "unspecified"
+    },
+    "date": "2026-01-01",
+    "score": 63,
+    "fields": [
+      52,
+      66,
+      66,
+      69
+    ]
+  },
+  {
+    "profile": {
+      "year": 2000,
+      "month": 5,
+      "day": 15,
+      "hour": 9,
+      "minute": 30,
+      "calendar": "solar",
+      "leap": false,
+      "unknownTime": false,
+      "gender": "unspecified"
+    },
+    "date": "2026-11-26",
+    "score": 72,
+    "fields": [
+      64,
+      83,
+      78,
+      64
+    ]
+  },
+  {
+    "profile": {
+      "year": 1992,
+      "month": 10,
+      "day": 24,
+      "hour": 5,
+      "minute": 30,
+      "calendar": "solar",
+      "leap": false,
+      "unknownTime": true,
+      "gender": "female"
+    },
+    "date": "2024-02-04",
+    "score": 72,
+    "fields": [
+      80,
+      82,
+      63,
+      63
+    ]
+  },
+  {
+    "profile": {
+      "year": 1992,
+      "month": 10,
+      "day": 24,
+      "hour": 5,
+      "minute": 30,
+      "calendar": "solar",
+      "leap": false,
+      "unknownTime": true,
+      "gender": "female"
+    },
+    "date": "2024-02-29",
+    "score": 77,
+    "fields": [
+      67,
+      78,
+      81,
+      81
+    ]
+  },
+  {
+    "profile": {
+      "year": 1992,
+      "month": 10,
+      "day": 24,
+      "hour": 5,
+      "minute": 30,
+      "calendar": "solar",
+      "leap": false,
+      "unknownTime": true,
+      "gender": "female"
+    },
+    "date": "2025-12-31",
+    "score": 75,
+    "fields": [
+      67,
+      86,
+      81,
+      67
+    ]
+  },
+  {
+    "profile": {
+      "year": 1992,
+      "month": 10,
+      "day": 24,
+      "hour": 5,
+      "minute": 30,
+      "calendar": "solar",
+      "leap": false,
+      "unknownTime": true,
+      "gender": "female"
+    },
+    "date": "2026-01-01",
+    "score": 70,
+    "fields": [
+      59,
+      73,
+      73,
+      76
+    ]
+  },
+  {
+    "profile": {
+      "year": 1992,
+      "month": 10,
+      "day": 24,
+      "hour": 5,
+      "minute": 30,
+      "calendar": "solar",
+      "leap": false,
+      "unknownTime": true,
+      "gender": "female"
+    },
+    "date": "2026-11-26",
+    "score": 75,
+    "fields": [
+      67,
+      86,
+      81,
+      67
+    ]
+  }
+]
